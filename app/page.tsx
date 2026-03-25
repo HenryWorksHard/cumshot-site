@@ -975,27 +975,7 @@ This error was caused by: SKILL_ISSUE
         <a href="#" className="webring-btn" style={{ marginTop: '10px' }}>RANDOM</a>
       </div>
 
-      {/* EXTRA CHAOS SECTION */}
-      <div className="flash-bg-slow" style={{ 
-        padding: '15px', 
-        margin: '8px',
-        textAlign: 'center',
-        border: '5px dashed #000'
-      }}>
-        <h2 className="glitch-intense comic-sans" style={{ color: '#000', textShadow: '2px 2px #fff' }}>
-           RANDOM CHAOS ZONE 
-        </h2>
-        <p className="shake comic-sans" style={{ fontSize: '1.5rem' }}>
-          EVERYTHING HERE IS BROKEN ON PURPOSE
-        </p>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap', marginTop: '20px' }}>
-          <span className="spin" style={{ fontSize: '2rem' }}></span>
-          <span className="float" style={{ fontSize: '2rem' }}></span>
-          <span className="shake" style={{ fontSize: '2rem' }}></span>
-          <span className="blink" style={{ fontSize: '2rem' }}></span>
-          <span className="glitch" style={{ fontSize: '2rem' }}></span>
-        </div>
-      </div>
+
 
     </main>
   )
