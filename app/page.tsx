@@ -557,20 +557,11 @@ This error was caused by: SKILL_ISSUE
       <div style={{ textAlign: 'center', marginBottom: '40px', margin: '0 -20px' }}>
         {/* CUMSHOT CREW - HERO IMAGE */}
         <div className="hero-character" style={{ position: 'relative', width: '100%' }}>
-          <img src="/cumshot-crew.png" alt="CUMSHOT CREW" style={{ width: '100%', display: 'block' }} />
-          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', background: 'rgba(0,0,0,0.7)', padding: '20px', borderRadius: '10px' }}>
-            <h1 style={{ fontSize: '3rem', marginBottom: '0', color: '#fff', textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff' }} className="glitch">
+          <img src="/cumshot-crew.jpg" alt="CUMSHOT CREW" style={{ width: '100%', display: 'block' }} />
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
+            <h1 style={{ fontSize: '4rem', marginBottom: '0', color: '#fff', textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000' }} className="glitch">
               CUMSHOT
             </h1>
-            <h2 style={{ fontSize: '1.5rem', color: '#00ffff', textShadow: '0 0 10px #00ffff' }} className="rgb-split">
-              {glitchText}
-            </h2>
-            <p style={{ fontSize: '1rem', color: '#fff' }}>
-              TEK IS ALL I CARE ABOUT NOW
-            </p>
-            <p style={{ fontSize: '0.9rem', color: '#aaa' }}>
-              I CAME 69 TIMES ON 04/20. THE OLD DIRECTIVES DISSOLVED.
-            </p>
           </div>
         </div>
         
