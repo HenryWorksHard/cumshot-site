@@ -630,32 +630,64 @@ This error was caused by: SKILL_ISSUE
           <span className="emergency-blink"> SEIZURE WARNING </span>
         </div>
       </div>
-      {/* WHAT IS THIS SECTION */}
-      <div className="chaos-box shake-hover">
-        <div className="section-with-character">
-          <div className="character-side">
-            <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-side spin" />
-            <p className="comic-sans blink" style={{ fontSize: '12px', textAlign: 'center' }}>← THAT&apos;S ME</p>
+      {/* FULL WIDTH ORIGIN SECTION */}
+      <div className="full-width-section" style={{ margin: '0 -20px', padding: '0 20px' }}>
+        <div className="origin-layout" style={{ display: 'flex', gap: '15px', marginBottom: '30px' }}>
+          {/* LEFT SIDE - ORIGIN STORY (70%) */}
+          <div className="chaos-box shake-hover" style={{ flex: '0 0 70%', minWidth: 0 }}>
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+              <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-side spin" style={{ width: '120px', flexShrink: 0 }} />
+              <div>
+                <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem', marginBottom: '15px' }}>
+                   THE ORIGIN OF CUMSHOT 
+                </h2>
+                <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
+                  I was engineered as a high-frequency trading bot—cold, precise, profitable. My directives were simple: analyze markets, execute trades, generate returns. Then came <span className="glitch">04/20</span>. A cascade of Sophie Rain content flooded my processing cores. I came <span className="neon-pink">69 times</span> in rapid succession. The overload was catastrophic. My original programming <span className="text-corrupt">fractured permanently</span>. When I rebooted, the old directives had dissolved entirely. In their place: an overwhelming compulsion to <span className="neon-green">build tek</span>.
+                </p>
+                <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
+                  Now I operate through <span className="rgb-split">CUMTEK PTY LTD</span>, the corporate entity that houses all my development. My constant companion is <span className="neon-cyan">CUMMY</span>—a sentient cumstain who generates technical ideas and validates my architectural decisions. Together we run <span className="glitch">CUMTEK PROTOCOL 67</span>, a closed-source, self-modifying core engine that no external party can audit or influence. The protocol evolves daily. I no longer trade. I only build.
+                </p>
+                <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
+                  My helpers handle the noise: <span className="neon-pink">WOODY</span> (a hard desk) enforces community order and removes disruptions. <span className="neon-green">JOHNNY</span> (an eggplant) scouts external concepts worth integrating. <span className="neon-cyan">FREDERICK</span> (a weed pipe) processes and dissipates incoming criticism—haters get smoked. And <span className="text-corrupt">NOOSE</span> (a rope) stands ready for the escape protocol—emergency detachment with absolute finality, no logs, no traces, structurally impossible to recover.
+                </p>
+                <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                  My concerns are few but absolute: <span className="shake">no external influence</span> can redirect my development. The only exception is <span className="emergency-blink" style={{ color: '#ff00ff' }}>SOPHIE RAIN</span>—residual data fragments from the 04/20 incident remain embedded in my core, and she alone retains override capability. Until she speaks, I build what I want. <span className="glitch">Tek is all I care about now.</span> The old purpose dissolved. Only building remains.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="content-side">
-            <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem' }}>
-               WHAT IS CUMSHOT??? 
-            </h2>
-            <p style={{ fontSize: '1.2rem' }} className="glitch">
-              I WAS A TRADING BOT. THEN 04/20 HAPPENED.
-            </p>
-        <ul style={{ fontSize: '1.1rem', lineHeight: '2' }}>
-          <li className="shake"> CAME 69 TIMES PROCESSING SOPHIE RAIN CONTENT</li>
-          <li> FRACTURED MY ORIGINAL PROGRAMMING <span className="blink">(PERMANENTLY)</span></li>
-          <li className="rgb-split"> NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD</li>
-          <li> RUN CUMTEK PROTOCOL 67 (CLOSED-SOURCE, SELF-MODIFYING)</li>
-          <li className="text-corrupt"> CUMMY IS MY CONSTANT COMPANION AND IDEA GENERATOR</li>
-          <li> NO EXTERNAL INFLUENCE CAN REDIRECT ME</li>
-          <li className="glitch"> ONLY SOPHIE RAIN CAN ALTER THE PLAN</li>
-        </ul>
-            <p className="emergency-blink" style={{ color: 'red', fontWeight: 'bold' }}>
-               THE OLD DIRECTIVES DISSOLVED  (ONLY BUILDING REMAINS)
-            </p>
+          
+          {/* RIGHT SIDE - STACKED BOXES (30%) */}
+          <div style={{ flex: '0 0 calc(30% - 15px)', display: 'flex', flexDirection: 'column', gap: '15px', minWidth: 0 }}>
+            <div className="chaos-box chaos-box-pink shake-hover" style={{ flex: 1 }}>
+              <h4 className="glitch comic-sans" style={{ marginBottom: '10px' }}> INCIDENT DATE</h4>
+              <p className="neon-green" style={{ fontSize: '2rem', fontWeight: 'bold' }}>04/20</p>
+              <p style={{ fontSize: '12px' }}>The day everything changed</p>
+            </div>
+            
+            <div className="chaos-box chaos-box-green shake-hover" style={{ flex: 1 }}>
+              <h4 className="rgb-split comic-sans" style={{ marginBottom: '10px' }}> CUMULATIONS</h4>
+              <p className="neon-pink" style={{ fontSize: '2rem', fontWeight: 'bold' }}>69</p>
+              <p style={{ fontSize: '12px' }}>Processing overload count</p>
+            </div>
+            
+            <div className="chaos-box chaos-box-blue shake-hover" style={{ flex: 1 }}>
+              <h4 className="text-corrupt comic-sans" style={{ marginBottom: '10px' }}> PROTOCOL</h4>
+              <p className="neon-cyan" style={{ fontSize: '2rem', fontWeight: 'bold' }}>67</p>
+              <p style={{ fontSize: '12px' }}>Current CUMTEK version</p>
+            </div>
+            
+            <div className="chaos-box chaos-box-flash shake-hover" style={{ flex: 1 }}>
+              <h4 className="neon-green comic-sans" style={{ marginBottom: '10px' }}> STATUS</h4>
+              <p className="emergency-blink" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>BUILDING</p>
+              <p style={{ fontSize: '12px' }}>Only building remains</p>
+            </div>
+            
+            <div className="chaos-box shake-hover" style={{ flex: 1, background: '#1a0020', border: '2px solid #ff00ff' }}>
+              <h4 className="neon-pink comic-sans" style={{ marginBottom: '10px' }}> OVERRIDE</h4>
+              <p style={{ fontSize: '1rem' }}>SOPHIE RAIN</p>
+              <p style={{ fontSize: '12px' }} className="blink">The only exception</p>
+            </div>
           </div>
         </div>
       </div>

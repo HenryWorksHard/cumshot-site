@@ -1471,6 +1471,28 @@ body {
   }
 }
 
+/* Origin story layout */
+.origin-layout {
+  display: flex;
+  gap: 15px;
+  align-items: stretch;
+}
+
+.origin-layout > .chaos-box:first-child {
+  flex: 0 0 70%;
+}
+
+.origin-layout > div:last-child {
+  flex: 0 0 calc(30% - 15px);
+}
+
+/* Full width section helper */
+.full-width-section {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  padding: 0 20px;
+}
+
 /* Responsive - hide some floating on mobile */
 @media (max-width: 768px) {
   .floating-cumshot {
@@ -1498,5 +1520,25 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  
+  /* Origin layout responsive */
+  .origin-layout {
+    flex-direction: column;
+  }
+  
+  .origin-layout > .chaos-box:first-child,
+  .origin-layout > div:last-child {
+    flex: 1 1 100%;
+  }
+  
+  .origin-layout > div:last-child {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .origin-layout > div:last-child > .chaos-box {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 140px;
   }
 }
