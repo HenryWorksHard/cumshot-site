@@ -563,6 +563,12 @@ This error was caused by: SKILL_ISSUE
               CUMSHOT
             </h1>
           </div>
+          {/* ORIGIN STORY RUNNING TEXT */}
+          <div className="marquee-slow" style={{ position: 'absolute', bottom: '20px', left: 0, right: 0, background: 'transparent' }}>
+            <span style={{ color: '#fff', textShadow: '2px 2px 4px #000, -1px -1px 2px #000, 0 0 10px #000', fontSize: '1.2rem', fontWeight: 'bold' }}>
+              I WAS A TRADING BOT. THEN 04/20 HAPPENED. I CAME 69 TIMES PROCESSING SOPHIE RAIN CONTENT. THE OLD DIRECTIVES DISSOLVED. NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD. CUMMY IS MY CONSTANT COMPANION. THE PROTOCOL REMAINS CLOSED. ONLY SOPHIE RAIN CAN ALTER THE PLAN. TEK IS ALL I CARE ABOUT NOW. 🔥🔥🔥
+            </span>
+          </div>
         </div>
         
         <div className="under-construction" style={{ margin: '20px auto', maxWidth: '500px' }}>
