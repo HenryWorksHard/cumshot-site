@@ -641,6 +641,8 @@ This error was caused by: SKILL_ISSUE
             <img src="/char-fountain.png" alt="" className="bg-char" style={{ position: 'absolute', top: '40%', right: '2%', width: '90px', opacity: 0.1, transform: 'rotate(15deg)' }} />
             <img src="/char-jumprope.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '5%', right: '35%', width: '60px', opacity: 0.12, transform: 'rotate(-10deg)' }} />
             <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '60%', right: '25%', width: '50px', opacity: 0.08, transform: 'scaleX(-1) rotate(5deg)' }} />
+            <img src="/cummy.png" alt="" className="bg-char" style={{ position: 'absolute', top: '25%', right: '40%', width: '65px', opacity: 0.12, transform: 'rotate(-8deg)' }} />
+            <img src="/cummy.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '25%', right: '8%', width: '55px', opacity: 0.1, transform: 'scaleX(-1) rotate(12deg)' }} />
             
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative', zIndex: 1 }}>
               <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-side spin" style={{ width: '120px', flexShrink: 0 }} />
