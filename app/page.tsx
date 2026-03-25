@@ -549,15 +549,15 @@ This error was caused by: SKILL_ISSUE
 
 
       {/* PINK MARQUEE - 90s STYLE */}
-      <div className="marquee-fast" style={{ background: '#ff00ff', marginBottom: '5px' }}>
+      <div className="marquee-fast" style={{ background: '#ff00ff', margin: '0 -20px', padding: '5px 0' }}>
         <span>🔥🔥🔥 HOT HOT HOT!!! 🔥🔥🔥 YOU ARE VISITOR NUMBER {visitorCount.toLocaleString()} 🔥🔥🔥 SIGN MY GUESTBOOK!!! 🔥🔥🔥 BEST VIEWED IN NETSCAPE NAVIGATOR 2.0 🔥🔥🔥</span>
       </div>
 
       {/* HERO SECTION */}
-      <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+      <div style={{ textAlign: 'center', marginBottom: '40px', margin: '0 -20px' }}>
         {/* CUMSHOT CREW - HERO IMAGE */}
-        <div className="hero-character" style={{ position: 'relative' }}>
-          <img src="/cumshot-crew.png" alt="CUMSHOT CREW" style={{ maxWidth: '100%', width: '800px', borderRadius: '10px', border: '4px solid #ff00ff', boxShadow: '0 0 20px #ff00ff' }} />
+        <div className="hero-character" style={{ position: 'relative', width: '100%' }}>
+          <img src="/cumshot-crew.png" alt="CUMSHOT CREW" style={{ width: '100%', display: 'block' }} />
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', background: 'rgba(0,0,0,0.7)', padding: '20px', borderRadius: '10px' }}>
             <h1 style={{ fontSize: '3rem', marginBottom: '0', color: '#fff', textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff' }} className="glitch">
               CUMSHOT
