@@ -882,9 +882,9 @@ This error was caused by: SKILL_ISSUE
             ʕ•ᴥ•ʔ
           </p>
         </div>
-        {/* Placeholder for second image - 50% width */}
-        <div className="chaos-box" style={{ width: '50%', margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#1a0a1a', border: '2px dashed #ff00ff' }}>
-          <p className="blink neon-pink comic-sans" style={{ fontSize: '1.2rem' }}>IMAGE SLOT<br/>AWAITING UPLOAD</p>
+        {/* CUMSHOTARMY Image */}
+        <div className="chaos-box shake-hover" style={{ width: '50%', margin: 0, padding: 0, overflow: 'hidden' }}>
+          <img src="/cumshotarmy.jpg" alt="The CUMSHOTARMY" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
         </div>
       </div>
 
