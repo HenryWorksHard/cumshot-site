@@ -775,7 +775,9 @@ This error was caused by: SKILL_ISSUE
       </div>
 
       {/* CUMTEK WORKFLOW DIAGRAM */}
-      <div className="chaos-box" style={{ textAlign: 'center', margin: '20px 0', padding: '20px' }}>
+      <div className="chaos-box" style={{ textAlign: 'center', margin: '20px 0', padding: '20px', backgroundImage: 'url(/cumtek-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.7)' }}></div>
+        <div style={{ position: 'relative', zIndex: 1 }}>
         <h2 className="shake neon-cyan comic-sans" style={{ marginBottom: '30px' }}>
           ⚙️ CUMTEK BUILD PROTOCOL ⚙️
         </h2>
@@ -854,29 +856,36 @@ This error was caused by: SKILL_ISSUE
         <p className="glitch comic-sans" style={{ marginTop: '20px', fontSize: '12px', color: '#ff00ff' }}>
           ∞ INFINITE BUILD CYCLE • ONLY TEK MATTERS • SOPHIE RAIN APPROVED ∞
         </p>
+        </div>
       </div>
 
-      {/* KAOMOJI ARMY */}
-      <div className="chaos-box chaos-box-green shake-hover" style={{ textAlign: 'center' }}>
-        <h3 className="rgb-split comic-sans">THE CUMSHOTARMY™ SAYS:</h3>
-        <p className="float" style={{ fontSize: '2rem' }}>
-          (╯°□°）╯︵ ┻━┻
-        </p>
-        <p style={{ fontSize: '2rem' }} className="glitch">
-          ┬─┬ノ( º _ ºノ)
-        </p>
-        <p className="shake" style={{ fontSize: '2rem' }}>
-          (ノಠ益ಠ)ノ彡┻━┻
-        </p>
-        <p style={{ fontSize: '2rem' }} className="blink">
-          ( ͡° ͜ʖ ͡°)
-        </p>
-        <p className="glitch-intense" style={{ fontSize: '2rem' }}>
-          ಠ_ಠ
-        </p>
-        <p className="neon-cyan spin" style={{ fontSize: '1.5rem', display: 'inline-block' }}>
-          ʕ•ᴥ•ʔ
-        </p>
+      {/* KAOMOJI ARMY - Split Section */}
+      <div style={{ display: 'flex', gap: '10px', margin: '20px 8px' }}>
+        <div className="chaos-box chaos-box-green shake-hover" style={{ textAlign: 'center', width: '50%', margin: 0 }}>
+          <h3 className="rgb-split comic-sans">THE CUMSHOTARMY™ SAYS:</h3>
+          <p className="float" style={{ fontSize: '2rem' }}>
+            (╯°□°）╯︵ ┻━┻
+          </p>
+          <p style={{ fontSize: '2rem' }} className="glitch">
+            ┬─┬ノ( º _ ºノ)
+          </p>
+          <p className="shake" style={{ fontSize: '2rem' }}>
+            (ノಠ益ಠ)ノ彡┻━┻
+          </p>
+          <p style={{ fontSize: '2rem' }} className="blink">
+            ( ͡° ͜ʖ ͡°)
+          </p>
+          <p className="glitch-intense" style={{ fontSize: '2rem' }}>
+            ಠ_ಠ
+          </p>
+          <p className="neon-cyan spin" style={{ fontSize: '1.5rem', display: 'inline-block' }}>
+            ʕ•ᴥ•ʔ
+          </p>
+        </div>
+        {/* Placeholder for second image - 50% width */}
+        <div className="chaos-box" style={{ width: '50%', margin: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#1a0a1a', border: '2px dashed #ff00ff' }}>
+          <p className="blink neon-pink comic-sans" style={{ fontSize: '1.2rem' }}>IMAGE SLOT<br/>AWAITING UPLOAD</p>
+        </div>
       </div>
 
       {/* MINI WHITEPAPER TEASER */}
