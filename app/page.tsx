@@ -577,6 +577,21 @@ This error was caused by: SKILL_ISSUE
               CA: COMING SOON
             </button>
           </div>
+          {/* FAKE ADULT SITE LOGOS - LEFT SIDE */}
+          <div style={{ position: 'absolute', left: '20px', top: '50%', transform: 'translateY(-50%)', display: 'flex', flexDirection: 'column', gap: '8px', zIndex: 10 }}>
+            <div style={{ background: '#000', padding: '6px 12px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '14px', color: '#fff', display: 'flex', alignItems: 'center' }}>
+              <span style={{ color: '#ff9000' }}>Porn</span><span style={{ color: '#000', background: '#ff9000', padding: '0 4px', marginLeft: '2px' }}>hub</span>
+            </div>
+            <div style={{ background: '#00aff0', padding: '6px 12px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '14px', color: '#fff', letterSpacing: '1px' }}>
+              OnlyFans
+            </div>
+            <div style={{ background: '#ff9000', padding: '6px 12px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '14px', color: '#fff', fontStyle: 'italic' }}>
+              BRAZZERS
+            </div>
+            <div style={{ background: '#c00', padding: '6px 12px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '14px', color: '#fff' }}>
+              XVIDEOS
+            </div>
+          </div>
           <img src="/cumshot-crew.jpg" alt="CUMSHOT CREW" style={{ width: '100%', display: 'block' }} />
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
             <h1 style={{ fontSize: '4rem', marginBottom: '0', color: '#fff', textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000' }} className="glitch">
@@ -746,23 +761,7 @@ This error was caused by: SKILL_ISSUE
         </div>
       </div>
 
-      {/* ANIMATED GIF BACKGROUND SECTION */}
-      <div className="gif-bg-section">
-        <div className="gif-overlay"></div>
-        <h2 className="comic-sans neon-green glitch" style={{ position: 'relative', zIndex: 2 }}>
-           WELCOME TO THE GIF ZONE 
-        </h2>
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', position: 'relative', zIndex: 2 }}>
-          <div className="fake-gif spin"></div>
-          <div className="fake-gif float"></div>
-          <div className="fake-gif shake"></div>
-          <div className="fake-gif blink"></div>
-          <div className="fake-gif rgb-split"></div>
-        </div>
-        <div className="bounce-text comic-sans" style={{ fontSize: '24px', color: '#ff00ff' }}>
-          ★彡 ANIMATED GIF BACKGROUND (imagine fire.gif here) 彡★
-        </div>
-      </div>
+
 
       {/* VISITOR COUNTER */}
       <div className="visitor-section">
