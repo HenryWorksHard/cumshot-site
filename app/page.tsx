@@ -557,6 +557,25 @@ This error was caused by: SKILL_ISSUE
       <div style={{ textAlign: 'center', marginBottom: '40px', margin: '0 -20px' }}>
         {/* CUMSHOT CREW - HERO IMAGE */}
         <div className="hero-character" style={{ position: 'relative', width: '100%' }}>
+          {/* 3 BUTTONS ROW ON TOP OF IMAGE */}
+          <div style={{ position: 'absolute', top: '15px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '10px', zIndex: 10 }}>
+            <a href="https://x.com/cumshotonsolana" target="_blank" rel="noopener noreferrer" className="chaos-btn" style={{ padding: '8px 20px', fontSize: '14px', background: '#000', border: '2px solid #fff' }}>
+              X
+            </a>
+            <a href="#" className="chaos-btn" style={{ padding: '8px 20px', fontSize: '14px', background: '#ff00ff', border: '2px solid #fff' }}>
+              Buy $CUM
+            </a>
+            <button 
+              onClick={() => {
+                navigator.clipboard.writeText('COMING SOON')
+                alert('CA copied! (Coming soon)')
+              }}
+              className="chaos-btn" 
+              style={{ padding: '8px 20px', fontSize: '14px', background: '#000', border: '2px solid #00ff00', color: '#00ff00' }}
+            >
+              CA: COMING SOON
+            </button>
+          </div>
           <img src="/cumshot-crew.jpg" alt="CUMSHOT CREW" style={{ width: '100%', display: 'block' }} />
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center' }}>
             <h1 style={{ fontSize: '4rem', marginBottom: '0', color: '#fff', textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000' }} className="glitch">
@@ -570,79 +589,20 @@ This error was caused by: SKILL_ISSUE
             </span>
           </div>
         </div>
-        
-        <div className="under-construction" style={{ margin: '20px auto', maxWidth: '500px' }}>
-          <span className="blink-fast"></span> UNDER ETERNAL CONSTRUCTION <span className="blink-fast"></span>
-        </div>
-
-        {/* COUNTDOWN TO "THE THING" (counts UP) */}
-        <div className="countdown-container shake-hover">
-          <h3 className="comic-sans glitch"> TIME UNTIL THE THING </h3>
-          <div className="countdown-display neon-green">
-            {formatCountdown(countdownTime)}
-          </div>
-          <p className="comic-sans blink" style={{ fontSize: '10px', color: 'red' }}>
-            (wait... why is it going up?)
-          </p>
-        </div>
-
-        {/* BROKEN BUTTONS ROW */}
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', margin: '20px 0' }}>
-          <RunAwayElement>
-            <button className="chaos-btn run-away" onClick={handleDownloadWhitepaper}>
-               DOWNLOAD WHITEPAPER
-            </button>
-          </RunAwayElement>
-          <RunAwayElement>
-            <button className="chaos-btn run-away" onClick={handleConnectWallet}>
-               CONNECT WALLET
-            </button>
-          </RunAwayElement>
-          <RunAwayElement>
-            <button className="chaos-btn run-away" onClick={handleBuyToken}>
-               BUY $CUMSHOT TOKEN
-            </button>
-          </RunAwayElement>
-        </div>
-
-        <div style={{ margin: '20px 0' }}>
-          <button className="chaos-btn shake-hover">
-             BUY CUMSHOT NOW <span className="blink">(NOT LIVE YET IDIOT)</span>
-          </button>
-        </div>
-
-        {/* MIDI PLAYER BUTTON */}
-        <div className="midi-player">
-          <button onClick={playMidi} className={`midi-btn ${midiPlaying ? 'shake' : ''}`}>
-             {midiPlaying ? ' PLAYING... ' : 'PLAY MIDI'} 
-          </button>
-          <span className="comic-sans" style={{ fontSize: '10px' }}>requires RealPlayer™</span>
-        </div>
-
-        {/* FLASHING WARNING */}
-        <div className="danger-zone" style={{ 
-          padding: '10px', 
-          margin: '20px auto', 
-          maxWidth: '400px',
-          color: '#fff',
-          fontWeight: 'bold'
-        }}>
-          <span className="emergency-blink"> SEIZURE WARNING </span>
-        </div>
       </div>
-      {/* FULL WIDTH ORIGIN SECTION */}
-      <div className="full-width-section" style={{ margin: '0 -20px', padding: '0 20px' }}>
+      {/* FULL WIDTH ORIGIN SECTION - NO GAP */}
+      <div className="full-width-section" style={{ margin: '0 -20px', marginTop: '-1px', padding: '0 20px' }}>
         <div className="origin-layout" style={{ display: 'flex', gap: '10px', alignItems: 'stretch' }}>
           {/* LEFT SIDE - ORIGIN STORY (68%) */}
           <div className="chaos-box shake-hover" style={{ flex: '0 0 68%', minWidth: 0, marginBottom: 0, position: 'relative', overflow: 'hidden' }}>
-            {/* Background characters */}
-            <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '10%', right: '5%', width: '80px', opacity: 0.15, transform: 'rotate(10deg)' }} />
-            <img src="/char-flowers.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '15%', right: '15%', width: '70px', opacity: 0.12, transform: 'rotate(-5deg)' }} />
-            <img src="/char-fountain.png" alt="" className="bg-char" style={{ position: 'absolute', top: '40%', right: '2%', width: '90px', opacity: 0.1, transform: 'rotate(15deg)' }} />
-            <img src="/char-jumprope.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '5%', right: '35%', width: '60px', opacity: 0.12, transform: 'rotate(-10deg)' }} />
-            <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '60%', right: '25%', width: '50px', opacity: 0.08, transform: 'scaleX(-1) rotate(5deg)' }} />
-            <img src="/cummy.png" alt="" className="bg-char" style={{ position: 'absolute', top: '25%', right: '40%', width: '65px', opacity: 0.12, transform: 'rotate(-8deg)' }} />
-            <img src="/cummy.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '25%', right: '8%', width: '55px', opacity: 0.1, transform: 'scaleX(-1) rotate(12deg)' }} />
+            {/* Background characters - more visible */}
+            <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '10%', right: '5%', width: '80px', opacity: 0.35, transform: 'rotate(10deg)' }} />
+            <img src="/char-flowers.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '15%', right: '15%', width: '70px', opacity: 0.3, transform: 'rotate(-5deg)' }} />
+            <img src="/char-fountain.png" alt="" className="bg-char" style={{ position: 'absolute', top: '40%', right: '2%', width: '90px', opacity: 0.25, transform: 'rotate(15deg)' }} />
+            <img src="/char-jumprope.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '5%', right: '35%', width: '60px', opacity: 0.3, transform: 'rotate(-10deg)' }} />
+            <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '60%', right: '25%', width: '50px', opacity: 0.2, transform: 'scaleX(-1) rotate(5deg)' }} />
+            <img src="/cummy.png" alt="" className="bg-char" style={{ position: 'absolute', top: '25%', right: '40%', width: '65px', opacity: 0.3, transform: 'rotate(-8deg)' }} />
+            <img src="/cummy.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '25%', right: '8%', width: '55px', opacity: 0.25, transform: 'scaleX(-1) rotate(12deg)' }} />
             
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative', zIndex: 1 }}>
               <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-side spin" style={{ width: '120px', flexShrink: 0 }} />
@@ -686,29 +646,6 @@ This error was caused by: SKILL_ISSUE
 > [03:48:00] CUMMY INPUT RECEIVED
 > [STATUS] PROTOCOL 67: RUNNING
 > [STATUS] EXTERNAL: REJECTED`}</pre>
-            </div>
-            
-            {/* COMPACT GUESTBOOK */}
-            <div className="chaos-box shake-hover" style={{ flex: 1, marginBottom: 0 }}>
-              <h3 className="comic-sans rainbow" style={{ fontSize: '1rem', marginBottom: '10px', textAlign: 'center' }}> GUESTBOOK </h3>
-              <form onSubmit={signGuestbook} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <input type="text" placeholder="Your Name" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
-                <input type="text" placeholder="Message" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
-                <button type="submit" className="chaos-btn shake-hover" style={{ padding: '8px', fontSize: '12px' }}>
-                   SIGN 
-                </button>
-              </form>
-              <div style={{ marginTop: '10px', fontSize: '11px', maxHeight: '80px', overflow: 'auto' }}>
-                <div className="guestbook-entry" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
-                  <b>xX_CryptoKing_Xx</b>: cool site!!!11
-                </div>
-                <div className="guestbook-entry blink" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
-                  <b>[DELETED]</b>: [REMOVED]
-                </div>
-                <div className="guestbook-entry" style={{ padding: '4px 0' }}>
-                  <b>Anonymous</b>: lost all SOL 10/10
-                </div>
-              </div>
             </div>
           </div>
         </div>
