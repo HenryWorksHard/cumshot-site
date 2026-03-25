@@ -387,7 +387,7 @@ export default function Home() {
 
   return (
     <main style={{ 
-      padding: '20px',
+      padding: '0 20px 20px 20px',
       background: flashBg ? '#ff0000' : 'transparent',
       transition: 'background 0.05s'
     }}>
