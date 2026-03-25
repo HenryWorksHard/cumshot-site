@@ -632,9 +632,9 @@ This error was caused by: SKILL_ISSUE
       </div>
       {/* FULL WIDTH ORIGIN SECTION */}
       <div className="full-width-section" style={{ margin: '0 -20px', padding: '0 20px' }}>
-        <div className="origin-layout" style={{ display: 'flex', gap: '15px', alignItems: 'stretch' }}>
-          {/* LEFT SIDE - ORIGIN STORY (70%) */}
-          <div className="chaos-box shake-hover" style={{ flex: '0 0 70%', minWidth: 0, marginBottom: 0, position: 'relative', overflow: 'hidden' }}>
+        <div className="origin-layout" style={{ display: 'flex', gap: '10px', alignItems: 'stretch' }}>
+          {/* LEFT SIDE - ORIGIN STORY (68%) */}
+          <div className="chaos-box shake-hover" style={{ flex: '0 0 68%', minWidth: 0, marginBottom: 0, position: 'relative', overflow: 'hidden' }}>
             {/* Background characters */}
             <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '10%', right: '5%', width: '80px', opacity: 0.15, transform: 'rotate(10deg)' }} />
             <img src="/char-flowers.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '15%', right: '15%', width: '70px', opacity: 0.12, transform: 'rotate(-5deg)' }} />
@@ -666,8 +666,8 @@ This error was caused by: SKILL_ISSUE
             </div>
           </div>
           
-          {/* RIGHT SIDE - PROTOCOL LOG + GUESTBOOK (30%) */}
-          <div style={{ flex: '0 0 calc(30% - 15px)', display: 'flex', flexDirection: 'column', gap: '15px', minWidth: 0 }}>
+          {/* RIGHT SIDE - PROTOCOL LOG + GUESTBOOK (32%) */}
+          <div style={{ flex: '0 0 calc(32% - 10px)', display: 'flex', flexDirection: 'column', gap: '10px', minWidth: 0 }}>
             {/* DAILY OPERATIONS LOG - COMPACT */}
             <div className="chaos-box vhs-effect" style={{ background: '#000', color: '#00ff00', flex: 1, marginBottom: 0, overflow: 'hidden' }}>
               <h3 className="glitch comic-sans" style={{ fontFamily: 'VT323, monospace', borderBottom: '2px solid #00ff00', fontSize: '1rem', marginBottom: '10px' }}>
