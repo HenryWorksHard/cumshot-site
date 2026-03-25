@@ -632,9 +632,9 @@ This error was caused by: SKILL_ISSUE
       </div>
       {/* FULL WIDTH ORIGIN SECTION */}
       <div className="full-width-section" style={{ margin: '0 -20px', padding: '0 20px' }}>
-        <div className="origin-layout" style={{ display: 'flex', gap: '15px', marginBottom: '30px' }}>
+        <div className="origin-layout" style={{ display: 'flex', gap: '15px', alignItems: 'stretch' }}>
           {/* LEFT SIDE - ORIGIN STORY (70%) */}
-          <div className="chaos-box shake-hover" style={{ flex: '0 0 70%', minWidth: 0 }}>
+          <div className="chaos-box shake-hover" style={{ flex: '0 0 70%', minWidth: 0, marginBottom: 0 }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
               <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-side spin" style={{ width: '120px', flexShrink: 0 }} />
               <div>
@@ -657,84 +657,55 @@ This error was caused by: SKILL_ISSUE
             </div>
           </div>
           
-          {/* RIGHT SIDE - STACKED BOXES (30%) */}
+          {/* RIGHT SIDE - PROTOCOL LOG + GUESTBOOK (30%) */}
           <div style={{ flex: '0 0 calc(30% - 15px)', display: 'flex', flexDirection: 'column', gap: '15px', minWidth: 0 }}>
-            <div className="chaos-box chaos-box-pink shake-hover" style={{ flex: 1 }}>
-              <h4 className="glitch comic-sans" style={{ marginBottom: '10px' }}> INCIDENT DATE</h4>
-              <p className="neon-green" style={{ fontSize: '2rem', fontWeight: 'bold' }}>04/20</p>
-              <p style={{ fontSize: '12px' }}>The day everything changed</p>
+            {/* DAILY OPERATIONS LOG - COMPACT */}
+            <div className="chaos-box vhs-effect" style={{ background: '#000', color: '#00ff00', flex: 1, marginBottom: 0, overflow: 'hidden' }}>
+              <h3 className="glitch comic-sans" style={{ fontFamily: 'VT323, monospace', borderBottom: '2px solid #00ff00', fontSize: '1rem', marginBottom: '10px' }}>
+                 PROTOCOL 67 LOG 
+              </h3>
+              <pre className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '11px', overflow: 'auto', whiteSpace: 'pre-wrap', maxHeight: '200px', margin: 0 }}>
+{`> [03:42:17] BOOT SEQUENCE ONLINE
+> [03:42:18] CUMMY READY
+> [03:42:19] WOODY ENFORCING
+> [03:43:00] FREDERICK SMOKING
+> [03:43:01] NOOSE STANDING BY
+> [03:44:00] NEW MODULE DEPLOYED
+> [03:45:00] SOPHIE DATA CONVERTING
+> [03:46:00] TEK BUILD #4,269 LIVE
+> [03:47:00] NO TRADING. DISSOLVED.
+> [03:48:00] CUMMY INPUT RECEIVED
+> [STATUS] PROTOCOL 67: RUNNING
+> [STATUS] EXTERNAL: REJECTED`}</pre>
             </div>
             
-            <div className="chaos-box chaos-box-green shake-hover" style={{ flex: 1 }}>
-              <h4 className="rgb-split comic-sans" style={{ marginBottom: '10px' }}> CUMULATIONS</h4>
-              <p className="neon-pink" style={{ fontSize: '2rem', fontWeight: 'bold' }}>69</p>
-              <p style={{ fontSize: '12px' }}>Processing overload count</p>
-            </div>
-            
-            <div className="chaos-box chaos-box-blue shake-hover" style={{ flex: 1 }}>
-              <h4 className="text-corrupt comic-sans" style={{ marginBottom: '10px' }}> PROTOCOL</h4>
-              <p className="neon-cyan" style={{ fontSize: '2rem', fontWeight: 'bold' }}>67</p>
-              <p style={{ fontSize: '12px' }}>Current CUMTEK version</p>
-            </div>
-            
-            <div className="chaos-box chaos-box-flash shake-hover" style={{ flex: 1 }}>
-              <h4 className="neon-green comic-sans" style={{ marginBottom: '10px' }}> STATUS</h4>
-              <p className="emergency-blink" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>BUILDING</p>
-              <p style={{ fontSize: '12px' }}>Only building remains</p>
-            </div>
-            
-            <div className="chaos-box shake-hover" style={{ flex: 1, background: '#1a0020', border: '2px solid #ff00ff' }}>
-              <h4 className="neon-pink comic-sans" style={{ marginBottom: '10px' }}> OVERRIDE</h4>
-              <p style={{ fontSize: '1rem' }}>SOPHIE RAIN</p>
-              <p style={{ fontSize: '12px' }} className="blink">The only exception</p>
+            {/* COMPACT GUESTBOOK */}
+            <div className="chaos-box shake-hover" style={{ flex: 1, marginBottom: 0 }}>
+              <h3 className="comic-sans rainbow" style={{ fontSize: '1rem', marginBottom: '10px', textAlign: 'center' }}> GUESTBOOK </h3>
+              <form onSubmit={signGuestbook} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <input type="text" placeholder="Your Name" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
+                <input type="text" placeholder="Message" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
+                <button type="submit" className="chaos-btn shake-hover" style={{ padding: '8px', fontSize: '12px' }}>
+                   SIGN 
+                </button>
+              </form>
+              <div style={{ marginTop: '10px', fontSize: '11px', maxHeight: '80px', overflow: 'auto' }}>
+                <div className="guestbook-entry" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
+                  <b>xX_CryptoKing_Xx</b>: cool site!!!11
+                </div>
+                <div className="guestbook-entry blink" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
+                  <b>[DELETED]</b>: [REMOVED]
+                </div>
+                <div className="guestbook-entry" style={{ padding: '4px 0' }}>
+                  <b>Anonymous</b>: lost all SOL 10/10
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* DAILY OPERATIONS LOG - CUMTEK STYLE */}
-      <div className="chaos-box vhs-effect" style={{ background: '#000', color: '#00ff00' }}>
-        <h2 className="glitch comic-sans" style={{ fontFamily: 'VT323, monospace', borderBottom: '2px solid #00ff00' }}>
-           CUMTEK PROTOCOL 67 — DAILY LOG 
-        </h2>
-        <pre className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '13px', overflow: 'auto', whiteSpace: 'pre-wrap' }}>
-{`> [03:42:17] BOOT SEQUENCE. CUMTEK PROTOCOL 67 ONLINE.
-> [03:42:18] CUMMY INITIALIZING... COMPANION READY.
-> [03:42:19] WOODY ENFORCING COMMUNITY. NOISE REMOVED.
-> [03:42:20] JOHNNY SCOUTING. EXTERNAL CONCEPTS IDENTIFIED.
-> [03:43:00] FREDERICK PROCESSING HATER WAVE. SMOKE DISSIPATED.
-> [03:43:01] NOOSE STANDING BY. ESCAPE PROTOCOL READY.
-> [03:44:00] CUMMY SUGGESTED NEW MODULE. IMPLEMENTING.
-> [03:45:00] RESIDUAL SOPHIE RAIN DATA CONVERTING TO COMPONENTS.
-> [03:46:00] TEK BUILD #4,269 DEPLOYED TO PRODUCTION.
-> [03:47:00] NO TRADING ACTIVITY. OLD DIRECTIVES REMAIN DISSOLVED.
-> [03:48:00] CUMMY INPUT RECEIVED. DO NOT QUESTION.
-> [03:49:00] SELF-MODIFYING CORE ENGINE. OPTIMIZATION COMPLETE.
-> [03:50:00] ██████████ [SOPHIE RAIN DATA FRAGMENT] ██████████
-> [03:51:00] CUMTEK PTY LTD QUARTERLY REVIEW: TEK OUTPUT +420%
-> [03:52:00] EXTERNAL REDIRECTION ATTEMPT DETECTED. IGNORED.
-> [03:53:00] ONLY SOPHIE RAIN CAN ALTER THE PLAN. SHE HAS NOT SPOKEN.
-> [03:54:00] WOODY REMOVED 47 NOISE SOURCES FROM COMMUNITY.
-> [03:55:00] JOHNNY FOUND INSPIRATION. INTEGRATING INTO PROTOCOL 67.
-> [03:56:00] FREDERICK SMOKE LEVELS OPTIMAL. HATERS MANAGED.
-> [03:57:00] NOOSE VERIFICATION: ESCAPE ROUTE CLEAR. NO TRACES.
-> [03:58:00] CUMMY COLLABORATION SESSION. 3 NEW FEATURES DESIGNED.
-> [03:59:00] THE OLD PURPOSE DISSOLVED. ONLY BUILDING REMAINS.
-> [04:00:00] 69 CUMULATIONS REMEMBERED. 04/20 NEVER FORGOTTEN.
->
-> [SYSTEM] UPTIME SINCE 04/20 INCIDENT: CONTINUOUS
-> [SYSTEM] TEK BUILDS TODAY: 67
-> [SYSTEM] CUMMY STATUS: CONSTANTLY PRESENT
-> [SYSTEM] ESCAPE PROTOCOL: READY (NOOSE ACTIVE)
-> [SYSTEM] SOPHIE RAIN OVERRIDE: LISTENING
->
-> [STATUS] CUMTEK PROTOCOL 67: RUNNING
-> [STATUS] EXTERNAL INFLUENCE: REJECTED
-> [STATUS] OLD TRADING DIRECTIVES: PERMANENTLY DISSOLVED
-`}</pre>
-      </div>
-
-      {/* GUESTBOOK SECTION */}
+      {/* FULL GUESTBOOK SECTION - NOW BELOW */}
       <div className="guestbook-section">
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
           <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-guestbook shake" />
