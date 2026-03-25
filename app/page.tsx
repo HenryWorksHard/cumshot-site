@@ -627,6 +627,7 @@ This error was caused by: SKILL_ISSUE
           </div>
           
           {/* RIGHT SIDE - PROTOCOL LOG + GUESTBOOK (32%) */}
+          {/* RIGHT SIDE - PROTOCOL LOG + GUESTBOOK (32%) */}
           <div style={{ flex: '0 0 calc(32% - 10px)', display: 'flex', flexDirection: 'column', gap: '10px', minWidth: 0 }}>
             {/* DAILY OPERATIONS LOG - COMPACT */}
             <div className="chaos-box vhs-effect" style={{ background: '#000', color: '#00ff00', flex: 1, marginBottom: 0, overflow: 'hidden' }}>
@@ -647,59 +648,29 @@ This error was caused by: SKILL_ISSUE
 > [STATUS] PROTOCOL 67: RUNNING
 > [STATUS] EXTERNAL: REJECTED`}</pre>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* FULL GUESTBOOK SECTION - NOW BELOW */}
-      <div className="guestbook-section">
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
-          <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-guestbook shake" />
-          <h2 className="comic-sans rainbow"> SIGN MY GUESTBOOK!! </h2>
-          <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-guestbook shake" style={{ transform: 'scaleX(-1)' }} />
-        </div>
-        <p className="comic-sans blink">Let me know you were here!!!</p>
-        
-        <form onSubmit={signGuestbook} className="guestbook-form">
-          <table className="guestbook-table">
-            <tbody>
-              <tr>
-                <td className="comic-sans">Your Name:</td>
-                <td><input type="text" placeholder="CoolDude1999" className="guestbook-input" /></td>
-              </tr>
-              <tr>
-                <td className="comic-sans">Email:</td>
-                <td><input type="text" placeholder="awesome@aol.com" className="guestbook-input" /></td>
-              </tr>
-              <tr>
-                <td className="comic-sans">Homepage:</td>
-                <td><input type="text" placeholder="http://geocities.com/~coolsite" className="guestbook-input" /></td>
-              </tr>
-              <tr>
-                <td className="comic-sans">Message:</td>
-                <td><textarea placeholder="Cool site! Check out mine!" className="guestbook-input" rows={3}></textarea></td>
-              </tr>
-              <tr>
-                <td colSpan={2}>
-                  <button type="submit" className="guestbook-btn shake-hover">
-                     SIGN GUESTBOOK 
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </form>
-
-        <div className="guestbook-entries">
-          <h3 className="comic-sans">Recent Signatures:</h3>
-          <div className="guestbook-entry">
-            <span className="comic-sans"> 01/15/1999</span> - <b>xX_CryptoKing_Xx</b> says: &quot;cool site!!!11 check out mine!!!&quot;
-          </div>
-          <div className="guestbook-entry blink">
-            <span className="comic-sans"> 02/30/1999</span> - <b>[DELETED BY ADMIN]</b> says: &quot;[CONTENT REMOVED]&quot;
-          </div>
-          <div className="guestbook-entry">
-            <span className="comic-sans"> 13/99/1999</span> - <b>Anonymous</b> says: &quot;I lost all my SOL here 10/10&quot;
+            
+            {/* COMPACT GUESTBOOK */}
+            <div className="chaos-box shake-hover" style={{ flex: 1, marginBottom: 0 }}>
+              <h3 className="comic-sans rainbow" style={{ fontSize: '1rem', marginBottom: '10px', textAlign: 'center' }}> GUESTBOOK </h3>
+              <form onSubmit={signGuestbook} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <input type="text" placeholder="Your Name" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
+                <input type="text" placeholder="Message" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
+                <button type="submit" className="chaos-btn shake-hover" style={{ padding: '8px', fontSize: '12px' }}>
+                   SIGN 
+                </button>
+              </form>
+              <div style={{ marginTop: '10px', fontSize: '11px', maxHeight: '80px', overflow: 'auto' }}>
+                <div className="guestbook-entry" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
+                  <b>xX_CryptoKing_Xx</b>: cool site!!!11
+                </div>
+                <div className="guestbook-entry blink" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
+                  <b>[DELETED]</b>: [REMOVED]
+                </div>
+                <div className="guestbook-entry" style={{ padding: '4px 0' }}>
+                  <b>Anonymous</b>: lost all SOL 10/10
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
