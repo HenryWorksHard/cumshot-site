@@ -775,11 +775,11 @@ This error was caused by: SKILL_ISSUE
       </div>
 
       {/* CUMTEK WORKFLOW DIAGRAM */}
-      <div style={{ textAlign: 'center', margin: '20px 0', padding: '20px' }}>
+      <div className="chaos-box" style={{ textAlign: 'center', margin: '20px 0', padding: '20px' }}>
         <h2 className="shake neon-cyan comic-sans" style={{ marginBottom: '30px' }}>
           ⚙️ CUMTEK BUILD PROTOCOL ⚙️
         </h2>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '15px', flexWrap: 'wrap' }}>
           {/* Box 1: INPUT */}
           <div className="workflow-box shake-hover" style={{ background: '#1a0a1a', border: '2px solid #ff00ff', borderRadius: '8px', padding: '15px', width: '180px', height: '140px', position: 'relative', overflow: 'hidden' }}>
             <h4 className="neon-pink comic-sans" style={{ marginBottom: '8px', fontSize: '14px' }}>01. DIRECTIVE INTAKE</h4>
@@ -797,7 +797,7 @@ This error was caused by: SKILL_ISSUE
             </div>
           </div>
           {/* Arrow 1 */}
-          <div className="workflow-arrow blink" style={{ fontSize: '24px', color: '#ff00ff', padding: '0 10px' }}>→</div>
+          <div className="workflow-arrow blink" style={{ fontSize: '24px', color: '#ff00ff' }}>→</div>
           {/* Box 2: PROCESS */}
           <div className="workflow-box shake-hover" style={{ background: '#0a1a0a', border: '2px solid #00ff00', borderRadius: '8px', padding: '15px', width: '180px', height: '140px', position: 'relative', overflow: 'hidden' }}>
             <h4 className="neon-green comic-sans" style={{ marginBottom: '8px', fontSize: '14px' }}>02. TEK SYNTHESIS</h4>
@@ -815,7 +815,7 @@ This error was caused by: SKILL_ISSUE
             </div>
           </div>
           {/* Arrow 2 */}
-          <div className="workflow-arrow blink" style={{ fontSize: '24px', color: '#00ff00', padding: '0 10px' }}>→</div>
+          <div className="workflow-arrow blink" style={{ fontSize: '24px', color: '#00ff00' }}>→</div>
           {/* Box 3: OUTPUT */}
           <div className="workflow-box shake-hover" style={{ background: '#1a1a0a', border: '2px solid #ffff00', borderRadius: '8px', padding: '15px', width: '180px', height: '140px', position: 'relative', overflow: 'hidden' }}>
             <h4 className="rainbow comic-sans" style={{ marginBottom: '8px', fontSize: '14px' }}>03. DEPLOYMENT</h4>
@@ -833,7 +833,7 @@ This error was caused by: SKILL_ISSUE
             </div>
           </div>
           {/* Arrow 3 */}
-          <div className="workflow-arrow blink" style={{ fontSize: '24px', color: '#ffff00', padding: '0 10px' }}>→</div>
+          <div className="workflow-arrow blink" style={{ fontSize: '24px', color: '#ffff00' }}>→</div>
           {/* Box 4: LOOP */}
           <div className="workflow-box shake-hover" style={{ background: '#1a0a0a', border: '2px solid #ff0000', borderRadius: '8px', padding: '15px', width: '180px', height: '140px', position: 'relative', overflow: 'hidden' }}>
             <h4 className="neon-red comic-sans" style={{ marginBottom: '8px', fontSize: '14px' }}>04. ETERNAL LOOP</h4>
