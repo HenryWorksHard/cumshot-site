@@ -685,9 +685,9 @@ This error was caused by: SKILL_ISSUE
       </div>
 
       {/* CUMTEK PTY LTD - THE TEAM */}
-      <div className="chaos-box" style={{ marginBottom: '30px' }}>
+      <div className="chaos-box" style={{ marginBottom: '8px' }}>
         <h2 className="neon-pink comic-sans" style={{ textAlign: 'center' }}> CUMTEK PTY LTD — THE TEAM </h2>
-        <p style={{ textAlign: 'center', marginBottom: '20px' }}>Entities exposed to residual energy from the 04/20 incident</p>
+        <p style={{ textAlign: 'center', marginBottom: '10px' }}>Entities exposed to residual energy from the 04/20 incident</p>
       </div>
       <div className="systems-grid">
         {cumtekTeam.map((member, i) => (
@@ -701,7 +701,7 @@ This error was caused by: SKILL_ISSUE
       </div>
 
       {/* PROPRIETARY SYSTEMS */}
-      <div className="systems-grid" style={{ marginTop: '30px' }}>
+      <div className="systems-grid" style={{ marginTop: '8px' }}>
         <div className="chaos-box chaos-box-pink shake-hover">
           <img src="/cumshot.png" alt="CUMTEK" className="system-icon" />
           <h4 className="glitch comic-sans">CUMTEK PROTOCOL 67™</h4>
@@ -761,7 +761,7 @@ This error was caused by: SKILL_ISSUE
       </div>
 
       {/* RANDOM CHAOS SECTION */}
-      <div style={{ textAlign: 'center', margin: '40px 0' }}>
+      <div style={{ textAlign: 'center', margin: '10px 0' }}>
         <h2 className="shake neon-red comic-sans" style={{ color: 'red' }}>
            IMPORTANT LINKS (NONE OF THEM WORK) 
         </h2>
@@ -781,7 +781,7 @@ This error was caused by: SKILL_ISSUE
       </div>
 
       {/* BROKEN IMAGES ROW - LOADING FOREVER */}
-      <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', margin: '40px 0', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', margin: '10px 0', flexWrap: 'wrap' }}>
         <div className="broken-img">IMG NOT<br/>FOUND</div>
         <div className="loading-spinner" />
         <div className="broken-img shake">404<br/>COPE</div>
@@ -831,7 +831,7 @@ This error was caused by: SKILL_ISSUE
       </div>
 
       {/* CONTRACT ADDRESS (PLACEHOLDER) */}
-      <div className="vhs-effect" style={{ textAlign: 'center', margin: '60px 0', padding: '20px', background: '#000', color: '#00ff00' }}>
+      <div className="vhs-effect" style={{ textAlign: 'center', margin: '10px 8px', padding: '15px', background: '#000', color: '#00ff00' }}>
         <h2 className="emergency-blink neon-green comic-sans"> CONTRACT ADDRESS </h2>
         <p className="glitch" style={{ fontFamily: 'monospace', fontSize: '1.2rem', wordBreak: 'break-all' }}>
           [NOT_DEPLOYED_YET_STOP_ASKING]
@@ -903,7 +903,8 @@ This error was caused by: SKILL_ISSUE
 
       {/* EXTRA CHAOS SECTION */}
       <div className="flash-bg-slow" style={{ 
-        padding: '30px', 
+        padding: '15px', 
+        margin: '8px',
         textAlign: 'center',
         border: '5px dashed #000'
       }}>
