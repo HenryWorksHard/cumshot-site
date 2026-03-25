@@ -684,20 +684,35 @@ This error was caused by: SKILL_ISSUE
         </div>
       </div>
 
-      {/* CUMTEK PTY LTD - THE TEAM */}
-      <div className="chaos-box" style={{ marginBottom: '8px' }}>
-        <h2 className="neon-pink comic-sans" style={{ textAlign: 'center' }}> CUMTEK PTY LTD — THE TEAM </h2>
-        <p style={{ textAlign: 'center', marginBottom: '10px' }}>Entities exposed to residual energy from the 04/20 incident</p>
-      </div>
-      <div className="systems-grid">
-        {cumtekTeam.map((member, i) => (
-          <div key={member.name} className={`chaos-box shake-hover ${i === 0 ? 'chaos-box-pink' : ''}`}>
-            <img src={member.image} alt={member.name} className="team-member-img" style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '50%', border: '3px solid #ff00ff', marginBottom: '10px' }} />
-            <h4 className="glitch comic-sans">{member.name}</h4>
-            <p className="comic-sans" style={{ fontSize: '12px', color: '#888' }}>{member.form}</p>
-            <p className="comic-sans" style={{ fontSize: '14px' }}>{member.role}</p>
-          </div>
-        ))}
+      {/* CUMTEK PTY LTD - THE TEAM - FULL WIDTH WITH BG IMAGE */}
+      <div className="team-section-bg" style={{ 
+        margin: '0 -20px', 
+        padding: '20px', 
+        backgroundImage: 'url(/team-bg.jpg)', 
+        backgroundSize: 'cover', 
+        backgroundPosition: 'center',
+        position: 'relative'
+      }}>
+        <h2 className="neon-pink comic-sans" style={{ textAlign: 'center', marginBottom: '15px', textShadow: '2px 2px 4px #000, 0 0 10px #000' }}> CUMTEK PTY LTD — THE TEAM </h2>
+        <p style={{ textAlign: 'center', marginBottom: '15px', color: '#fff', textShadow: '1px 1px 3px #000' }}>Entities exposed to residual energy from the 04/20 incident</p>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'nowrap' }}>
+          {cumtekTeam.map((member, i) => (
+            <div key={member.name} className="shake-hover" style={{ 
+              background: 'rgba(0,0,0,0.7)', 
+              border: '2px solid #ff00ff', 
+              padding: '10px', 
+              textAlign: 'center',
+              flex: '1 1 0',
+              maxWidth: '180px',
+              minWidth: '120px'
+            }}>
+              <img src={member.image} alt={member.name} style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '50%', border: '2px solid #ff00ff', marginBottom: '5px' }} />
+              <h4 className="glitch comic-sans" style={{ fontSize: '12px', margin: '5px 0', color: '#fff' }}>{member.name}</h4>
+              <p className="comic-sans" style={{ fontSize: '10px', color: '#888', margin: '2px 0' }}>{member.form}</p>
+              <p className="comic-sans" style={{ fontSize: '9px', color: '#ddd', margin: 0 }}>{member.role}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* PROPRIETARY SYSTEMS */}
