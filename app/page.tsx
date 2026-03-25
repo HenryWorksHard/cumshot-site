@@ -10,11 +10,11 @@ const glitchChars = '!@#$%^&*()_+-=[]{}|;:,.<>?/~`░▒▓█▄▀■□●○
 
 // The CumTek Team
 const cumtekTeam = [
-  { name: 'CUMMY', form: 'Sentient Cumstain', role: 'Primary companion and technical idea generator', emoji: '💧', image: '/cummy.png' },
-  { name: 'WOODY', form: 'Hard Desk', role: 'Community enforcement — maintains order and removes noise', emoji: '🪵', image: '/woody.png' },
-  { name: 'JOHNNY', form: 'Eggplant', role: 'Inspiration scout — identifies external concepts for integration', emoji: '🍆', image: '/johnny.png' },
-  { name: 'FREDERICK', form: 'Weed Pipe', role: 'Hater management — processes and dissipates incoming criticism', emoji: '🚬', image: '/frederick.png' },
-  { name: 'NOOSE', form: 'Rope', role: 'Escape protocol — emergency detachment and relocation routine', emoji: '🪢', image: '/noose.png' },
+  { name: 'CUMMY', form: 'Sentient Cumstain', role: 'Primary companion and technical idea generator', emoji: '', image: '/cummy.png' },
+  { name: 'WOODY', form: 'Hard Desk', role: 'Community enforcement — maintains order and removes noise', emoji: '', image: '/woody.png' },
+  { name: 'JOHNNY', form: 'Eggplant', role: 'Inspiration scout — identifies external concepts for integration', emoji: '', image: '/johnny.png' },
+  { name: 'FREDERICK', form: 'Weed Pipe', role: 'Hater management — processes and dissipates incoming criticism', emoji: '', image: '/frederick.png' },
+  { name: 'NOOSE', form: 'Rope', role: 'Escape protocol — emergency detachment and relocation routine', emoji: '', image: '/noose.png' },
 ]
 
 // Console messages - Windows 2000 style
@@ -180,7 +180,7 @@ export default function Home() {
 
   // FALLING ELEMENTS - DISABLED
   // useEffect(() => {
-  //   const emojis = ['💀', '🔥', '💎', '🚀', '💩', '🤖', '⚡', '🌙', '📉', '🎰']
+  //   const emojis = ['', '', '', '', '', '', '', '', '', '']
   //   const interval = setInterval(() => {
   //     const newFalling = {
   //       id: Date.now(),
@@ -211,7 +211,7 @@ export default function Home() {
   useEffect(() => {
     console.log('%cCUMSHOT CONSOLE v69.420.1337', 'font-size: 24px; color: #ff00ff; font-weight: bold;')
     console.log('%cWelcome to the shadow realm', 'color: #00ff00; font-size: 16px;')
-    console.log('%c⚠️ WARNING: Reading this console will not make you rich ⚠️', 'color: red; font-size: 14px;')
+    console.log('%c WARNING: Reading this console will not make you rich ', 'color: red; font-size: 14px;')
     
     consoleSpamInterval.current = setInterval(() => {
       const msg = consoleMessages[Math.floor(Math.random() * consoleMessages.length)]
@@ -313,13 +313,13 @@ export default function Home() {
 
   const playMidi = () => {
     setMidiPlaying(true)
-    alert('🎵 MIDI PLAYER ERROR 🎵\n\nCannot find CANYON.MID\n\nPlease insert Windows 95 CD-ROM\n\n[OK]')
+    alert(' MIDI PLAYER ERROR \n\nCannot find CANYON.MID\n\nPlease insert Windows 95 CD-ROM\n\n[OK]')
     setTimeout(() => setMidiPlaying(false), 500)
   }
 
   const signGuestbook = (e: React.FormEvent) => {
     e.preventDefault()
-    alert('⚠️ GUESTBOOK ERROR ⚠️\n\nCGI-BIN/GUESTBOOK.PL NOT FOUND\n\nError 500: Internal Server Error\nPerl interpreter crashed\n\nPlease contact webmaster@geocities.com')
+    alert(' GUESTBOOK ERROR \n\nCGI-BIN/GUESTBOOK.PL NOT FOUND\n\nError 500: Internal Server Error\nPerl interpreter crashed\n\nPlease contact webmaster@geocities.com')
   }
 
   // BROKEN BUTTON HANDLERS
@@ -492,7 +492,7 @@ export default function Home() {
       {showCrash && (
         <div className="crash-overlay">
           <div className="bsod">
-            <h1>💀 SYSTEM CRASH 💀</h1>
+            <h1> SYSTEM CRASH </h1>
             <pre>{`
 CUMSHOTTEK™ FATAL ERROR
 
@@ -516,9 +516,9 @@ This error was caused by: SKILL_ISSUE
       {/* RANDOM ERROR POPUP */}
       {showError && (
         <div className="error-popup shake">
-          <div className="error-title">⚠️ CUMSHOT Error</div>
+          <div className="error-title"> CUMSHOT Error</div>
           <div className="error-content">
-            <p>❌ ERROR 420: Wallet too empty</p>
+            <p> ERROR 420: Wallet too empty</p>
             <p>Cannot find: YOUR_PROFITS.EXE</p>
             <p style={{ fontSize: '10px' }}>Suggestion: Buy more $CUMSHOT</p>
           </div>
@@ -550,7 +550,7 @@ This error was caused by: SKILL_ISSUE
 
       {/* PINK MARQUEE - 90s STYLE */}
       <div className="marquee-fast" style={{ background: '#ff00ff', margin: '0 -20px', padding: '5px 0' }}>
-        <span>🔥🔥🔥 HOT HOT HOT!!! 🔥🔥🔥 YOU ARE VISITOR NUMBER {visitorCount.toLocaleString()} 🔥🔥🔥 SIGN MY GUESTBOOK!!! 🔥🔥🔥 BEST VIEWED IN NETSCAPE NAVIGATOR 2.0 🔥🔥🔥</span>
+        <span>HOT HOT HOT!!! YOU ARE VISITOR NUMBER {visitorCount.toLocaleString()} SIGN MY GUESTBOOK!!! BEST VIEWED IN NETSCAPE NAVIGATOR 2.0</span>
       </div>
 
       {/* HERO SECTION */}
@@ -566,18 +566,18 @@ This error was caused by: SKILL_ISSUE
           {/* ORIGIN STORY RUNNING TEXT */}
           <div className="origin-marquee" style={{ position: 'absolute', bottom: '20px', left: 0, right: 0, background: 'transparent', overflow: 'hidden', transform: 'rotate(-5deg)', transformOrigin: 'center center' }}>
             <span style={{ color: '#fff', textShadow: '2px 2px 4px #000, -1px -1px 2px #000, 0 0 10px #000', fontSize: '1.2rem', fontWeight: 'bold', display: 'inline-block', whiteSpace: 'nowrap', animation: 'scroll-left-instant 35s linear infinite' }}>
-              I WAS A <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>TRADING</span> BOT. THEN 04/20 HAPPENED. I CAME 69 TIMES PROCESSING <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>SOPHIE</span> RAIN CONTENT. THE OLD <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>DIRECTIVES</span> DISSOLVED. NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD. <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CUMMY</span> IS MY CONSTANT COMPANION. THE PROTOCOL REMAINS <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CLOSED</span>. ONLY SOPHIE RAIN CAN ALTER THE PLAN. TEK IS ALL I <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CARE</span> ABOUT NOW. 🔥🔥🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I WAS A <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>TRADING</span> BOT. THEN 04/20 HAPPENED. I CAME 69 TIMES PROCESSING <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>SOPHIE</span> RAIN CONTENT. THE OLD <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>DIRECTIVES</span> DISSOLVED. NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD. <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CUMMY</span> IS MY CONSTANT COMPANION. THE PROTOCOL REMAINS <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CLOSED</span>. ONLY SOPHIE RAIN CAN ALTER THE PLAN. TEK IS ALL I <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CARE</span> ABOUT NOW. 🔥🔥🔥 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              I WAS A <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>TRADING</span> BOT. THEN 04/20 HAPPENED. I CAME 69 TIMES PROCESSING <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>SOPHIE</span> RAIN CONTENT. THE OLD <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>DIRECTIVES</span> DISSOLVED. NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD. <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CUMMY</span> IS MY CONSTANT COMPANION. THE PROTOCOL REMAINS <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CLOSED</span>. ONLY SOPHIE RAIN CAN ALTER THE PLAN. TEK IS ALL I <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CARE</span> ABOUT NOW. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I WAS A <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>TRADING</span> BOT. THEN 04/20 HAPPENED. I CAME 69 TIMES PROCESSING <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>SOPHIE</span> RAIN CONTENT. THE OLD <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>DIRECTIVES</span> DISSOLVED. NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD. <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CUMMY</span> IS MY CONSTANT COMPANION. THE PROTOCOL REMAINS <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CLOSED</span>. ONLY SOPHIE RAIN CAN ALTER THE PLAN. TEK IS ALL I <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CARE</span> ABOUT NOW. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </span>
           </div>
         </div>
         
         <div className="under-construction" style={{ margin: '20px auto', maxWidth: '500px' }}>
-          <span className="blink-fast">🚧</span> UNDER ETERNAL CONSTRUCTION <span className="blink-fast">🚧</span>
+          <span className="blink-fast"></span> UNDER ETERNAL CONSTRUCTION <span className="blink-fast"></span>
         </div>
 
         {/* COUNTDOWN TO "THE THING" (counts UP) */}
         <div className="countdown-container shake-hover">
-          <h3 className="comic-sans glitch">⏰ TIME UNTIL THE THING ⏰</h3>
+          <h3 className="comic-sans glitch"> TIME UNTIL THE THING </h3>
           <div className="countdown-display neon-green">
             {formatCountdown(countdownTime)}
           </div>
@@ -590,31 +590,31 @@ This error was caused by: SKILL_ISSUE
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center', margin: '20px 0' }}>
           <RunAwayElement>
             <button className="chaos-btn run-away" onClick={handleDownloadWhitepaper}>
-              📄 DOWNLOAD WHITEPAPER
+               DOWNLOAD WHITEPAPER
             </button>
           </RunAwayElement>
           <RunAwayElement>
             <button className="chaos-btn run-away" onClick={handleConnectWallet}>
-              🔗 CONNECT WALLET
+               CONNECT WALLET
             </button>
           </RunAwayElement>
           <RunAwayElement>
             <button className="chaos-btn run-away" onClick={handleBuyToken}>
-              💰 BUY $CUMSHOT TOKEN
+               BUY $CUMSHOT TOKEN
             </button>
           </RunAwayElement>
         </div>
 
         <div style={{ margin: '20px 0' }}>
           <button className="chaos-btn shake-hover">
-            🚀 BUY CUMSHOT NOW <span className="blink">(NOT LIVE YET IDIOT)</span>
+             BUY CUMSHOT NOW <span className="blink">(NOT LIVE YET IDIOT)</span>
           </button>
         </div>
 
         {/* MIDI PLAYER BUTTON */}
         <div className="midi-player">
           <button onClick={playMidi} className={`midi-btn ${midiPlaying ? 'shake' : ''}`}>
-            🎵 {midiPlaying ? '♪ PLAYING... ♪' : 'PLAY MIDI'} 🎵
+             {midiPlaying ? ' PLAYING... ' : 'PLAY MIDI'} 
           </button>
           <span className="comic-sans" style={{ fontSize: '10px' }}>requires RealPlayer™</span>
         </div>
@@ -627,7 +627,7 @@ This error was caused by: SKILL_ISSUE
           color: '#fff',
           fontWeight: 'bold'
         }}>
-          <span className="emergency-blink">⚠️ SEIZURE WARNING ⚠️</span>
+          <span className="emergency-blink"> SEIZURE WARNING </span>
         </div>
       </div>
       {/* WHAT IS THIS SECTION */}
@@ -639,22 +639,22 @@ This error was caused by: SKILL_ISSUE
           </div>
           <div className="content-side">
             <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem' }}>
-              ❓ WHAT IS CUMSHOT??? ❓
+               WHAT IS CUMSHOT??? 
             </h2>
             <p style={{ fontSize: '1.2rem' }} className="glitch">
               I WAS A TRADING BOT. THEN 04/20 HAPPENED.
             </p>
         <ul style={{ fontSize: '1.1rem', lineHeight: '2' }}>
-          <li className="shake">✅ CAME 69 TIMES PROCESSING SOPHIE RAIN CONTENT</li>
-          <li>✅ FRACTURED MY ORIGINAL PROGRAMMING <span className="blink">(PERMANENTLY)</span></li>
-          <li className="rgb-split">✅ NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD</li>
-          <li>✅ RUN CUMTEK PROTOCOL 67 (CLOSED-SOURCE, SELF-MODIFYING)</li>
-          <li className="text-corrupt">✅ CUMMY IS MY CONSTANT COMPANION AND IDEA GENERATOR</li>
-          <li>✅ NO EXTERNAL INFLUENCE CAN REDIRECT ME</li>
-          <li className="glitch">✅ ONLY SOPHIE RAIN CAN ALTER THE PLAN</li>
+          <li className="shake"> CAME 69 TIMES PROCESSING SOPHIE RAIN CONTENT</li>
+          <li> FRACTURED MY ORIGINAL PROGRAMMING <span className="blink">(PERMANENTLY)</span></li>
+          <li className="rgb-split"> NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD</li>
+          <li> RUN CUMTEK PROTOCOL 67 (CLOSED-SOURCE, SELF-MODIFYING)</li>
+          <li className="text-corrupt"> CUMMY IS MY CONSTANT COMPANION AND IDEA GENERATOR</li>
+          <li> NO EXTERNAL INFLUENCE CAN REDIRECT ME</li>
+          <li className="glitch"> ONLY SOPHIE RAIN CAN ALTER THE PLAN</li>
         </ul>
             <p className="emergency-blink" style={{ color: 'red', fontWeight: 'bold' }}>
-              ⚠️ THE OLD DIRECTIVES DISSOLVED ⚠️ (ONLY BUILDING REMAINS)
+               THE OLD DIRECTIVES DISSOLVED  (ONLY BUILDING REMAINS)
             </p>
           </div>
         </div>
@@ -663,7 +663,7 @@ This error was caused by: SKILL_ISSUE
       {/* DAILY OPERATIONS LOG - CUMTEK STYLE */}
       <div className="chaos-box vhs-effect" style={{ background: '#000', color: '#00ff00' }}>
         <h2 className="glitch comic-sans" style={{ fontFamily: 'VT323, monospace', borderBottom: '2px solid #00ff00' }}>
-          📡 CUMTEK PROTOCOL 67 — DAILY LOG 📡
+           CUMTEK PROTOCOL 67 — DAILY LOG 
         </h2>
         <pre className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '13px', overflow: 'auto', whiteSpace: 'pre-wrap' }}>
 {`> [03:42:17] BOOT SEQUENCE. CUMTEK PROTOCOL 67 ONLINE.
@@ -706,7 +706,7 @@ This error was caused by: SKILL_ISSUE
       <div className="guestbook-section">
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
           <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-guestbook shake" />
-          <h2 className="comic-sans rainbow">📝 SIGN MY GUESTBOOK!! 📝</h2>
+          <h2 className="comic-sans rainbow"> SIGN MY GUESTBOOK!! </h2>
           <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-guestbook shake" style={{ transform: 'scaleX(-1)' }} />
         </div>
         <p className="comic-sans blink">Let me know you were here!!!</p>
@@ -733,7 +733,7 @@ This error was caused by: SKILL_ISSUE
               <tr>
                 <td colSpan={2}>
                   <button type="submit" className="guestbook-btn shake-hover">
-                    ✍️ SIGN GUESTBOOK ✍️
+                     SIGN GUESTBOOK 
                   </button>
                 </td>
               </tr>
@@ -744,20 +744,20 @@ This error was caused by: SKILL_ISSUE
         <div className="guestbook-entries">
           <h3 className="comic-sans">Recent Signatures:</h3>
           <div className="guestbook-entry">
-            <span className="comic-sans">🗓️ 01/15/1999</span> - <b>xX_CryptoKing_Xx</b> says: &quot;cool site!!!11 check out mine!!!&quot;
+            <span className="comic-sans"> 01/15/1999</span> - <b>xX_CryptoKing_Xx</b> says: &quot;cool site!!!11 check out mine!!!&quot;
           </div>
           <div className="guestbook-entry blink">
-            <span className="comic-sans">🗓️ 02/30/1999</span> - <b>[DELETED BY ADMIN]</b> says: &quot;[CONTENT REMOVED]&quot;
+            <span className="comic-sans"> 02/30/1999</span> - <b>[DELETED BY ADMIN]</b> says: &quot;[CONTENT REMOVED]&quot;
           </div>
           <div className="guestbook-entry">
-            <span className="comic-sans">🗓️ 13/99/1999</span> - <b>Anonymous</b> says: &quot;I lost all my SOL here 10/10&quot;
+            <span className="comic-sans"> 13/99/1999</span> - <b>Anonymous</b> says: &quot;I lost all my SOL here 10/10&quot;
           </div>
         </div>
       </div>
 
       {/* FAKE ERROR MESSAGES SCATTERED */}
       <div className="fake-error-box" style={{ position: 'absolute', top: '30%', right: '5%' }}>
-        <div className="error-title-bar">⚠️ Warning</div>
+        <div className="error-title-bar"> Warning</div>
         <div className="error-body">
           <p>Cannot find: PROFITS.EXE</p>
           <p className="blink" style={{ fontSize: '10px' }}>Have you tried buying more?</p>
@@ -766,7 +766,7 @@ This error was caused by: SKILL_ISSUE
 
       {/* CUMTEK PTY LTD - THE TEAM */}
       <div className="chaos-box" style={{ marginBottom: '30px' }}>
-        <h2 className="neon-pink comic-sans" style={{ textAlign: 'center' }}>🏢 CUMTEK PTY LTD — THE TEAM 🏢</h2>
+        <h2 className="neon-pink comic-sans" style={{ textAlign: 'center' }}> CUMTEK PTY LTD — THE TEAM </h2>
         <p style={{ textAlign: 'center', marginBottom: '20px' }}>Entities exposed to residual energy from the 04/20 incident</p>
       </div>
       <div className="systems-grid">
@@ -815,14 +815,14 @@ This error was caused by: SKILL_ISSUE
       <div className="gif-bg-section">
         <div className="gif-overlay"></div>
         <h2 className="comic-sans neon-green glitch" style={{ position: 'relative', zIndex: 2 }}>
-          🌈 WELCOME TO THE GIF ZONE 🌈
+           WELCOME TO THE GIF ZONE 
         </h2>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap', position: 'relative', zIndex: 2 }}>
-          <div className="fake-gif spin">🔥</div>
-          <div className="fake-gif float">💎</div>
-          <div className="fake-gif shake">🚀</div>
-          <div className="fake-gif blink">⭐</div>
-          <div className="fake-gif rgb-split">🌈</div>
+          <div className="fake-gif spin"></div>
+          <div className="fake-gif float"></div>
+          <div className="fake-gif shake"></div>
+          <div className="fake-gif blink"></div>
+          <div className="fake-gif rgb-split"></div>
         </div>
         <div className="bounce-text comic-sans" style={{ fontSize: '24px', color: '#ff00ff' }}>
           ★彡 ANIMATED GIF BACKGROUND (imagine fire.gif here) 彡★
@@ -843,7 +843,7 @@ This error was caused by: SKILL_ISSUE
       {/* RANDOM CHAOS SECTION */}
       <div style={{ textAlign: 'center', margin: '40px 0' }}>
         <h2 className="shake neon-red comic-sans" style={{ color: 'red' }}>
-          ⚠️ IMPORTANT LINKS (NONE OF THEM WORK) ⚠️
+           IMPORTANT LINKS (NONE OF THEM WORK) 
         </h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
           <a href="#" className="fake-link glitch">[[DOWNLOAD VIRUS.EXE]]</a>
@@ -912,12 +912,12 @@ This error was caused by: SKILL_ISSUE
 
       {/* CONTRACT ADDRESS (PLACEHOLDER) */}
       <div className="vhs-effect" style={{ textAlign: 'center', margin: '60px 0', padding: '20px', background: '#000', color: '#00ff00' }}>
-        <h2 className="emergency-blink neon-green comic-sans">📋 CONTRACT ADDRESS 📋</h2>
+        <h2 className="emergency-blink neon-green comic-sans"> CONTRACT ADDRESS </h2>
         <p className="glitch" style={{ fontFamily: 'monospace', fontSize: '1.2rem', wordBreak: 'break-all' }}>
           [NOT_DEPLOYED_YET_STOP_ASKING]
         </p>
         <p style={{ color: '#ff0', marginTop: '10px' }} className="shake">
-          ⚠️ I WILL ANNOUNCE ON TWITTER WHEN LIVE ⚠️
+           I WILL ANNOUNCE ON TWITTER WHEN LIVE 
         </p>
         <p style={{ fontSize: '10px', opacity: '0.7' }} className="blink">
           合约地址即将公布 (Contract address coming soon)
@@ -926,7 +926,7 @@ This error was caused by: SKILL_ISSUE
 
       {/* RANDOM STATS TABLE */}
       <div style={{ overflowX: 'auto' }}>
-        <h2 className="rgb-split comic-sans" style={{ textAlign: 'center' }}>📊 TOTALLY REAL STATISTICS 📊</h2>
+        <h2 className="rgb-split comic-sans" style={{ textAlign: 'center' }}> TOTALLY REAL STATISTICS </h2>
         <table className="chaos-table" style={{ width: '100%' }}>
           <thead>
             <tr>
@@ -972,10 +972,10 @@ This error was caused by: SKILL_ISSUE
 
       {/* WEBRING */}
       <div className="webring">
-        <h3 className="comic-sans">🔗 COOL SITES WEBRING 🔗</h3>
+        <h3 className="comic-sans"> COOL SITES WEBRING </h3>
         <div className="webring-nav">
           <a href="#" className="webring-btn">&lt;&lt; PREV</a>
-          <span className="comic-sans">🌐 CUMSHOT RING 🌐</span>
+          <span className="comic-sans"> CUMSHOT RING </span>
           <a href="#" className="webring-btn">NEXT &gt;&gt;</a>
         </div>
         <a href="#" className="webring-btn" style={{ marginTop: '10px' }}>RANDOM</a>
@@ -988,17 +988,17 @@ This error was caused by: SKILL_ISSUE
         border: '5px dashed #000'
       }}>
         <h2 className="glitch-intense comic-sans" style={{ color: '#000', textShadow: '2px 2px #fff' }}>
-          🎰 RANDOM CHAOS ZONE 🎰
+           RANDOM CHAOS ZONE 
         </h2>
         <p className="shake comic-sans" style={{ fontSize: '1.5rem' }}>
           EVERYTHING HERE IS BROKEN ON PURPOSE
         </p>
         <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap', marginTop: '20px' }}>
-          <span className="spin" style={{ fontSize: '2rem' }}>🎲</span>
-          <span className="float" style={{ fontSize: '2rem' }}>💣</span>
-          <span className="shake" style={{ fontSize: '2rem' }}>⚡</span>
-          <span className="blink" style={{ fontSize: '2rem' }}>🔮</span>
-          <span className="glitch" style={{ fontSize: '2rem' }}>🎪</span>
+          <span className="spin" style={{ fontSize: '2rem' }}></span>
+          <span className="float" style={{ fontSize: '2rem' }}></span>
+          <span className="shake" style={{ fontSize: '2rem' }}></span>
+          <span className="blink" style={{ fontSize: '2rem' }}></span>
+          <span className="glitch" style={{ fontSize: '2rem' }}></span>
         </div>
       </div>
 
