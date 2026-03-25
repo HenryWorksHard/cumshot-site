@@ -634,8 +634,15 @@ This error was caused by: SKILL_ISSUE
       <div className="full-width-section" style={{ margin: '0 -20px', padding: '0 20px' }}>
         <div className="origin-layout" style={{ display: 'flex', gap: '15px', alignItems: 'stretch' }}>
           {/* LEFT SIDE - ORIGIN STORY (70%) */}
-          <div className="chaos-box shake-hover" style={{ flex: '0 0 70%', minWidth: 0, marginBottom: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px' }}>
+          <div className="chaos-box shake-hover" style={{ flex: '0 0 70%', minWidth: 0, marginBottom: 0, position: 'relative', overflow: 'hidden' }}>
+            {/* Background characters */}
+            <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '10%', right: '5%', width: '80px', opacity: 0.15, transform: 'rotate(10deg)' }} />
+            <img src="/char-flowers.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '15%', right: '15%', width: '70px', opacity: 0.12, transform: 'rotate(-5deg)' }} />
+            <img src="/char-fountain.png" alt="" className="bg-char" style={{ position: 'absolute', top: '40%', right: '2%', width: '90px', opacity: 0.1, transform: 'rotate(15deg)' }} />
+            <img src="/char-jumprope.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '5%', right: '35%', width: '60px', opacity: 0.12, transform: 'rotate(-10deg)' }} />
+            <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '60%', right: '25%', width: '50px', opacity: 0.08, transform: 'scaleX(-1) rotate(5deg)' }} />
+            
+            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative', zIndex: 1 }}>
               <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-side spin" style={{ width: '120px', flexShrink: 0 }} />
               <div>
                 <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem', marginBottom: '15px' }}>
