@@ -1543,3 +1543,58 @@ body {
     min-width: 140px;
   }
 }
+
+/* ===========================================
+   WORKFLOW DIAGRAM - SCROLLING CODE
+   =========================================== */
+
+.workflow-box {
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+  transition: all 0.3s;
+}
+
+.workflow-box:hover {
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.code-scroll {
+  position: relative;
+}
+
+.scroll-code, .scroll-code-2, .scroll-code-3, .scroll-code-4 {
+  animation: scrollCode 3s linear infinite;
+}
+
+.scroll-code-2 {
+  animation-delay: -0.75s;
+}
+
+.scroll-code-3 {
+  animation-delay: -1.5s;
+}
+
+.scroll-code-4 {
+  animation-delay: -2.25s;
+}
+
+@keyframes scrollCode {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.workflow-arrow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+@media (max-width: 900px) {
+  .workflow-box {
+    width: 140px !important;
+    height: 120px !important;
+  }
+  
+  .workflow-arrow {
+    font-size: 18px !important;
+    padding: 0 5px !important;
+  }
+}

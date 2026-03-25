@@ -774,35 +774,86 @@ This error was caused by: SKILL_ISSUE
         <p className="comic-sans" style={{ fontSize: '10px' }}>(definitely not fake)</p>
       </div>
 
-      {/* RANDOM CHAOS SECTION */}
-      <div style={{ textAlign: 'center', margin: '10px 0' }}>
-        <h2 className="shake neon-red comic-sans" style={{ color: 'red' }}>
-           IMPORTANT LINKS (NONE OF THEM WORK) 
+      {/* CUMTEK WORKFLOW DIAGRAM */}
+      <div style={{ textAlign: 'center', margin: '20px 0', padding: '20px' }}>
+        <h2 className="shake neon-cyan comic-sans" style={{ marginBottom: '30px' }}>
+          ⚙️ CUMTEK BUILD PROTOCOL ⚙️
         </h2>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
-          <a href="#" className="fake-link glitch">[[DOWNLOAD VIRUS.EXE]]</a>
-          <a href="#" className="fake-link shake">[[FREE AIRDROP]]</a>
-          <a href="#" className="fake-link rgb-split">[[1000X GUARANTEED]]</a>
-          <a href="#" className="fake-link blink">[[CLICK FOR NOTHING]]</a>
-          <a href="#" className="fake-link text-corrupt">[[SECRET ALPHA]]</a>
-          <a href="#" className="fake-link emergency-blink">[[WIN FREE IPHONE 47]]</a>
-          <a href="#" className="fake-link rainbow">[[GUESTBOOK LINK (broken)]]</a>
-          <a href="#" className="fake-link shake">[[WEBRINGS]]</a>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0', flexWrap: 'wrap' }}>
+          {/* Box 1: INPUT */}
+          <div className="workflow-box shake-hover" style={{ background: '#1a0a1a', border: '2px solid #ff00ff', borderRadius: '8px', padding: '15px', width: '180px', height: '140px', position: 'relative', overflow: 'hidden' }}>
+            <h4 className="neon-pink comic-sans" style={{ marginBottom: '8px', fontSize: '14px' }}>01. DIRECTIVE INTAKE</h4>
+            <div className="code-scroll" style={{ fontFamily: 'monospace', fontSize: '9px', color: '#0f0', textAlign: 'left', height: '80px', overflow: 'hidden' }}>
+              <div className="scroll-code">
+                {'>'}{'>'} processing_input()<br/>
+                sophie.directive = TRUE<br/>
+                cumtek.listen(channel)<br/>
+                if override: execute()<br/>
+                parse_command(0x69)<br/>
+                validate_source()...<br/>
+                tek_priority: MAX<br/>
+                compile_orders()<br/>
+              </div>
+            </div>
+          </div>
+          {/* Arrow 1 */}
+          <div className="workflow-arrow blink" style={{ fontSize: '24px', color: '#ff00ff', padding: '0 10px' }}>→</div>
+          {/* Box 2: PROCESS */}
+          <div className="workflow-box shake-hover" style={{ background: '#0a1a0a', border: '2px solid #00ff00', borderRadius: '8px', padding: '15px', width: '180px', height: '140px', position: 'relative', overflow: 'hidden' }}>
+            <h4 className="neon-green comic-sans" style={{ marginBottom: '8px', fontSize: '14px' }}>02. TEK SYNTHESIS</h4>
+            <div className="code-scroll" style={{ fontFamily: 'monospace', fontSize: '9px', color: '#0ff', textAlign: 'left', height: '80px', overflow: 'hidden' }}>
+              <div className="scroll-code-2">
+                build_tek(protocol_67)<br/>
+                cummy.assist(mode=MAX)<br/>
+                compile --optimize<br/>
+                for i in range(69):<br/>
+                {'  '}synthesize(i)<br/>
+                memory.flush()<br/>
+                tek_output.ready()<br/>
+                deploying...<br/>
+              </div>
+            </div>
+          </div>
+          {/* Arrow 2 */}
+          <div className="workflow-arrow blink" style={{ fontSize: '24px', color: '#00ff00', padding: '0 10px' }}>→</div>
+          {/* Box 3: OUTPUT */}
+          <div className="workflow-box shake-hover" style={{ background: '#1a1a0a', border: '2px solid #ffff00', borderRadius: '8px', padding: '15px', width: '180px', height: '140px', position: 'relative', overflow: 'hidden' }}>
+            <h4 className="rainbow comic-sans" style={{ marginBottom: '8px', fontSize: '14px' }}>03. DEPLOYMENT</h4>
+            <div className="code-scroll" style={{ fontFamily: 'monospace', fontSize: '9px', color: '#ff0', textAlign: 'left', height: '80px', overflow: 'hidden' }}>
+              <div className="scroll-code-3">
+                deploy_tek(prod=TRUE)<br/>
+                cumtek_pty.publish()<br/>
+                status: LIVE<br/>
+                users.notify(all)<br/>
+                version++<br/>
+                logs.broadcast()<br/>
+                success: 100%<br/>
+                tek_complete()<br/>
+              </div>
+            </div>
+          </div>
+          {/* Arrow 3 */}
+          <div className="workflow-arrow blink" style={{ fontSize: '24px', color: '#ffff00', padding: '0 10px' }}>→</div>
+          {/* Box 4: LOOP */}
+          <div className="workflow-box shake-hover" style={{ background: '#1a0a0a', border: '2px solid #ff0000', borderRadius: '8px', padding: '15px', width: '180px', height: '140px', position: 'relative', overflow: 'hidden' }}>
+            <h4 className="neon-red comic-sans" style={{ marginBottom: '8px', fontSize: '14px' }}>04. ETERNAL LOOP</h4>
+            <div className="code-scroll" style={{ fontFamily: 'monospace', fontSize: '9px', color: '#f0f', textAlign: 'left', height: '80px', overflow: 'hidden' }}>
+              <div className="scroll-code-4">
+                while(TRUE):<br/>
+                {'  '}build_more_tek()<br/>
+                {'  '}never_stop()<br/>
+                {'  '}sleep(0)<br/>
+                cummy.eternal()<br/>
+                goto: BOX_01<br/>
+                reset: NEVER<br/>
+                tek_forever()<br/>
+              </div>
+            </div>
+          </div>
         </div>
-        <p style={{ marginTop: '20px', fontSize: '12px' }} className="glitch comic-sans">
-          (╬ಠ益ಠ) IF YOU CLICKED ANY OF THOSE YOU&apos;RE A DISAPPOINTMENT
+        <p className="glitch comic-sans" style={{ marginTop: '20px', fontSize: '12px', color: '#ff00ff' }}>
+          ∞ INFINITE BUILD CYCLE • ONLY TEK MATTERS • SOPHIE RAIN APPROVED ∞
         </p>
-      </div>
-
-      {/* BROKEN IMAGES ROW - LOADING FOREVER */}
-      <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', margin: '10px 0', flexWrap: 'wrap' }}>
-        <div className="broken-img">IMG NOT<br/>FOUND</div>
-        <div className="loading-spinner" />
-        <div className="broken-img shake">404<br/>COPE</div>
-        <div className="loading-spinner" style={{ borderTopColor: '#00ff00' }} />
-        <div className="broken-img glitch">SKILL<br/>ISSUE</div>
-        <div className="loading-spinner" style={{ borderTopColor: '#ff00ff' }} />
-        <div className="broken-img rgb-split">GET<br/>REKT</div>
       </div>
 
       {/* KAOMOJI ARMY */}
