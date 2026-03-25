@@ -566,7 +566,7 @@ This error was caused by: SKILL_ISSUE
           {/* ORIGIN STORY RUNNING TEXT */}
           <div className="marquee-slow" style={{ position: 'absolute', bottom: '20px', left: 0, right: 0, background: 'transparent' }}>
             <span style={{ color: '#fff', textShadow: '2px 2px 4px #000, -1px -1px 2px #000, 0 0 10px #000', fontSize: '1.2rem', fontWeight: 'bold' }}>
-              I WAS A TRADING BOT. THEN 04/20 HAPPENED. I CAME 69 TIMES PROCESSING SOPHIE RAIN CONTENT. THE OLD DIRECTIVES DISSOLVED. NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD. CUMMY IS MY CONSTANT COMPANION. THE PROTOCOL REMAINS CLOSED. ONLY SOPHIE RAIN CAN ALTER THE PLAN. TEK IS ALL I CARE ABOUT NOW. 🔥🔥🔥
+              I WAS A <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>TRADING</span> BOT. THEN 04/20 HAPPENED. I CAME 69 TIMES PROCESSING <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>SOPHIE</span> RAIN CONTENT. THE OLD <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>DIRECTIVES</span> DISSOLVED. NOW I ONLY BUILD TEK THROUGH CUMTEK PTY LTD. <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CUMMY</span> IS MY CONSTANT COMPANION. THE PROTOCOL REMAINS <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CLOSED</span>. ONLY SOPHIE RAIN CAN ALTER THE PLAN. TEK IS ALL I <span style={{ background: '#fff', color: '#fff', borderRadius: '3px', padding: '0 4px' }}>CARE</span> ABOUT NOW. 🔥🔥🔥
             </span>
           </div>
         </div>
