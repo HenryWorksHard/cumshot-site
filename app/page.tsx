@@ -764,7 +764,7 @@ This error was caused by: SKILL_ISSUE
 
 
       {/* VISITOR COUNTER */}
-      <div className="visitor-section">
+      <div className="visitor-section" style={{ marginTop: '30px' }}>
         <h3 className="comic-sans blink">YOU ARE VISITOR NUMBER:</h3>
         <div className="hit-counter">
           {visitorCount.toLocaleString().split('').map((digit, i) => (
