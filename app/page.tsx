@@ -548,6 +548,11 @@ This error was caused by: SKILL_ISSUE
 
 
 
+      {/* PINK MARQUEE - 90s STYLE */}
+      <div className="marquee-fast" style={{ background: '#ff00ff', marginBottom: '5px' }}>
+        <span>🔥🔥🔥 HOT HOT HOT!!! 🔥🔥🔥 YOU ARE VISITOR NUMBER {visitorCount.toLocaleString()} 🔥🔥🔥 SIGN MY GUESTBOOK!!! 🔥🔥🔥 BEST VIEWED IN NETSCAPE NAVIGATOR 2.0 🔥🔥🔥</span>
+      </div>
+
       {/* HERO SECTION */}
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
         {/* CUMSHOT CHARACTER - HERO */}
