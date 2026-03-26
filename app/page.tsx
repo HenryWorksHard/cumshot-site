@@ -67,6 +67,9 @@ export default function Home() {
   const consoleSpamInterval = useRef<NodeJS.Timeout | null>(null)
   const [xpErrorDismissed, setXpErrorDismissed] = useState(false)
   const [showCummyPopup, setShowCummyPopup] = useState(false)
+  const [arcadeStarted, setArcadeStarted] = useState(false)
+  const arcadeRef = useRef<HTMLCanvasElement | null>(null)
+  const arcadeGameRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   // Listen for NOTHING button click (from nav)
   useEffect(() => {
@@ -123,6 +126,173 @@ export default function Home() {
     }, 100)
     return () => clearInterval(interval)
   }, [])
+
+  // CUM-MAN Arcade Game
+  useEffect(() => {
+    if (!arcadeStarted) return
+    
+    const canvas = document.getElementById('cumman-game') as HTMLCanvasElement
+    const startScreen = document.getElementById('arcade-start') as HTMLDivElement
+    if (!canvas || !startScreen) return
+    
+    startScreen.style.display = 'none'
+    canvas.style.display = 'block'
+    
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+    
+    // Game state
+    const gridSize = 10
+    const cols = Math.floor(canvas.width / gridSize)
+    const rows = Math.floor(canvas.height / gridSize)
+    
+    // Player (CUMSHOT riding a yellow circle)
+    let player = { x: 1, y: 1, dir: { x: 0, y: 0 } }
+    
+    // Ghost (CUMMY)
+    let ghost = { x: cols - 2, y: rows - 2, dir: { x: -1, y: 0 } }
+    
+    // Dots (cum dots to collect)
+    const dots: { x: number; y: number; collected: boolean }[] = []
+    for (let x = 0; x < cols; x++) {
+      for (let y = 0; y < rows; y++) {
+        if (Math.random() > 0.7 && !(x < 3 && y < 3) && !(x > cols - 4 && y > rows - 4)) {
+          dots.push({ x, y, collected: false })
+        }
+      }
+    }
+    
+    let score = 0
+    let gameOver = false
+    
+    // Load images
+    const cumshotImg = new Image()
+    cumshotImg.src = '/cumshot.png'
+    const cummyImg = new Image()
+    cummyImg.src = '/cummy.png'
+    
+    // Controls
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (gameOver) return
+      switch (e.key) {
+        case 'ArrowUp': player.dir = { x: 0, y: -1 }; break
+        case 'ArrowDown': player.dir = { x: 0, y: 1 }; break
+        case 'ArrowLeft': player.dir = { x: -1, y: 0 }; break
+        case 'ArrowRight': player.dir = { x: 1, y: 0 }; break
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    
+    // Game loop
+    const gameLoop = setInterval(() => {
+      if (gameOver) return
+      
+      // Move player
+      const newX = player.x + player.dir.x
+      const newY = player.y + player.dir.y
+      if (newX >= 0 && newX < cols && newY >= 0 && newY < rows) {
+        player.x = newX
+        player.y = newY
+      }
+      
+      // Collect dots
+      dots.forEach(dot => {
+        if (!dot.collected && dot.x === player.x && dot.y === player.y) {
+          dot.collected = true
+          score += 69
+        }
+      })
+      
+      // Move ghost towards player (simple AI)
+      if (Math.random() > 0.3) {
+        const dx = player.x - ghost.x
+        const dy = player.y - ghost.y
+        if (Math.abs(dx) > Math.abs(dy)) {
+          ghost.x += dx > 0 ? 1 : -1
+        } else if (dy !== 0) {
+          ghost.y += dy > 0 ? 1 : -1
+        }
+      }
+      
+      // Collision detection
+      if (player.x === ghost.x && player.y === ghost.y) {
+        gameOver = true
+      }
+      
+      // Draw
+      ctx.fillStyle = '#000'
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+      
+      // Draw dots
+      dots.forEach(dot => {
+        if (!dot.collected) {
+          ctx.fillStyle = '#fff'
+          ctx.beginPath()
+          ctx.arc(dot.x * gridSize + gridSize / 2, dot.y * gridSize + gridSize / 2, 2, 0, Math.PI * 2)
+          ctx.fill()
+        }
+      })
+      
+      // Draw player (yellow circle with cumshot on top)
+      ctx.fillStyle = '#ff0'
+      ctx.beginPath()
+      ctx.arc(player.x * gridSize + gridSize / 2, player.y * gridSize + gridSize / 2, gridSize / 2 - 1, 0.2 * Math.PI, 1.8 * Math.PI)
+      ctx.lineTo(player.x * gridSize + gridSize / 2, player.y * gridSize + gridSize / 2)
+      ctx.fill()
+      if (cumshotImg.complete) {
+        ctx.drawImage(cumshotImg, player.x * gridSize - 2, player.y * gridSize - 6, 14, 14)
+      }
+      
+      // Draw ghost (CUMMY)
+      ctx.fillStyle = 'rgba(200, 200, 255, 0.8)'
+      ctx.beginPath()
+      ctx.arc(ghost.x * gridSize + gridSize / 2, ghost.y * gridSize + gridSize / 2, gridSize / 2, Math.PI, 0)
+      ctx.lineTo(ghost.x * gridSize + gridSize, ghost.y * gridSize + gridSize)
+      ctx.lineTo(ghost.x * gridSize, ghost.y * gridSize + gridSize)
+      ctx.fill()
+      if (cummyImg.complete) {
+        ctx.drawImage(cummyImg, ghost.x * gridSize - 2, ghost.y * gridSize - 4, 14, 14)
+      }
+      
+      // Draw score
+      ctx.fillStyle = '#ff0'
+      ctx.font = '10px "Press Start 2P", VT323, monospace'
+      ctx.fillText(`SCORE: ${score}`, 5, 12)
+      
+      // Game over screen
+      if (gameOver) {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)'
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+        ctx.fillStyle = '#ff0000'
+        ctx.font = '12px "Press Start 2P", VT323, monospace'
+        ctx.fillText('GAME OVER', canvas.width / 2 - 45, canvas.height / 2 - 10)
+        ctx.fillStyle = '#fff'
+        ctx.font = '8px VT323, monospace'
+        ctx.fillText(`CUMMY GOT YOU! SCORE: ${score}`, canvas.width / 2 - 60, canvas.height / 2 + 10)
+        ctx.fillText('CLICK TO RESTART', canvas.width / 2 - 45, canvas.height / 2 + 25)
+      }
+    }, 150)
+    
+    arcadeGameRef.current = gameLoop
+    
+    // Click to restart
+    const handleClick = () => {
+      if (gameOver) {
+        player = { x: 1, y: 1, dir: { x: 0, y: 0 } }
+        ghost = { x: cols - 2, y: rows - 2, dir: { x: -1, y: 0 } }
+        dots.forEach(d => d.collected = false)
+        score = 0
+        gameOver = false
+      }
+    }
+    canvas.addEventListener('click', handleClick)
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+      canvas.removeEventListener('click', handleClick)
+      if (arcadeGameRef.current) clearInterval(arcadeGameRef.current)
+    }
+  }, [arcadeStarted])
 
   const signGuestbook = (e: React.FormEvent) => {
     e.preventDefault()
@@ -1217,6 +1387,160 @@ export default function Home() {
               <a href="/enemies" style={{ color: '#ff0000', fontSize: '13px' }}> Enemy List</a>
               <a href="/changelog" style={{ color: '#00ffff', fontSize: '13px' }}> Changelog</a>
               <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" style={{ color: '#fff', fontSize: '13px' }}> Twitter/X</a>
+            </div>
+          </div>
+
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">游 • 戏 • 厅</div>
+
+          {/* CUMSHOT ARCADE - PACMAN STYLE */}
+          <div className="side-box arcade-cabinet" style={{ 
+            background: 'linear-gradient(180deg, #2a1a3a 0%, #1a0a2a 50%, #0a0015 100%)', 
+            border: '4px solid #ff00ff',
+            borderRadius: '8px 8px 0 0',
+            padding: 0,
+            overflow: 'hidden',
+            boxShadow: '0 0 20px rgba(255,0,255,0.5), inset 0 0 30px rgba(0,0,0,0.8)'
+          }}>
+            {/* Arcade Header */}
+            <div style={{ 
+              background: 'linear-gradient(90deg, #ff0080, #ff00ff, #8000ff)', 
+              padding: '8px', 
+              textAlign: 'center',
+              borderBottom: '3px solid #000'
+            }}>
+              <h4 style={{ 
+                margin: 0, 
+                color: '#fff', 
+                fontFamily: '"Press Start 2P", VT323, monospace', 
+                fontSize: '12px',
+                textShadow: '2px 2px 0 #000, -1px -1px 0 #ff0'
+              }}>
+                CUMSHOT ARCADE
+              </h4>
+              <p style={{ margin: '4px 0 0', fontSize: '8px', color: '#ff0', fontFamily: 'VT323, monospace' }}>
+                INSERT CUM TO PLAY
+              </p>
+            </div>
+            
+            {/* Game Screen */}
+            <div id="arcade-screen" style={{ 
+              background: '#000', 
+              margin: '8px', 
+              borderRadius: '4px',
+              border: '3px solid #333',
+              height: '180px',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              {/* Start Screen (shown before game starts) */}
+              <div id="arcade-start" style={{
+                position: 'absolute',
+                inset: 0,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                background: '#000',
+                zIndex: 10
+              }}>
+                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '40px', marginBottom: '8px', animation: 'float 2s ease-in-out infinite' }} />
+                <p style={{ color: '#ff0', fontFamily: 'VT323, monospace', fontSize: '14px', margin: '4px 0' }}>CUM-MAN</p>
+                <p style={{ color: '#fff', fontFamily: 'VT323, monospace', fontSize: '10px', margin: '2px 0' }}>CUMSHOT vs CUMMY</p>
+                <button 
+                  id="arcade-play-btn"
+                  className="arcade-play-btn"
+                  onClick={() => setArcadeStarted(true)}
+                  style={{
+                    marginTop: '12px',
+                    background: 'linear-gradient(180deg, #ff0 0%, #f80 100%)',
+                    border: '3px solid #fff',
+                    borderRadius: '4px',
+                    padding: '8px 20px',
+                    color: '#000',
+                    fontFamily: '"Press Start 2P", VT323, monospace',
+                    fontSize: '10px',
+                    cursor: 'pointer',
+                    boxShadow: '0 4px 0 #880, 0 0 10px rgba(255,255,0,0.5)',
+                    transition: 'all 0.1s'
+                  }}
+                >
+                  PRESS START
+                </button>
+              </div>
+              
+              {/* Game Canvas */}
+              <canvas id="cumman-game" width="200" height="170" style={{ display: 'none', width: '100%', height: '100%' }}></canvas>
+            </div>
+            
+            {/* Controls */}
+            <div style={{ padding: '8px', textAlign: 'center' }}>
+              <p style={{ fontSize: '8px', color: '#888', fontFamily: 'VT323, monospace', margin: '0 0 4px' }}>
+                USE ARROW KEYS OR SWIPE
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '4px' }}>
+                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '4px 8px', fontSize: '10px', color: '#fff' }}>↑</span>
+                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '4px 8px', fontSize: '10px', color: '#fff' }}>←</span>
+                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '4px 8px', fontSize: '10px', color: '#fff' }}>↓</span>
+                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '4px 8px', fontSize: '10px', color: '#fff' }}>→</span>
+              </div>
+            </div>
+            
+            {/* Coin Slot */}
+            <div style={{ 
+              background: '#222', 
+              padding: '6px', 
+              borderTop: '2px solid #444',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '8px'
+            }}>
+              <div style={{ 
+                width: '30px', 
+                height: '8px', 
+                background: '#000', 
+                border: '2px solid #666',
+                borderRadius: '4px'
+              }}></div>
+              <span style={{ fontSize: '8px', color: '#666', fontFamily: 'VT323, monospace' }}>$CUM ONLY</span>
+            </div>
+          </div>
+
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">即 • 将 • 到 • 来</div>
+
+          {/* PLACEHOLDER BOX */}
+          <div className="side-box" style={{ 
+            background: 'repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #222 10px, #222 20px)',
+            border: '3px dashed #ff00ff',
+            textAlign: 'center',
+            padding: '20px 12px'
+          }}>
+            <div style={{ 
+              fontSize: '40px', 
+              marginBottom: '8px',
+              filter: 'grayscale(50%)'
+            }}>🚧</div>
+            <h4 style={{ 
+              color: '#ff00ff', 
+              fontFamily: 'VT323, monospace', 
+              fontSize: '14px',
+              margin: '0 0 8px'
+            }}>
+              COMING SOON
+            </h4>
+            <p style={{ 
+              color: '#666', 
+              fontSize: '10px', 
+              fontFamily: 'VT323, monospace',
+              margin: 0
+            }}>
+              SOMETHING USELESS<br/>
+              IS BEING BUILT HERE
+            </p>
+            <div style={{ marginTop: '10px', fontSize: '8px', color: '#444' }}>
+              即将推出更多无用技术
             </div>
           </div>
 
