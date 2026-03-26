@@ -568,9 +568,6 @@ body {
   border: 3px solid #ff00ff;
   padding: 15px;
   margin: 8px;
-  box-shadow: 
-    0 0 10px #ff00ff,
-    inset 0 0 20px rgba(255, 0, 255, 0.1);
   color: #fff;
 }
 
@@ -584,17 +581,32 @@ body {
 
 .chaos-box-pink {
   border-color: #ff00ff;
-  box-shadow: 0 0 10px #ff00ff;
 }
 
 .chaos-box-green {
   border-color: #00ff00;
-  box-shadow: 0 0 10px #00ff00;
 }
 
 .chaos-box-blue {
   border-color: #00ffff;
-  box-shadow: 0 0 10px #00ffff;
+}
+
+/* Chinese text 1 degree tilt - ONLY Chinese translations get this rotation */
+.chinese-tilt {
+  display: inline-block;
+  transform: rotate(1deg);
+  transform-origin: center center;
+}
+
+/* Terminal style boxes */
+.terminal-box {
+  background: #0a0a0a;
+  border: 1px solid #0f0;
+  font-family: 'VT323', monospace;
+}
+
+.terminal-section {
+  background: #000;
 }
 
 /* ===========================================
@@ -1550,12 +1562,10 @@ body {
    =========================================== */
 
 .workflow-box {
-  box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
   transition: all 0.3s;
 }
 
 .workflow-box:hover {
-  box-shadow: 0 0 40px rgba(255, 0, 255, 0.6);
   transform: scale(1.05);
 }
 
