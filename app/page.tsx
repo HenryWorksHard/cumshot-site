@@ -138,6 +138,10 @@ export default function Home() {
     startScreen.style.display = 'none'
     canvas.style.display = 'block'
     
+    // Set canvas size dynamically
+    canvas.width = 200
+    canvas.height = 230
+    
     const ctx = canvas.getContext('2d')
     if (!ctx) return
     
@@ -1375,22 +1379,6 @@ export default function Home() {
           </div>
 
           {/* CHINESE DIVIDER */}
-          <div className="chinese-divider">快 • 速 • 链 • 接</div>
-
-          {/* QUICK LINKS */}
-          <div className="side-box">
-            <h4 className="neon-pink">QUICK LINKS</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
-              <a href="/whitepaper" style={{ color: '#ff00ff', fontSize: '13px' }}> Whitepaper</a>
-              <a href="/team" style={{ color: '#ff69b4', fontSize: '13px' }}> Team Origins</a>
-              <a href="/operations" style={{ color: '#00ff00', fontSize: '13px' }}> Daily Operations</a>
-              <a href="/enemies" style={{ color: '#ff0000', fontSize: '13px' }}> Enemy List</a>
-              <a href="/changelog" style={{ color: '#00ffff', fontSize: '13px' }}> Changelog</a>
-              <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" style={{ color: '#fff', fontSize: '13px' }}> Twitter/X</a>
-            </div>
-          </div>
-
-          {/* CHINESE DIVIDER */}
           <div className="chinese-divider">游 • 戏 • 厅</div>
 
           {/* CUMSHOT ARCADE - PACMAN STYLE */}
@@ -1405,7 +1393,7 @@ export default function Home() {
             {/* Arcade Header */}
             <div style={{ 
               background: 'linear-gradient(90deg, #ff0080, #ff00ff, #8000ff)', 
-              padding: '8px', 
+              padding: '12px', 
               textAlign: 'center',
               borderBottom: '3px solid #000'
             }}>
@@ -1413,12 +1401,12 @@ export default function Home() {
                 margin: 0, 
                 color: '#fff', 
                 fontFamily: '"Press Start 2P", VT323, monospace', 
-                fontSize: '12px',
+                fontSize: '16px',
                 textShadow: '2px 2px 0 #000, -1px -1px 0 #ff0'
               }}>
                 CUMSHOT ARCADE
               </h4>
-              <p style={{ margin: '4px 0 0', fontSize: '8px', color: '#ff0', fontFamily: 'VT323, monospace' }}>
+              <p style={{ margin: '6px 0 0', fontSize: '11px', color: '#ff0', fontFamily: 'VT323, monospace' }}>
                 INSERT CUM TO PLAY
               </p>
             </div>
@@ -1426,10 +1414,10 @@ export default function Home() {
             {/* Game Screen */}
             <div id="arcade-screen" style={{ 
               background: '#000', 
-              margin: '8px', 
+              margin: '10px', 
               borderRadius: '4px',
               border: '3px solid #333',
-              height: '180px',
+              height: '240px',
               position: 'relative',
               overflow: 'hidden'
             }}>
@@ -1444,22 +1432,22 @@ export default function Home() {
                 background: '#000',
                 zIndex: 10
               }}>
-                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '40px', marginBottom: '8px', animation: 'float 2s ease-in-out infinite' }} />
-                <p style={{ color: '#ff0', fontFamily: 'VT323, monospace', fontSize: '14px', margin: '4px 0' }}>CUM-MAN</p>
-                <p style={{ color: '#fff', fontFamily: 'VT323, monospace', fontSize: '10px', margin: '2px 0' }}>CUMSHOT vs CUMMY</p>
+                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '50px', marginBottom: '10px', animation: 'float 2s ease-in-out infinite' }} />
+                <p style={{ color: '#ff0', fontFamily: 'VT323, monospace', fontSize: '18px', margin: '6px 0' }}>CUM-MAN</p>
+                <p style={{ color: '#fff', fontFamily: 'VT323, monospace', fontSize: '12px', margin: '4px 0' }}>CUMSHOT vs CUMMY</p>
                 <button 
                   id="arcade-play-btn"
                   className="arcade-play-btn"
                   onClick={() => setArcadeStarted(true)}
                   style={{
-                    marginTop: '12px',
+                    marginTop: '16px',
                     background: 'linear-gradient(180deg, #ff0 0%, #f80 100%)',
                     border: '3px solid #fff',
                     borderRadius: '4px',
-                    padding: '8px 20px',
+                    padding: '10px 24px',
                     color: '#000',
                     fontFamily: '"Press Start 2P", VT323, monospace',
-                    fontSize: '10px',
+                    fontSize: '12px',
                     cursor: 'pointer',
                     boxShadow: '0 4px 0 #880, 0 0 10px rgba(255,255,0,0.5)',
                     transition: 'all 0.1s'
@@ -1470,40 +1458,40 @@ export default function Home() {
               </div>
               
               {/* Game Canvas */}
-              <canvas id="cumman-game" width="200" height="170" style={{ display: 'none', width: '100%', height: '100%' }}></canvas>
+              <canvas id="cumman-game" width="200" height="230" style={{ display: 'none', width: '100%', height: '100%' }}></canvas>
             </div>
             
             {/* Controls */}
-            <div style={{ padding: '8px', textAlign: 'center' }}>
-              <p style={{ fontSize: '8px', color: '#888', fontFamily: 'VT323, monospace', margin: '0 0 4px' }}>
+            <div style={{ padding: '10px', textAlign: 'center' }}>
+              <p style={{ fontSize: '10px', color: '#888', fontFamily: 'VT323, monospace', margin: '0 0 6px' }}>
                 USE ARROW KEYS OR SWIPE
               </p>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '4px' }}>
-                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '4px 8px', fontSize: '10px', color: '#fff' }}>↑</span>
-                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '4px 8px', fontSize: '10px', color: '#fff' }}>←</span>
-                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '4px 8px', fontSize: '10px', color: '#fff' }}>↓</span>
-                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '4px 8px', fontSize: '10px', color: '#fff' }}>→</span>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '6px' }}>
+                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '6px 10px', fontSize: '12px', color: '#fff' }}>↑</span>
+                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '6px 10px', fontSize: '12px', color: '#fff' }}>←</span>
+                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '6px 10px', fontSize: '12px', color: '#fff' }}>↓</span>
+                <span style={{ background: '#333', border: '2px solid #555', borderRadius: '4px', padding: '6px 10px', fontSize: '12px', color: '#fff' }}>→</span>
               </div>
             </div>
             
             {/* Coin Slot */}
             <div style={{ 
               background: '#222', 
-              padding: '6px', 
+              padding: '8px', 
               borderTop: '2px solid #444',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              gap: '8px'
+              gap: '10px'
             }}>
               <div style={{ 
-                width: '30px', 
-                height: '8px', 
+                width: '35px', 
+                height: '10px', 
                 background: '#000', 
                 border: '2px solid #666',
                 borderRadius: '4px'
               }}></div>
-              <span style={{ fontSize: '8px', color: '#666', fontFamily: 'VT323, monospace' }}>$CUM ONLY</span>
+              <span style={{ fontSize: '10px', color: '#666', fontFamily: 'VT323, monospace' }}>$CUM ONLY</span>
             </div>
           </div>
 
@@ -1515,32 +1503,48 @@ export default function Home() {
             background: 'repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #222 10px, #222 20px)',
             border: '3px dashed #ff00ff',
             textAlign: 'center',
-            padding: '20px 12px'
+            padding: '25px 12px'
           }}>
             <div style={{ 
-              fontSize: '40px', 
-              marginBottom: '8px',
+              fontSize: '45px', 
+              marginBottom: '10px',
               filter: 'grayscale(50%)'
             }}>🚧</div>
             <h4 style={{ 
               color: '#ff00ff', 
               fontFamily: 'VT323, monospace', 
-              fontSize: '14px',
-              margin: '0 0 8px'
+              fontSize: '16px',
+              margin: '0 0 10px'
             }}>
               COMING SOON
             </h4>
             <p style={{ 
               color: '#666', 
-              fontSize: '10px', 
+              fontSize: '12px', 
               fontFamily: 'VT323, monospace',
               margin: 0
             }}>
               SOMETHING USELESS<br/>
               IS BEING BUILT HERE
             </p>
-            <div style={{ marginTop: '10px', fontSize: '8px', color: '#444' }}>
+            <div style={{ marginTop: '12px', fontSize: '10px', color: '#444' }}>
               即将推出更多无用技术
+            </div>
+          </div>
+
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">快 • 速 • 链 • 接</div>
+
+          {/* QUICK LINKS */}
+          <div className="side-box">
+            <h4 className="neon-pink">QUICK LINKS</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
+              <a href="/whitepaper" style={{ color: '#ff00ff', fontSize: '13px' }}> Whitepaper</a>
+              <a href="/team" style={{ color: '#ff69b4', fontSize: '13px' }}> Team Origins</a>
+              <a href="/operations" style={{ color: '#00ff00', fontSize: '13px' }}> Daily Operations</a>
+              <a href="/enemies" style={{ color: '#ff0000', fontSize: '13px' }}> Enemy List</a>
+              <a href="/changelog" style={{ color: '#00ffff', fontSize: '13px' }}> Changelog</a>
+              <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" style={{ color: '#fff', fontSize: '13px' }}> Twitter/X</a>
             </div>
           </div>
 
