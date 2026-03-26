@@ -1032,7 +1032,7 @@ export default function Home() {
           {/* WHITEPAPER TEASER */}
           <div className="side-box">
             <h4 className="neon-cyan">WHITEPAPER</h4>
-            <blockquote className="text-corrupt" style={{ fontStyle: 'italic', borderLeft: '2px solid #ff00ff', paddingLeft: '10px', fontSize: '12px', margin: '6px 0 0 0' }}>
+            <blockquote className="text-corrupt" style={{ fontStyle: 'italic', borderLeft: '2px solid #ff00ff', paddingLeft: '10px', fontSize: '12px', margin: '6px 0 0 0', color: '#fff' }}>
               &quot;CUMSHOT represents a paradigm shift in blockchain-based AI systems...&quot;
             </blockquote>
             <a href="/whitepaper" className="chaos-btn" style={{ display: 'block', marginTop: '10px', textAlign: 'center', fontSize: '12px', padding: '6px' }}>
