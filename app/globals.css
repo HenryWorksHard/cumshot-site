@@ -1612,7 +1612,7 @@ body {
 
 .dvd-bounce {
   position: absolute;
-  width: 60px;
+  width: 100px;
   height: auto;
   animation: dvd-move-x 4s linear infinite alternate, dvd-move-y 3s linear infinite alternate;
   filter: drop-shadow(0 0 10px #ff00ff);
@@ -1620,12 +1620,12 @@ body {
 
 @keyframes dvd-move-x {
   0% { left: 0; }
-  100% { left: calc(100% - 60px); }
+  100% { left: calc(100% - 100px); }
 }
 
 @keyframes dvd-move-y {
   0% { top: 0; }
-  100% { top: calc(100% - 60px); }
+  100% { top: calc(100% - 100px); }
 }
 
 /* Color shift on "bounce" - cycles through colors */

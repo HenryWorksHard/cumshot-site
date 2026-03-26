@@ -447,8 +447,26 @@ export default function Home() {
             </div>
             <div className="chaos-box shake-hover" style={{ width: '50%', margin: 0, padding: 0, overflow: 'hidden', position: 'relative' }}>
               <img src="/cumshotarmy.jpg" alt="The CUMSHOTARMY" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              
+              {/* TOP RUNNING TEXT - STUPID TEK IDEAS */}
+              <div style={{ position: 'absolute', top: '10px', left: 0, right: 0, background: 'rgba(0,0,0,0.7)', overflow: 'hidden', transform: 'rotate(-1deg)' }}>
+                <span style={{ color: '#0f0', textShadow: '1px 1px 2px #000', fontSize: '0.9rem', fontWeight: 'bold', fontFamily: 'VT323, monospace', display: 'inline-block', whiteSpace: 'nowrap', animation: 'scroll-left-instant 25s linear infinite' }}>
+                  🔧 TEK IDEAS: blockchain-powered toilet paper dispenser 区块链卫生纸机 • AI that judges your food choices 评判你食物选择的AI • smart doorknob that insults you 会侮辱你的智能门把手 • NFT for every sneeze you've ever done 你打过的每个喷嚏都是NFT • decentralized cum tracking protocol 去中心化精液追踪协议 • smart fridge that texts your mom when you eat cake 吃蛋糕时给你妈发短信的智能冰箱 • AI therapist that only responds with "skill issue" 只回复"技术问题"的AI治疗师 • blockchain-verified excuses for being late 区块链验证的迟到借口 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  🔧 TEK IDEAS: blockchain-powered toilet paper dispenser 区块链卫生纸机 • AI that judges your food choices 评判你食物选择的AI • smart doorknob that insults you 会侮辱你的智能门把手 • NFT for every sneeze you've ever done 你打过的每个喷嚏都是NFT • decentralized cum tracking protocol 去中心化精液追踪协议 • smart fridge that texts your mom when you eat cake 吃蛋糕时给你妈发短信的智能冰箱 • AI therapist that only responds with "skill issue" 只回复"技术问题"的AI治疗师 • blockchain-verified excuses for being late 区块链验证的迟到借口 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+              </div>
+              
+              {/* BOTTOM RUNNING TEXT - FREE TIME ACTIVITIES */}
+              <div style={{ position: 'absolute', bottom: '10px', left: 0, right: 0, background: 'rgba(0,0,0,0.7)', overflow: 'hidden', transform: 'rotate(1deg)' }}>
+                <span style={{ color: '#ff00ff', textShadow: '1px 1px 2px #000', fontSize: '0.9rem', fontWeight: 'bold', fontFamily: 'VT323, monospace', display: 'inline-block', whiteSpace: 'nowrap', animation: 'scroll-left-instant 30s linear infinite', animationDirection: 'reverse' }}>
+                  😴 FREE TIME (24/7): swiping on grindr 刷grindr • looking at plant pics on pinterest 在pinterest看植物图片 • stalking hot moms' ring doorbell cams 偷看辣妈的门铃摄像头 • pretending to code but actually napping 假装写代码其实在睡觉 • making tier lists of soup 给汤做排行榜 • googling "am i a sociopath" quiz 谷歌"我是不是反社会"测试 • watching paint dry (literally) 看油漆干（真的） • sending unsolicited tech opinions to random discord servers 在随机discord发送没人要的技术意见 • judging people's spotify wrapped 评判别人的spotify年度总结 • reporting my own tweets 举报我自己的推文 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  😴 FREE TIME (24/7): swiping on grindr 刷grindr • looking at plant pics on pinterest 在pinterest看植物图片 • stalking hot moms' ring doorbell cams 偷看辣妈的门铃摄像头 • pretending to code but actually napping 假装写代码其实在睡觉 • making tier lists of soup 给汤做排行榜 • googling "am i a sociopath" quiz 谷歌"我是不是反社会"测试 • watching paint dry (literally) 看油漆干（真的） • sending unsolicited tech opinions to random discord servers 在随机discord发送没人要的技术意见 • judging people's spotify wrapped 评判别人的spotify年度总结 • reporting my own tweets 举报我自己的推文 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+              </div>
+              
+              {/* DVD BOUNCING CUMMY - 70% BIGGER */}
               <div className="dvd-bounce-container" style={{ position: 'absolute', inset: 0 }}>
-                <img src="/cummy-bounce.png" alt="Cummy" className="dvd-bounce" />
+                <img src="/cummy-bounce.png" alt="Cummy" className="dvd-bounce" style={{ width: '100px' }} />
               </div>
             </div>
           </div>
