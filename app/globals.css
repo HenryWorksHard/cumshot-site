@@ -1702,22 +1702,26 @@ body {
   align-items: flex-start;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0;
   position: relative;
 }
 
 .piss-left {
   flex: 1 1 65%;
   min-width: 0;
-  padding-right: 12px;
+  padding: 8px;
+  background: #c0c0c0;
+  border-right: 2px solid #808080;
 }
 
 .piss-right {
-  flex: 0 0 300px;
+  flex: 0 0 320px;
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding-left: 12px;
+  padding: 10px;
+  background: linear-gradient(180deg, #d0d0d0 0%, #c0c0c0 100%);
+  border: 1px inset #808080;
 }
 
 /* VERTICAL CHINESE TEXT DIVIDER */
@@ -1766,37 +1770,55 @@ body {
   border-radius: 2px;
 }
 
-/* Right side boxes styling */
+/* Right side boxes styling - Pissmissle style */
 .piss-right .side-box {
   background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
-  border: 2px solid #ff00ff;
-  border-bottom: none;
-  padding: 8px 10px;
+  border: 2px outset #666;
+  margin: 0 0 10px 0;
+  padding: 10px;
   flex-shrink: 0;
 }
 
 .piss-right .side-box:last-child {
-  border-bottom: 2px solid #ff00ff;
+  margin-bottom: 0;
 }
 
 .piss-right .side-box h4 {
   color: #ff00ff;
   font-family: 'VT323', monospace;
-  font-size: 13px;
-  margin-bottom: 6px;
+  font-size: 14px;
+  margin-bottom: 8px;
   border-bottom: none;
   padding-bottom: 0;
 }
 
-/* Chinese text divider between sections */
+/* Vertical border dividers between sections - Pissmissle style */
+.vertical-border {
+  height: 8px;
+  margin: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    transparent 10%,
+    #ff00ff 10%,
+    #ff00ff 12%,
+    transparent 12%,
+    transparent 88%,
+    #00ffff 88%,
+    #00ffff 90%,
+    transparent 90%
+  );
+}
+
+/* Chinese text divider between sections - thinner, more subtle */
 .chinese-divider {
-  background: linear-gradient(90deg, transparent, #ff00ff 20%, #ff00ff 80%, transparent);
-  padding: 2px 0;
+  background: linear-gradient(90deg, transparent 5%, rgba(255,0,255,0.3) 20%, rgba(255,0,255,0.3) 80%, transparent 95%);
+  padding: 3px 0;
+  margin: 0;
   text-align: center;
   font-family: 'VT323', monospace;
-  font-size: 9px;
-  color: #000;
-  letter-spacing: 3px;
+  font-size: 10px;
+  color: #ff00ff;
+  letter-spacing: 2px;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -1818,9 +1840,16 @@ body {
   color: #ccc;
 }
 
-/* Consistent padding for ALL sidebar boxes */
-.piss-right .side-box {
-  padding: 10px 12px;
+/* Left column boxes - consistent spacing */
+.piss-left .chaos-box,
+.piss-left .terminal-section,
+.piss-left .systems-grid,
+.piss-left > div {
+  margin-bottom: 8px;
+}
+
+.piss-left > div:last-child {
+  margin-bottom: 0;
 }
 
 /* Responsive - stack on mobile */
