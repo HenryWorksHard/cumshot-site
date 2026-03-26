@@ -1013,15 +1013,15 @@ export default function Home() {
                 SIGN
               </button>
             </form>
-            <div style={{ marginTop: '8px', fontSize: '12px', maxHeight: '80px', overflow: 'auto' }}>
+            <div style={{ marginTop: '8px', fontSize: '12px', maxHeight: '80px', overflow: 'auto', color: '#fff' }}>
               <div style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
-                <b>xX_CryptoKing_Xx</b>: cool site!!!11
+                <b style={{ color: '#00ffff' }}>xX_CryptoKing_Xx</b>: cool site!!!11
               </div>
               <div className="blink" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
-                <b>[DELETED]</b>: [REMOVED]
+                <b style={{ color: '#ff0000' }}>[DELETED]</b>: [REMOVED]
               </div>
               <div style={{ padding: '4px 0' }}>
-                <b>Anonymous</b>: lost all SOL 10/10
+                <b style={{ color: '#00ff00' }}>Anonymous</b>: lost all SOL 10/10
               </div>
             </div>
           </div>
