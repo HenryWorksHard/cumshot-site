@@ -981,9 +981,13 @@ This error was caused by: SKILL_ISSUE
             ʕ•ᴥ•ʔ
           </p>
         </div>
-        {/* CUMSHOTARMY Image */}
-        <div className="chaos-box shake-hover" style={{ width: '50%', margin: 0, padding: 0, overflow: 'hidden' }}>
+        {/* CUMSHOTARMY Image with bouncing Cummy DVD */}
+        <div className="chaos-box shake-hover" style={{ width: '50%', margin: 0, padding: 0, overflow: 'hidden', position: 'relative' }}>
           <img src="/cumshotarmy.jpg" alt="The CUMSHOTARMY" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          {/* DVD Bouncing Cummy */}
+          <div className="dvd-bounce-container" style={{ position: 'absolute', inset: 0 }}>
+            <img src="/cummy-bounce.png" alt="Cummy" className="dvd-bounce" />
+          </div>
         </div>
       </div>
 
