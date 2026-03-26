@@ -981,6 +981,11 @@ export default function Home() {
             <p style={{ fontSize: '11px', color: '#666', margin: '6px 0 0 0' }}>[ refreshes every 3s ]</p>
           </div>
 
+          {/* CUMSHOT ROOM IMAGE */}
+          <div className="side-box" style={{ padding: 0, overflow: 'hidden' }}>
+            <img src="/cumshot-room.jpg" alt="CUMSHOT Room" style={{ width: '100%', display: 'block' }} />
+          </div>
+
           {/* CHINESE DIVIDER */}
           <div className="chinese-divider">协 • 议 • 日 • 志</div>
 
