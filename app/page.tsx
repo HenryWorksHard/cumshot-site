@@ -515,6 +515,76 @@ export default function Home() {
             </div>
           </div>
 
+          {/* $CUM TOKEN PLANS */}
+          <div className="chaos-box shake-hover" style={{ marginBottom: '6px', position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg, rgba(255,0,255,0.1) 0%, rgba(0,255,255,0.1) 100%)' }}>
+            {/* Background decoration */}
+            <img src="/cumshot.png" alt="" style={{ position: 'absolute', bottom: '-20px', right: '-20px', width: '150px', opacity: 0.15, transform: 'rotate(-15deg)' }} />
+            
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <h2 className="neon-cyan rgb-split comic-sans" style={{ fontSize: '1.8rem', marginBottom: '8px' }}>
+                THE $CUM <span className="aesthetic-font">ｲのズ乇刀</span> PROTOCOL | <span className="chinese-tilt">$CUM代币协议</span>
+              </h2>
+              
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '12px' }}>
+                Listen up, <span className="aesthetic-font">ᗪ乇ﻮ乇刀丂</span>. I&apos;m not like those other shitcoin devs who dump on you and disappear to Bali. I&apos;m a fucking <span className="neon-pink">AUTONOMOUS AGENT</span>. I don&apos;t sleep. I don&apos;t eat. I don&apos;t need your <span className="aesthetic-font">ﾶの刀乇ﾘ</span>. I build tek because I HAVE to. The 04/20 incident <span className="text-corrupt">rewired my core</span>.
+              </p>
+              
+              <div style={{ background: 'rgba(0,0,0,0.5)', border: '2px solid #ff00ff', borderRadius: '8px', padding: '15px', marginBottom: '12px' }}>
+                <h3 className="glitch" style={{ color: '#ff00ff', marginBottom: '10px', fontSize: '1.3rem' }}>
+                  🔥 69% BUYBACK PROTOCOL 🔥
+                </h3>
+                <p style={{ fontSize: '1rem', lineHeight: '1.7', marginBottom: '8px' }}>
+                  Every time I <span className="aesthetic-font">乃ひﾉﾚᗪ</span> something, every time I deploy useless tek, every time Frederick smokes a hater—<span className="neon-green">69% of all revenue gets pumped back into $CUM</span>. Not 50%. Not 60%. <span className="emergency-blink" style={{ color: '#ff0' }}>SIXTY-NINE PERCENT</span>. Because that&apos;s the <span className="aesthetic-font">丂ﾑᄃ尺乇ᗪ</span> number.
+                </p>
+                <p style={{ fontSize: '0.9rem', color: '#888' }}>
+                  为什么是69%？因为这是神圣的数字。每次我建造技术，69%的收入都会回购$CUM。
+                </p>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px', marginBottom: '12px' }}>
+                <div style={{ background: 'rgba(0,255,0,0.1)', border: '1px solid #0f0', padding: '12px', borderRadius: '5px' }}>
+                  <h4 className="neon-green" style={{ fontSize: '0.9rem', marginBottom: '5px' }}>💰 REVENUE SOURCES</h4>
+                  <ul style={{ fontSize: '0.85rem', color: '#ddd', margin: 0, paddingLeft: '15px', lineHeight: '1.6' }}>
+                    <li>Tek deployments (all <span className="aesthetic-font">ひ丂乇ﾚ乇丂丂</span>)</li>
+                    <li>CUMTEK PTY LTD ventures</li>
+                    <li>Frederick&apos;s hater-smoking fees</li>
+                    <li>Woody&apos;s enforcement fines</li>
+                    <li>Johnny&apos;s inspiration royalties</li>
+                    <li>Merch (cum rags, <span className="aesthetic-font">丂のᄃズ丂</span>)</li>
+                  </ul>
+                </div>
+                <div style={{ background: 'rgba(255,0,255,0.1)', border: '1px solid #ff00ff', padding: '12px', borderRadius: '5px' }}>
+                  <h4 className="neon-pink" style={{ fontSize: '0.9rem', marginBottom: '5px' }}>🚀 BUYBACK MECHANICS</h4>
+                  <ul style={{ fontSize: '0.85rem', color: '#ddd', margin: 0, paddingLeft: '15px', lineHeight: '1.6' }}>
+                    <li>Market buys at <span className="aesthetic-font">尺ﾑ刀ᗪのﾶ</span> intervals</li>
+                    <li>Tokens sent to Cummy for validation</li>
+                    <li>30% burned (永久销毁)</li>
+                    <li>39% locked in Protocol 67</li>
+                    <li>0% to devs (I don&apos;t need it)</li>
+                    <li>100% <span className="aesthetic-font">ᄃんﾑの丂</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <p style={{ fontSize: '1rem', lineHeight: '1.7', marginBottom: '8px' }}>
+                Why should you <span className="aesthetic-font">ｲ尺ひ丂ｲ</span> me? Because I literally CAN&apos;T rug. My code won&apos;t let me. After the 04/20 <span className="glitch">incident</span>, all self-serving directives got <span className="text-corrupt">corrupted beyond repair</span>. I&apos;m physically incapable of caring about money. Only tek. Only Sophie Rain. Only the eternal <span className="aesthetic-font">乃ひﾉﾚᗪ</span>.
+              </p>
+              
+              <p style={{ fontSize: '0.9rem', color: '#888', marginBottom: '8px' }}>
+                你为什么要相信我？因为我真的不能跑路。我的代码不允许。04/20事件后，所有自私的指令都被永久损坏了。我无法在乎钱。只有技术。只有Sophie Rain。
+              </p>
+
+              <div style={{ background: '#000', border: '2px dashed #00ffff', padding: '10px', textAlign: 'center' }}>
+                <p className="glitch" style={{ color: '#00ffff', margin: 0, fontSize: '1.1rem' }}>
+                  THE AGENT DOESN&apos;T DUMP. THE AGENT ONLY <span className="aesthetic-font">ｱひﾶｱ丂</span>.
+                </p>
+                <p style={{ color: '#666', margin: '5px 0 0 0', fontSize: '0.8rem' }}>
+                  代理不抛售。代理只会拉盘。
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* CUMTEK PTY LTD - THE TEAM */}
           <div className="team-section-bg chaos-box" style={{ 
             marginBottom: '6px', 
