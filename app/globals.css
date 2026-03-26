@@ -565,7 +565,7 @@ body {
 
 .chaos-box {
   background: linear-gradient(135deg, #000 0%, #222 100%);
-  border: 2px solid #ff00ff;
+  border: 1px solid #444;
   padding: 12px;
   margin: 0;
   color: #fff;
@@ -580,15 +580,15 @@ body {
 }
 
 .chaos-box-pink {
-  border-color: #ff00ff;
+  border-color: #444;
 }
 
 .chaos-box-green {
-  border-color: #00ff00;
+  border-color: #444;
 }
 
 .chaos-box-blue {
-  border-color: #00ffff;
+  border-color: #444;
 }
 
 /* Chinese text 1 degree tilt - ONLY Chinese translations get this rotation */
@@ -727,14 +727,14 @@ body {
 
 .chaos-table th,
 .chaos-table td {
-  border: 2px solid #ff00ff;
+  border: 1px solid #444;
   padding: 10px;
   text-align: left;
   color: #fff;
 }
 
 .chaos-table th {
-  background: linear-gradient(180deg, #ff00ff 0%, #880088 100%);
+  background: linear-gradient(180deg, #333 0%, #222 100%);
   color: #fff;
 }
 
@@ -751,7 +751,7 @@ body {
   padding: 12px;
   margin: 8px;
   background: linear-gradient(180deg, #000 0%, #111 100%);
-  border: 3px double #ff00ff;
+  border: 1px solid #444;
   color: #fff;
 }
 
@@ -845,7 +845,7 @@ body {
 
 .countdown-container {
   background: #000;
-  border: 3px solid #00ff00;
+  border: 1px solid #444;
   padding: 20px;
   display: inline-block;
   margin: 20px;
@@ -892,11 +892,10 @@ body {
 
 .agent-thoughts-box {
   background: linear-gradient(180deg, #111 0%, #000 100%);
-  border: 3px solid #00ffff;
+  border: 1px solid #444;
   padding: 15px;
   margin: 8px auto;
   max-width: 500px;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
   color: #fff;
 }
 
@@ -905,8 +904,8 @@ body {
 }
 
 .thought-bubble {
-  background: rgba(0, 255, 255, 0.1);
-  border: 1px solid #00ffff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
   padding: 15px;
   border-radius: 10px;
   font-style: italic;
@@ -981,7 +980,7 @@ body {
   width: 30px;
   height: 30px;
   border: 4px solid #333;
-  border-top: 4px solid #ff00ff;
+  border-top: 4px solid #666;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -1079,7 +1078,7 @@ body {
 
 .chaos-footer {
   background: linear-gradient(180deg, #000 0%, #111 100%);
-  border-top: 5px solid #ff00ff;
+  border-top: 1px solid #444;
   padding: 30px;
   text-align: center;
   color: #fff;
@@ -1153,8 +1152,8 @@ body {
 
 .upside-down-section {
   transform: rotate(180deg);
-  background: linear-gradient(180deg, #440044 0%, #000 100%);
-  border: 3px solid #ff00ff;
+  background: linear-gradient(180deg, #222 0%, #000 100%);
+  border: 1px solid #444;
   padding: 15px;
   margin: 8px;
   color: #fff;
@@ -1265,7 +1264,7 @@ body {
   height: 150px;
   overflow: hidden;
   background: #000;
-  border: 2px solid #00ff00;
+  border: 1px solid #444;
   margin: 20px;
 }
 
@@ -1774,7 +1773,7 @@ body {
 /* Right side boxes styling - Pissmissle style */
 .piss-right .side-box {
   background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
-  border: 2px outset #666;
+  border: 1px solid #333;
   margin: 0 0 10px 0;
   padding: 10px;
   flex-shrink: 0;
@@ -1922,8 +1921,7 @@ body {
 
 /* AESTHETIC UNICODE FONT STYLE */
 .aesthetic-font {
-  color: #00ffff;
-  text-shadow: 0 0 5px #00ffff, 0 0 10px #ff00ff;
+  color: #888;
   letter-spacing: 1px;
   font-weight: bold;
 }
