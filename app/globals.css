@@ -695,6 +695,7 @@ body {
   padding: 5px;
   font-family: 'Comic Neue', cursive;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .guestbook-btn {
@@ -1834,6 +1835,11 @@ body {
 .piss-right .side-box div {
   font-size: 13px;
   line-height: 1.5;
+}
+
+.piss-right .side-box input,
+.piss-right .side-box button {
+  box-sizing: border-box;
 }
 
 .piss-right .side-box p {
