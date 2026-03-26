@@ -920,20 +920,24 @@ export default function Home() {
           {/* CUMTEK FAMILY IMAGE */}
           <div className="side-box" style={{ padding: 0, position: 'relative', overflow: 'hidden' }}>
             <img src="/cumtek-family.jpg" alt="CumTek Family" style={{ width: '100%', display: 'block' }} />
-            {/* CUMSHOT logo overlay */}
-            <img 
-              src="/cumshot.png" 
-              alt="CUMSHOT" 
+            {/* CUMSHOT text overlay - centered like header */}
+            <h2 
+              className="glitch"
               style={{ 
                 position: 'absolute', 
-                bottom: '10px', 
-                right: '10px', 
-                width: '60px', 
-                height: 'auto',
-                filter: 'drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 5px #000)',
-                animation: 'hero-glow 2s ease-in-out infinite alternate'
-              }} 
-            />
+                top: '50%', 
+                left: '50%', 
+                transform: 'translate(-50%, -50%)',
+                fontSize: '2rem',
+                fontWeight: 'bold',
+                color: '#fff',
+                textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000',
+                margin: 0,
+                whiteSpace: 'nowrap'
+              }}
+            >
+              $CUMSHOT
+            </h2>
           </div>
 
           {/* CHINESE DIVIDER */}
