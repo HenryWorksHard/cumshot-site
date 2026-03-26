@@ -2,6 +2,31 @@
 
 import { useEffect, useState, useRef, useCallback } from 'react'
 
+// ============================================
+// CENTRALIZED CONFIG - UPDATE THESE AFTER LAUNCH
+// ============================================
+const TOKEN_CONFIG = {
+  // Contract Address - Update this after token launch
+  CA: 'COMING_SOON',
+  CA_DISPLAY: 'COMING SOON', // What shows on buttons
+  
+  // Buy Link - Update this to pump.fun link after launch
+  BUY_LINK: '#', // Change to: 'https://pump.fun/coin/YOUR_CA_HERE'
+  
+  // Social Links
+  TWITTER: 'https://x.com/cumshotonsolana',
+  TWITTER_HANDLE: '@cumshotonsolana',
+  
+  // DEX Links - Update after launch
+  PUMP_FUN: '', // 'https://pump.fun/coin/YOUR_CA_HERE'
+  DEXSCREENER: '', // 'https://dexscreener.com/solana/YOUR_CA_HERE'
+  
+  // Token Info
+  TOKEN_NAME: '$CUM',
+  TOKEN_SYMBOL: 'CUM',
+}
+// ============================================
+
 // The CumTek Team
 const cumtekTeam = [
   { name: 'CUMMY', form: 'Sentient Cumstain | 有意识的精斑', role: 'Primary companion and technical idea generator | 主要伙伴和技术创意生成器', image: '/cummy.png' },
@@ -254,21 +279,21 @@ export default function Home() {
         <div className="hero-character" style={{ position: 'relative', width: '100%' }}>
           {/* 3 BUTTONS ROW ON TOP OF IMAGE */}
           <div style={{ position: 'absolute', top: '15px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '10px', zIndex: 10 }}>
-            <a href="https://x.com/cumshotonsolana" target="_blank" rel="noopener noreferrer" className="chaos-btn" style={{ padding: '8px 20px', fontSize: '14px', background: '#000', border: '2px solid #fff' }}>
+            <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" className="chaos-btn" style={{ padding: '8px 20px', fontSize: '14px', background: '#000', border: '2px solid #fff' }}>
               X
             </a>
-            <a href="#" className="chaos-btn" style={{ padding: '8px 20px', fontSize: '14px', background: '#ff00ff', border: '2px solid #fff' }}>
-              Buy $CUM
+            <a href={TOKEN_CONFIG.BUY_LINK} className="chaos-btn" style={{ padding: '8px 20px', fontSize: '14px', background: '#ff00ff', border: '2px solid #fff' }}>
+              Buy {TOKEN_CONFIG.TOKEN_NAME}
             </a>
             <button 
               onClick={() => {
-                navigator.clipboard.writeText('COMING SOON')
-                alert('CA copied! (Coming soon)')
+                navigator.clipboard.writeText(TOKEN_CONFIG.CA)
+                alert(`CA copied! (${TOKEN_CONFIG.CA_DISPLAY})`)
               }}
               className="chaos-btn" 
               style={{ padding: '8px 20px', fontSize: '14px', background: '#000', border: '2px solid #00ff00', color: '#00ff00' }}
             >
-              CA: COMING SOON
+              CA: {TOKEN_CONFIG.CA_DISPLAY}
             </button>
           </div>
           {/* FAKE ADULT SITE LOGOS - LEFT SIDE */}
@@ -747,8 +772,8 @@ export default function Home() {
             <div style={{ padding: '12px' }}>
               <button 
                 onClick={() => {
-                  navigator.clipboard.writeText('COMING_SOON')
-                  alert('CA copied! (Coming soon) | 合约地址已复制！(即将推出)')
+                  navigator.clipboard.writeText(TOKEN_CONFIG.CA)
+                  alert(`CA copied! (${TOKEN_CONFIG.CA_DISPLAY}) | 合约地址已复制！`)
                 }}
                 style={{ 
                   width: '100%', 
@@ -764,7 +789,7 @@ export default function Home() {
                 }}
                 className="shake-hover"
               >
-                COMING_SOON_STOP_ASKING
+                {TOKEN_CONFIG.CA === 'COMING_SOON' ? 'COMING_SOON_STOP_ASKING' : TOKEN_CONFIG.CA}
               </button>
               <p style={{ textAlign: 'center', fontSize: '9px', color: '#666', margin: '6px 0 0 0' }}>
                 CLICK TO COPY 点击复制
@@ -774,13 +799,13 @@ export default function Home() {
             {/* Links */}
             <div style={{ padding: '0 12px 12px 12px', fontFamily: 'VT323, monospace', fontSize: '12px', lineHeight: '1.8' }}>
               <p style={{ margin: '4px 0' }}>
-                CumTek X: <a href="https://x.com/cumshotonsolana" target="_blank" rel="noopener noreferrer" style={{ color: '#00ffff' }}>@cumshotonsolana</a> <span style={{ color: '#0f0' }}>[ACTIVE]</span>
+                CumTek X: <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" style={{ color: '#00ffff' }}>{TOKEN_CONFIG.TWITTER_HANDLE}</a> <span style={{ color: '#0f0' }}>[ACTIVE]</span>
               </p>
               <p style={{ margin: '4px 0' }}>
-                Pump.fun: <span style={{ color: '#666' }}>COMING SOON</span>
+                Pump.fun: {TOKEN_CONFIG.PUMP_FUN ? <a href={TOKEN_CONFIG.PUMP_FUN} target="_blank" rel="noopener noreferrer" style={{ color: '#00ff00' }}>BUY HERE</a> : <span style={{ color: '#666' }}>COMING SOON</span>}
               </p>
               <p style={{ margin: '4px 0' }}>
-                DexScreener: <span style={{ color: '#666' }}>COMING SOON</span>
+                DexScreener: {TOKEN_CONFIG.DEXSCREENER ? <a href={TOKEN_CONFIG.DEXSCREENER} target="_blank" rel="noopener noreferrer" style={{ color: '#00ff00' }}>CHART</a> : <span style={{ color: '#666' }}>COMING SOON</span>}
               </p>
               <p style={{ margin: '4px 0' }}>
                 Website: <a href="/" style={{ color: '#ff00ff' }}>cumtek.fun</a>
@@ -789,6 +814,14 @@ export default function Home() {
                 Docs: <a href="/whitepaper" style={{ color: '#ff00ff' }}>WHITEPAPER</a>
               </p>
             </div>
+
+            {/* BUY BANNER */}
+            <a href={TOKEN_CONFIG.BUY_LINK} target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
+              <div style={{ background: 'linear-gradient(90deg, #ff00ff, #00ffff)', padding: '8px', textAlign: 'center', fontFamily: 'VT323, monospace', fontSize: '16px', fontWeight: 'bold', color: '#000', letterSpacing: '2px' }} className="shake-hover">
+                🚀 BUY {TOKEN_CONFIG.TOKEN_NAME} 🚀
+              </div>
+              <img src="/cumshot-banner.jpg" alt="CUMSHOT" style={{ width: '100%', display: 'block' }} />
+            </a>
           </div>
 
           {/* ===== ORIGIN STORY SIDEBAR (aligns with origin story box) ===== */}
@@ -902,7 +935,7 @@ export default function Home() {
               <a href="/operations" style={{ color: '#00ff00', fontSize: '11px' }}> Daily Operations</a>
               <a href="/enemies" style={{ color: '#ff0000', fontSize: '11px' }}> Enemy List</a>
               <a href="/changelog" style={{ color: '#00ffff', fontSize: '11px' }}> Changelog</a>
-              <a href="https://x.com/cumshotonsolana" target="_blank" rel="noopener noreferrer" style={{ color: '#fff', fontSize: '11px' }}> Twitter/X</a>
+              <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" style={{ color: '#fff', fontSize: '11px' }}> Twitter/X</a>
             </div>
           </div>
 
