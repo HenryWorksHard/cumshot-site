@@ -565,9 +565,9 @@ body {
 
 .chaos-box {
   background: linear-gradient(135deg, #000 0%, #222 100%);
-  border: 3px solid #ff00ff;
-  padding: 15px;
-  margin: 8px;
+  border: 2px solid #ff00ff;
+  padding: 12px;
+  margin: 0;
   color: #fff;
 }
 
@@ -1652,27 +1652,62 @@ body {
 
 .piss-layout {
   display: flex;
-  gap: 15px;
+  gap: 0;
   align-items: flex-start;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
+  position: relative;
 }
 
 .piss-left {
   flex: 1 1 65%;
   min-width: 0;
+  padding-right: 25px;
 }
 
 .piss-right {
-  flex: 0 0 320px;
+  flex: 0 0 300px;
   position: sticky;
-  top: 20px;
-  max-height: calc(100vh - 40px);
+  top: 10px;
+  max-height: calc(100vh - 20px);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
+  padding-left: 25px;
+}
+
+/* VERTICAL CHINESE TEXT DIVIDER */
+.vertical-divider {
+  position: absolute;
+  left: calc(65% + 10px);
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.vertical-text-scroll {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  white-space: nowrap;
+  font-family: 'VT323', monospace;
+  font-size: 14px;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+  animation: vertical-scroll-down 30s linear infinite;
+}
+
+@keyframes vertical-scroll-down {
+  0% { top: -100%; }
+  100% { top: 100%; }
 }
 
 /* Hide scrollbar but keep functionality */
@@ -1693,23 +1728,23 @@ body {
 .piss-right .side-box {
   background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
   border: 2px solid #ff00ff;
-  padding: 15px;
+  padding: 10px;
   flex-shrink: 0;
 }
 
 .piss-right .side-box h4 {
   color: #ff00ff;
   font-family: 'VT323', monospace;
-  font-size: 14px;
-  margin-bottom: 10px;
+  font-size: 13px;
+  margin-bottom: 8px;
   border-bottom: 1px solid #ff00ff;
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 }
 
 .piss-right .side-box p {
-  font-size: 12px;
+  font-size: 11px;
   color: #ccc;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* Responsive - stack on mobile */
