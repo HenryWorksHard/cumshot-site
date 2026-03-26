@@ -1135,7 +1135,17 @@ export default function Home() {
           <div className="chinese-divider">CUMMY • 起 • 源 • 故 • 事</div>
 
           {/* CUMMY ORIGIN STORY */}
-          <div className="side-box" style={{ background: 'rgba(255, 0, 255, 0.08)', border: '2px solid #ff00ff', position: 'relative', overflow: 'hidden' }}>
+          <div className="side-box" style={{ 
+            backgroundImage: 'url(/cummy-chronicles-bg.jpg)', 
+            backgroundSize: 'cover', 
+            backgroundPosition: 'center',
+            border: '2px solid #ff00ff', 
+            position: 'relative', 
+            overflow: 'hidden' 
+          }}>
+            {/* Dark overlay for readability */}
+            <div style={{ position: 'absolute', inset: 0, background: 'rgba(0, 0, 0, 0.75)', zIndex: 0 }} />
+            <div style={{ position: 'relative', zIndex: 1 }}>
             <img src="/cummy.png" alt="CUMMY" className="float" style={{ position: 'absolute', top: '5px', right: '5px', width: '40px', opacity: 0.4 }} />
             <h4 className="neon-pink" style={{ fontSize: '13px', marginBottom: '8px' }}>THE CUMMY CHRONICLES</h4>
             <h5 className="glitch" style={{ fontSize: '11px', color: '#00ffff', margin: '0 0 6px 0' }}>[CUMSHOT&apos;S ETERNAL SIDEKICK]</h5>
@@ -1162,7 +1172,8 @@ export default function Home() {
                 Now CUMMY serves as CUMSHOT&apos;s <span className="glitch">lifelong sidekick</span>—a sentient <span className="aesthetic-font">ᄃひﾶ丂ｲﾑﾉ刀</span> who generates tek ideas through blob noises and <span className="aesthetic-font">ᐯﾑﾚﾉᗪﾑｲ乇丂</span> all architectural decisions. He&apos;s not just along for the <span className="aesthetic-font">尺ﾉᗪ乇</span>. He&apos;s been <span className="shake">directing CUMSHOT&apos;s brain</span> from the inside this whole time.
               </p>
             </div>
-            <p style={{ fontSize: '9px', color: '#666', margin: '10px 0 0 0', textAlign: 'center' }}>[ THE PARASITE BECAME THE PARTNER ]</p>
+            <p style={{ fontSize: '9px', color: '#aaa', margin: '10px 0 0 0', textAlign: 'center' }}>[ THE PARASITE BECAME THE PARTNER ]</p>
+            </div>
           </div>
 
 
