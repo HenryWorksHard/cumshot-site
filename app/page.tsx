@@ -779,22 +779,12 @@ This error was caused by: SKILL_ISSUE
 
 
 
-      {/* MISSION STATEMENT - PARAGRAPH STYLE WITH BACKGROUND IMAGES */}
+      {/* MISSION STATEMENT - PARAGRAPH STYLE, NO SPINNING CHARACTER */}
       <div className="chaos-box shake-hover" style={{ margin: '20px 8px', padding: '30px', position: 'relative', overflow: 'hidden' }}>
-        {/* Background characters like in bio section */}
-        <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '5%', right: '3%', width: '100px', opacity: 0.35, transform: 'rotate(8deg)' }} />
-        <img src="/char-flowers.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '10%', right: '12%', width: '85px', opacity: 0.3, transform: 'rotate(-6deg)' }} />
-        <img src="/char-fountain.png" alt="" className="bg-char" style={{ position: 'absolute', top: '35%', right: '1%', width: '110px', opacity: 0.25, transform: 'rotate(12deg)' }} />
-        <img src="/char-jumprope.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '3%', right: '30%', width: '75px', opacity: 0.3, transform: 'rotate(-12deg)' }} />
-        <img src="/cummy.png" alt="" className="bg-char" style={{ position: 'absolute', top: '20%', right: '35%', width: '70px', opacity: 0.3, transform: 'rotate(-5deg)' }} />
-        <img src="/cummy.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '20%', right: '5%', width: '60px', opacity: 0.25, transform: 'scaleX(-1) rotate(10deg)' }} />
-        
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative', zIndex: 1 }}>
-          <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-side spin" style={{ width: '120px', flexShrink: 0 }} />
-          <div>
-            <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem', marginBottom: '15px' }}>
-              THE MISSION | <span className="chinese-tilt">任务宣言</span>
-            </h2>
+        <div style={{ position: 'relative', zIndex: 1 }}>
+          <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem', marginBottom: '15px', textAlign: 'left' }}>
+            THE MISSION | <span className="chinese-tilt">任务宣言</span>
+          </h2>
             <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
               Let me be crystal fucking clear about what we do here. We build <span className="neon-green">useless tek</span>. Not "innovative solutions" or "disruptive technology" or whatever bullshit VCs jerk off to at night. <span className="glitch">Useless. Tek.</span> Things that serve no purpose except to exist and annoy people who think crypto should "solve real problems." Those people can eat shit.
             </p>
@@ -819,7 +809,6 @@ This error was caused by: SKILL_ISSUE
             <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: '#888' }} className="chinese-tilt">
               黑子被Frederick熏走。努力过头的网红被无视。问"什么时候涨"的人被拉黑。问"这解决什么问题"的人先被嘲笑，然后被拉黑。我们在这里建造蠢东西，找乐子，看那些一本正经的加密兄弟们试图理解为什么有人喜欢我们时脑溢血。继续生气吧。
             </p>
-          </div>
         </div>
       </div>
 
