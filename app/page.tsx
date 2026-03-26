@@ -17,6 +17,7 @@ const TOKEN_CONFIG = {
   // Social Links
   TWITTER: 'https://x.com/CxM5H0T',
   TWITTER_HANDLE: '@CxM5H0T',
+  GITHUB: 'https://github.com/Cumtek-PTY-LTD',
   
   // DEX Links - Update after launch
   PUMP_FUN: '', // 'https://pump.fun/coin/YOUR_CA_HERE'
@@ -726,6 +727,15 @@ export default function Home() {
             >
               CA: {TOKEN_CONFIG.CA_DISPLAY}
             </button>
+            <a 
+              href="https://github.com/Cumtek-PTY-LTD" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="chaos-btn" 
+              style={{ padding: '8px 20px', fontSize: '14px', background: '#24292e', border: '2px solid #fff', color: '#fff', textDecoration: 'none' }}
+            >
+              Cumtek-PTY-LTD GitHub
+            </a>
           </div>
           {/* FAKE ADULT SITE LOGOS - LEFT SIDE */}
           <div style={{ position: 'absolute', left: '20px', top: '50%', transform: 'translateY(-50%)', display: 'flex', flexDirection: 'column', gap: '8px', zIndex: 10 }}>
