@@ -917,6 +917,25 @@ export default function Home() {
             </div>
           </div>
 
+          {/* CUMTEK FAMILY IMAGE */}
+          <div className="side-box" style={{ padding: 0, position: 'relative', overflow: 'hidden' }}>
+            <img src="/cumtek-family.jpg" alt="CumTek Family" style={{ width: '100%', display: 'block' }} />
+            {/* CUMSHOT logo overlay */}
+            <img 
+              src="/cumshot.png" 
+              alt="CUMSHOT" 
+              style={{ 
+                position: 'absolute', 
+                bottom: '10px', 
+                right: '10px', 
+                width: '60px', 
+                height: 'auto',
+                filter: 'drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 5px #000)',
+                animation: 'hero-glow 2s ease-in-out infinite alternate'
+              }} 
+            />
+          </div>
+
           {/* CHINESE DIVIDER */}
           <div className="chinese-divider">四 • 二 • 零 • 事 • 件</div>
 
