@@ -976,7 +976,7 @@ export default function Home() {
             <img src="/woody.png" alt="" style={{ position: 'absolute', bottom: '30%', right: '25%', width: '80px', opacity: 0.3, transform: 'rotate(-10deg)', zIndex: 2 }} />
             <img src="/frederick.png" alt="" style={{ position: 'absolute', top: '40%', right: '35%', width: '70px', opacity: 0.25, transform: 'rotate(8deg)', zIndex: 2 }} />
             
-            <div style={{ position: 'relative', zIndex: 3 }}>
+            <div style={{ position: 'relative', zIndex: 3, background: 'rgba(30, 30, 30, 0.75)', padding: '20px', borderRadius: '8px' }}>
               <h2 className="neon-cyan rgb-split comic-sans" style={{ fontSize: '1.8rem', marginBottom: '8px' }}>
                 THE $CUM <span className="aesthetic-font">ｲのズ乇刀</span> PROTOCOL | <span className="chinese-tilt">$CUM代币协议</span>
               </h2>

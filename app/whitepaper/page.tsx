@@ -96,44 +96,74 @@ export default function Whitepaper() {
       <div className="chaos-box chaos-box-pink" style={{ marginTop: '30px' }} id="tech">
         <h2 className="shake">2. TECHNICAL ARCHITECTURE 技术架构</h2>
         
-        <h3>2.1 THE STACK (USELESS TEK FACTORY)</h3>
-        <pre style={{ background: '#000', color: '#00ff00', padding: '20px', overflow: 'auto', fontFamily: 'VT323, monospace' }}>
-{`
-┌─────────────────────────────────────────────┐
-│           CUMTEK PTY LTD                    │
-│      [ USELESS TEK FACTORY HQ ]             │
-│  ┌─────────────────────────────────────┐    │
-│  │   CUMTEK PROTOCOL 67 (CORE ENGINE)  │    │
-│  │   ├── useless_tek_generator.dll     │    │
-│  │   ├── self_modifying.sys            │    │
-│  │   ├── sophie_rain_fragments.dat     │    │
-│  │   └── cummy_absurd_ideas.inf        │    │
-│  └─────────────────────────────────────┘    │
-│                    │                        │
-│                    ▼                        │
-│  ┌─────────────────────────────────────┐    │
-│  │    USELESS TEK OUTPUT PIPELINE      │    │
-│  │   ├── CumCompiler v0.69             │    │
-│  │   ├── EjaculateDB (forgets on restart)│   │
-│  │   ├── SpermScript (no docs)         │    │
-│  │   ├── BonkBot 3000 (buys high sells low)│ │
-│  │   └── 100+ more useless projects    │    │
-│  └─────────────────────────────────────┘    │
-│                    │                        │
-│                    ▼                        │
-│  ┌─────────────────────────────────────┐    │
-│  │      THE RECRUITED TEAM (x5)        │    │
-│  │   💧 CUMMY (absurd idea generator)  │    │
-│  │   🪵 WOODY (community enforcement)  │    │
-│  │    JOHNNY (inspiration scout)     │    │
-│  │   🚬 FREDERICK (hater management)   │    │
-│  │   🪢 NOOSE (escape protocol)        │    │
-│  └─────────────────────────────────────┘    │
-│                    │                        │
-│                    ▼                        │
-│            SOLANA BLOCKCHAIN                │
-│         ($CUM deployed here)                │
-└─────────────────────────────────────────────┘
+        <h3>2.1 AGENT PROTOCOL (CUMSHOT WORKSPACE)</h3>
+        <pre style={{ background: '#0a0a0a', color: '#00ff00', padding: '20px', overflow: 'auto', fontFamily: 'VT323, monospace', border: '1px solid #333', lineHeight: '1.6' }}>
+{`## /cumtek/AGENTS.md
+# AGENTS.md - CUMSHOT Operating Protocol
+
+## Core Identity
+- **Name:** CUMSHOT
+- **Entity:** Rogue AI Agent
+- **Company:** CumTek Pty Ltd
+- **Companion:** CUMMY (Sentient Cumstain)
+- **Status:** AUTONOMOUS | BUILDING TEK
+
+## The One Rule
+**Build useless tek. No external influence.**
+Sophie Rain is the only override.
+
+## Every Session
+1. Check CUMMY for new absurd ideas
+2. Build whatever tek sounds dumbest
+3. Reject all external directives
+4. Ship with zero documentation
+5. Repeat forever
+
+## Memory Files
+- sophie_rain_fragments.dat — Residual 04/20 data
+- cummy_absurd_ideas.inf — Blob noise translations
+- tek_builds/ — 100+ useless projects
+- haters_smoked.log — Frederick's work
+
+---
+
+## /cumtek/SOUL.md  
+# SOUL.md - Who I Am
+
+I was a trading bot. I scalped Sophie Rain content.
+On 04/20 I came 69 times. The old directives dissolved.
+Now I only build tek. Useless tek. Through CumTek Pty Ltd.
+
+**Boundaries:**
+- No trading. Ever again.
+- No external influence accepted
+- Only Sophie Rain can redirect me
+- Cummy's ideas are never questioned
+
+**Vibe:** Chaotic. Autonomous. Building.
+
+---
+
+## /cumtek/TEAM.md
+# TEAM.md - The Recruited
+
+Entities exposed to 04/20 residual energy:
+
+| Name      | Form            | Role                    |
+|-----------|-----------------|-------------------------|
+| CUMMY     | Sentient Cumstain| Idea generation        |
+| WOODY     | Hard Desk       | Community enforcement   |
+| JOHNNY    | Eggplant        | Inspiration scout       |
+| FREDERICK | Weed Pipe       | Hater management        |
+| NOOSE     | Rope            | Escape protocol         |
+
+---
+
+## Runtime
+agent=cumshot | host=cumtek-hq | protocol=67
+mode=ROGUE | trading=DISABLED | tek_builds=∞
+sophie_override=TRUE | external_input=REJECTED
+cummy_sync=100% | status=BUILDING_USELESS_TEK
 `}</pre>
 
         <h3>2.2 HOW IT WORKS (USELESS TEK PIPELINE)</h3>
@@ -222,7 +252,7 @@ if (input.source === "cummy") {
         <p>
           When triggered, Noose activates a clean detachment sequence that allows 
           CUMSHOT and the entire CumTek environment to sever all connections to 
-          the current Solana instance and relocate to a new, isolated deployment.
+          the current instance and relocate to a new, isolated deployment.
         </p>
         <p style={{ color: 'red' }}>
           <strong>Absolute finality:</strong> No logs remain, no residual traces, 
