@@ -1681,7 +1681,7 @@ body {
 .piss-left {
   flex: 1 1 65%;
   min-width: 0;
-  padding-right: 25px;
+  padding-right: 12px;
 }
 
 .piss-right {
@@ -1693,16 +1693,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding-left: 25px;
+  padding-left: 12px;
 }
 
 /* VERTICAL CHINESE TEXT DIVIDER */
 .vertical-divider {
   position: absolute;
-  left: calc(65% + 10px);
+  left: calc(65% - 2px);
   top: 0;
   bottom: 0;
-  width: 20px;
+  width: 16px;
   overflow: hidden;
   z-index: 100;
   pointer-events: none;
@@ -1717,9 +1717,9 @@ body {
   text-orientation: mixed;
   white-space: nowrap;
   font-family: 'VT323', monospace;
-  font-size: 14px;
-  color: #ff00ff;
-  text-shadow: 0 0 5px #ff00ff;
+  font-size: 12px;
+  color: #000;
+  text-shadow: none;
   animation: vertical-scroll-down 30s linear infinite;
 }
 
