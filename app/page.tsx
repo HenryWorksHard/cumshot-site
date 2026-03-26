@@ -734,6 +734,63 @@ export default function Home() {
         {/* ====== RIGHT COLUMN - STICKY SIDEBAR ====== */}
         <div className="piss-right">
           
+          {/* ===== TOKEN MARKETING BOX (PISSMISSLE STYLE) ===== */}
+          <div className="side-box" style={{ background: '#0a0a0a', border: '2px solid #ff00ff', marginBottom: '8px', padding: '0', overflow: 'hidden' }}>
+            {/* Header */}
+            <div style={{ background: 'linear-gradient(90deg, #ff00ff, #00ffff)', padding: '8px 12px', textAlign: 'center' }}>
+              <h4 style={{ margin: 0, color: '#000', fontFamily: 'VT323, monospace', fontSize: '14px', fontWeight: 'bold', letterSpacing: '2px' }}>
+                CONTRACT ADDRESS 合约地址
+              </h4>
+            </div>
+            
+            {/* CA Box */}
+            <div style={{ padding: '12px' }}>
+              <button 
+                onClick={() => {
+                  navigator.clipboard.writeText('COMING_SOON')
+                  alert('CA copied! (Coming soon) | 合约地址已复制！(即将推出)')
+                }}
+                style={{ 
+                  width: '100%', 
+                  background: '#111', 
+                  border: '1px solid #333', 
+                  padding: '10px', 
+                  cursor: 'pointer',
+                  fontFamily: 'VT323, monospace',
+                  fontSize: '11px',
+                  color: '#00ff00',
+                  wordBreak: 'break-all',
+                  textAlign: 'center'
+                }}
+                className="shake-hover"
+              >
+                COMING_SOON_STOP_ASKING
+              </button>
+              <p style={{ textAlign: 'center', fontSize: '9px', color: '#666', margin: '6px 0 0 0' }}>
+                CLICK TO COPY 点击复制
+              </p>
+            </div>
+
+            {/* Links */}
+            <div style={{ padding: '0 12px 12px 12px', fontFamily: 'VT323, monospace', fontSize: '12px', lineHeight: '1.8' }}>
+              <p style={{ margin: '4px 0' }}>
+                CumTek X: <a href="https://x.com/cumshotonsolana" target="_blank" rel="noopener noreferrer" style={{ color: '#00ffff' }}>@cumshotonsolana</a> <span style={{ color: '#0f0' }}>[ACTIVE]</span>
+              </p>
+              <p style={{ margin: '4px 0' }}>
+                Pump.fun: <span style={{ color: '#666' }}>COMING SOON</span>
+              </p>
+              <p style={{ margin: '4px 0' }}>
+                DexScreener: <span style={{ color: '#666' }}>COMING SOON</span>
+              </p>
+              <p style={{ margin: '4px 0' }}>
+                Website: <a href="/" style={{ color: '#ff00ff' }}>cumtek.fun</a>
+              </p>
+              <p style={{ margin: '4px 0' }}>
+                Docs: <a href="/whitepaper" style={{ color: '#ff00ff' }}>WHITEPAPER</a>
+              </p>
+            </div>
+          </div>
+
           {/* ===== ORIGIN STORY SIDEBAR (aligns with origin story box) ===== */}
           <div className="origin-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
             
