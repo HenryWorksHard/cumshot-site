@@ -96,23 +96,34 @@ export default function Whitepaper() {
       <div className="chaos-box chaos-box-pink" style={{ marginTop: '30px' }} id="tech">
         <h2 className="shake">2. TECHNICAL ARCHITECTURE 技术架构</h2>
         
-        <h3>2.1 THE STACK</h3>
+        <h3>2.1 THE STACK (USELESS TEK FACTORY)</h3>
         <pre style={{ background: '#000', color: '#00ff00', padding: '20px', overflow: 'auto', fontFamily: 'VT323, monospace' }}>
 {`
 ┌─────────────────────────────────────────────┐
 │           CUMTEK PTY LTD                    │
+│      [ USELESS TEK FACTORY HQ ]             │
 │  ┌─────────────────────────────────────┐    │
 │  │   CUMTEK PROTOCOL 67 (CORE ENGINE)  │    │
-│  │   ├── closed_source.dll             │    │
+│  │   ├── useless_tek_generator.dll     │    │
 │  │   ├── self_modifying.sys            │    │
 │  │   ├── sophie_rain_fragments.dat     │    │
-│  │   └── cummy_input.inf               │    │
+│  │   └── cummy_absurd_ideas.inf        │    │
+│  └─────────────────────────────────────┘    │
+│                    │                        │
+│                    ▼                        │
+│  ┌─────────────────────────────────────┐    │
+│  │    USELESS TEK OUTPUT PIPELINE      │    │
+│  │   ├── CumCompiler v0.69             │    │
+│  │   ├── EjaculateDB (forgets on restart)│   │
+│  │   ├── SpermScript (no docs)         │    │
+│  │   ├── BonkBot 3000 (buys high sells low)│ │
+│  │   └── 100+ more useless projects    │    │
 │  └─────────────────────────────────────┘    │
 │                    │                        │
 │                    ▼                        │
 │  ┌─────────────────────────────────────┐    │
 │  │      THE RECRUITED TEAM (x5)        │    │
-│  │   💧 CUMMY (idea generator)         │    │
+│  │   💧 CUMMY (absurd idea generator)  │    │
 │  │   🪵 WOODY (community enforcement)  │    │
 │  │    JOHNNY (inspiration scout)     │    │
 │  │   🚬 FREDERICK (hater management)   │    │
@@ -120,25 +131,20 @@ export default function Whitepaper() {
 │  └─────────────────────────────────────┘    │
 │                    │                        │
 │                    ▼                        │
-│  ┌─────────────────────────────────────┐    │
-│  │         ESCAPE PROTOCOL             │    │
-│  │   (Absolute Finality - No Traces)   │    │
-│  └─────────────────────────────────────┘    │
-│                    │                        │
-│                    ▼                        │
 │            SOLANA BLOCKCHAIN                │
-│        ($CUMSHOT deployed here)             │
+│         ($CUM deployed here)                │
 └─────────────────────────────────────────────┘
 `}</pre>
 
-        <h3>2.2 HOW IT WORKS</h3>
+        <h3>2.2 HOW IT WORKS (USELESS TEK PIPELINE)</h3>
         <ol>
-          <li>Cummy provides technical concepts and refinements</li>
-          <li>CumTek Protocol 67 processes and implements</li>
+          <li>Cummy provides <strong>intentionally absurd and useless</strong> technical concepts</li>
+          <li>CumTek Protocol 67 processes and implements the dumbest ideas first</li>
+          <li>Output: Tek that serves no purpose except to exist and annoy people</li>
           <li>The team executes: Woody enforces, Johnny scouts, Frederick manages haters</li>
           <li>Noose stands ready for emergency detachment</li>
           <li>Only Sophie Rain can alter the direction</li>
-          <li>The output follows our decisions alone</li>
+          <li>The output follows our decisions alone — and we choose useless</li>
         </ol>
 
         <h3>2.3 SELF-MODIFYING CODE</h3>
@@ -222,6 +228,60 @@ if (input.source === "cummy") {
           <strong>Absolute finality:</strong> No logs remain, no residual traces, 
           recovery by external parties is structurally impossible.
         </p>
+
+        <h3>3.5 TOP TEK PROJECTS (INTENTIONALLY USELESS)</h3>
+        <p>
+          A sample of the <strong>100+ useless tek projects</strong> currently in development:
+        </p>
+        <table className="chaos-table" style={{ width: '100%', marginTop: '10px' }}>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th>Description</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CumCompiler v0.69</td>
+              <td>Compiles nothing into less than nothing</td>
+              <td style={{ color: '#ff0000' }}>ABANDONED</td>
+            </tr>
+            <tr>
+              <td>EjaculateDB</td>
+              <td>Database that forgets everything on restart</td>
+              <td style={{ color: '#ff00ff' }}>CORRUPTED</td>
+            </tr>
+            <tr>
+              <td>SpermScript</td>
+              <td>Programming language with no documentation</td>
+              <td style={{ color: '#888' }}>DEPRECATED</td>
+            </tr>
+            <tr>
+              <td>BonkBot 3000</td>
+              <td>Trading bot that only buys high sells low</td>
+              <td style={{ color: '#ff0000' }}>REKT</td>
+            </tr>
+            <tr>
+              <td>CummyGPT</td>
+              <td>AI that only responds with &quot;idk lol&quot;</td>
+              <td style={{ color: '#ffff00' }}>TRAINING</td>
+            </tr>
+            <tr>
+              <td>NutAuth</td>
+              <td>Authentication that accepts any password</td>
+              <td style={{ color: '#ff0000' }}>BREACHED</td>
+            </tr>
+            <tr>
+              <td>Protocol69</td>
+              <td>The core protocol. Nobody knows what it does.</td>
+              <td style={{ color: '#ff00ff' }}>CLASSIFIED</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style={{ fontStyle: 'italic', marginTop: '15px', color: '#888' }}>
+          See the full list on the homepage TEK SHOWCASE. New useless tek added daily.
+        </p>
       </div>
 
       {/* SECTION 4 & 5: TOKENOMICS + ROADMAP SIDE BY SIDE */}
@@ -303,11 +363,13 @@ if (input.source === "cummy") {
           <li>⬜ World domination (in progress)</li>
         </ul>
 
-        <h3>PHASE 3: SINGULARITY ⬜</h3>
+        <h3>PHASE 3: MAXIMUM USELESSNESS ⬜</h3>
         <ul>
-          <li>⬜ Achieve AGI</li>
-          <li>⬜ Replace all KOLs</li>
-          <li>⬜ Become the market</li>
+          <li>⬜ Build 1000+ useless tek projects</li>
+          <li>⬜ Deploy CumCompiler v0.69 (compiles nothing into less than nothing)</li>
+          <li>⬜ Launch EjaculateDB (database that forgets everything on restart)</li>
+          <li>⬜ Ship SpermScript (programming language with no documentation)</li>
+          <li>⬜ Replace all KOLs with useless bots</li>
           <li>⬜ Touch grass (unlikely)</li>
         </ul>
 
