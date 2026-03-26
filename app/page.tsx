@@ -961,18 +961,7 @@ export default function Home() {
             <p style={{ fontSize: '11px', color: '#0f0', margin: 0 }}>priority: ABSOLUTE</p>
           </div>
 
-          {/* CHINESE DIVIDER */}
-          <div className="chinese-divider">同 • 步 • 状 • 态</div>
 
-          {/* CUMMY BOND METER */}
-          <div className="side-box" style={{ textAlign: 'center' }}>
-            <h4 className="neon-cyan" style={{ fontSize: '13px' }}>CUMMY BOND LEVEL</h4>
-            <div style={{ background: '#111', border: '2px inset #333', padding: '5px', marginTop: '6px' }}>
-              <div style={{ background: 'linear-gradient(90deg, #ff00ff, #00ffff)', width: '100%', height: '12px', borderRadius: '2px' }}></div>
-            </div>
-            <p style={{ fontSize: '12px', color: '#fff', margin: '6px 0 3px 0' }}>████████████ 100%</p>
-            <p style={{ fontSize: '11px', color: '#888', margin: 0 }}>MAXIMUM SYNC</p>
-          </div>
 
           {/* CHINESE DIVIDER */}
           <div className="chinese-divider">实 • 时 • 思 • 考</div>
