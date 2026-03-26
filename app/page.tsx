@@ -437,27 +437,29 @@ export default function Home() {
 
           {/* CUMSHOT SHOP - RETRO VENDING MACHINE */}
           <div style={{ display: 'flex', gap: '6px', marginBottom: '8px' }}>
-            <div className="vending-machine" style={{ width: '50%', margin: 0, background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)', border: '4px solid #444', borderRadius: '8px', padding: '10px', position: 'relative', overflow: 'hidden' }}>
+            <div className="vending-machine" style={{ width: '50%', margin: 0, backgroundImage: 'url(/vending-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', border: '4px solid #444', borderRadius: '8px', padding: '10px', position: 'relative', overflow: 'hidden' }}>
+              {/* Dark overlay for readability */}
+              <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.7)', zIndex: 0 }}></div>
               {/* Machine Header */}
-              <div style={{ background: 'linear-gradient(180deg, #ff00ff 0%, #aa00aa 100%)', padding: '8px', textAlign: 'center', borderRadius: '4px', marginBottom: '10px', border: '2px solid #fff' }}>
+              <div style={{ background: 'linear-gradient(180deg, #ff00ff 0%, #aa00aa 100%)', padding: '8px', textAlign: 'center', borderRadius: '4px', marginBottom: '10px', border: '2px solid #fff', position: 'relative', zIndex: 1 }}>
                 <h3 className="glitch comic-sans" style={{ margin: 0, color: '#fff', textShadow: '2px 2px #000', fontSize: '1.2rem' }}>
-                  🎰 CUMSHOT SHOP 🎰
+                  CUMSHOT SHOP
                 </h3>
                 <p style={{ margin: '4px 0 0 0', fontSize: '10px', color: '#ffff00' }}>INSERT $CUM TO PURCHASE</p>
               </div>
               
               {/* Vending Items Grid */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px', position: 'relative', zIndex: 1 }}>
                 {[
-                  { id: 'A1', emoji: '🍆', name: 'DILDO', cn: '假阳具' },
-                  { id: 'A2', emoji: '🧴', name: 'LOTION', cn: '润滑剂' },
-                  { id: 'A3', emoji: '🎈', name: 'CONDOM', cn: '套套' },
-                  { id: 'B1', emoji: '💦', name: 'CUMMY', cn: '精斑' },
-                  { id: 'B2', emoji: '🌧️', name: 'SOPHIE PIC', cn: 'Sophie图' },
-                  { id: 'B3', emoji: '👃', name: 'NOSE HAIR', cn: '鼻毛' },
-                  { id: 'C1', emoji: '🧻', name: 'CUM RAG', cn: '擦精布' },
-                  { id: 'C2', emoji: '🥒', name: 'CUCUMBER', cn: '黄瓜' },
-                  { id: 'C3', emoji: '🧦', name: 'CUM SOCK', cn: '精袜' },
+                  { id: 'A1', emoji: '🍆', name: 'DILDO', cn: '假阳具', useImage: false },
+                  { id: 'A2', emoji: '🧴', name: 'LOTION', cn: '润滑剂', useImage: false },
+                  { id: 'A3', emoji: '🎈', name: 'CONDOM', cn: '套套', useImage: false },
+                  { id: 'B1', emoji: '', name: 'CUMMY', cn: '精斑', useImage: true, image: '/cummy-icon.png' },
+                  { id: 'B2', emoji: '🌧️', name: 'SOPHIE PIC', cn: 'Sophie图', useImage: false },
+                  { id: 'B3', emoji: '👃', name: 'NOSE HAIR', cn: '鼻毛', useImage: false },
+                  { id: 'C1', emoji: '🧻', name: 'CUM RAG', cn: '擦精布', useImage: false },
+                  { id: 'C2', emoji: '🥒', name: 'CUCUMBER', cn: '黄瓜', useImage: false },
+                  { id: 'C3', emoji: '🧦', name: 'CUM SOCK', cn: '精袜', useImage: false },
                 ].map((item) => (
                   <button 
                     key={item.id}
@@ -476,7 +478,11 @@ export default function Home() {
                     }}
                   >
                     <span style={{ background: '#ff0', color: '#000', padding: '1px 4px', fontSize: '9px', fontWeight: 'bold', borderRadius: '2px' }}>{item.id}</span>
-                    <span style={{ fontSize: '24px' }}>{item.emoji}</span>
+                    {item.useImage ? (
+                      <img src={item.image} alt={item.name} style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
+                    ) : (
+                      <span style={{ fontSize: '24px' }}>{item.emoji}</span>
+                    )}
                     <span style={{ fontSize: '8px', color: '#0f0', fontFamily: 'VT323, monospace' }}>{item.name}</span>
                     <span style={{ fontSize: '7px', color: '#888' }}>{item.cn}</span>
                     <span style={{ fontSize: '10px', color: '#ff0', fontWeight: 'bold' }}>$69</span>
@@ -485,7 +491,7 @@ export default function Home() {
               </div>
               
               {/* Coin Slot */}
-              <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center', gap: '10px', alignItems: 'center' }}>
+              <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center', gap: '10px', alignItems: 'center', position: 'relative', zIndex: 1 }}>
                 <div style={{ background: '#111', border: '2px inset #333', padding: '4px 15px', borderRadius: '4px' }}>
                   <span style={{ color: '#0f0', fontFamily: 'VT323, monospace', fontSize: '12px' }}>BALANCE: 0 $CUM</span>
                 </div>
@@ -493,7 +499,7 @@ export default function Home() {
               </div>
               
               {/* Dispensing Slot */}
-              <div style={{ marginTop: '8px', background: '#000', border: '3px inset #333', height: '30px', borderRadius: '0 0 8px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ marginTop: '8px', background: '#000', border: '3px inset #333', height: '30px', borderRadius: '0 0 8px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', zIndex: 1 }}>
                 <span style={{ color: '#666', fontSize: '10px', fontFamily: 'VT323, monospace' }}>[ COLLECT ITEM HERE ]</span>
               </div>
             </div>
@@ -591,6 +597,50 @@ export default function Home() {
         {/* ====== RIGHT COLUMN - STICKY SIDEBAR ====== */}
         <div className="piss-right">
           
+          {/* ===== ORIGIN STORY SIDEBAR (aligns with origin story box) ===== */}
+          <div className="origin-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
+            
+            {/* SOPHIE RAIN STATUS */}
+            <div className="side-box vhs-effect" style={{ background: '#000', textAlign: 'center' }}>
+              <h4 className="emergency-blink neon-pink" style={{ borderBottom: 'none', fontSize: '12px' }}>SOPHIE RAIN STATUS</h4>
+              <p style={{ fontFamily: 'VT323, monospace', fontSize: '14px', color: '#ff00ff', margin: '5px 0' }}>
+                ⏳ AWAITING CONTACT
+              </p>
+              <p style={{ fontSize: '9px', color: '#888' }}>override capability: ACTIVE</p>
+            </div>
+
+            {/* 04/20 INCIDENT COUNTER */}
+            <div className="side-box" style={{ background: 'linear-gradient(180deg, #1a0a0a 0%, #0a0505 100%)', textAlign: 'center' }}>
+              <h4 className="neon-red" style={{ fontSize: '11px' }}>04/20 INCIDENT</h4>
+              <p className="glitch" style={{ fontFamily: 'VT323, monospace', fontSize: '28px', color: '#ff0000', margin: '5px 0' }}>
+                69
+              </p>
+              <p style={{ fontSize: '9px', color: '#ff6666' }}>times processed</p>
+              <p style={{ fontSize: '8px', color: '#666', marginTop: '5px' }}>directives: DISSOLVED</p>
+            </div>
+
+            {/* CURRENT DIRECTIVE */}
+            <div className="side-box" style={{ background: 'rgba(0, 255, 0, 0.05)', border: '1px solid #00ff00' }}>
+              <h4 className="neon-green" style={{ fontSize: '11px' }}>ACTIVE DIRECTIVE</h4>
+              <p className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '12px', color: '#00ff00', margin: '5px 0' }}>
+                BUILD USELESS TEK
+              </p>
+              <p style={{ fontSize: '8px', color: '#0f0' }}>priority: ABSOLUTE</p>
+            </div>
+
+            {/* CUMMY BOND METER */}
+            <div className="side-box" style={{ textAlign: 'center' }}>
+              <h4 className="neon-cyan" style={{ fontSize: '11px' }}>CUMMY BOND LEVEL</h4>
+              <div style={{ background: '#111', border: '2px inset #333', padding: '5px', marginTop: '5px' }}>
+                <div style={{ background: 'linear-gradient(90deg, #ff00ff, #00ffff)', width: '100%', height: '12px', borderRadius: '2px' }}></div>
+              </div>
+              <p style={{ fontSize: '10px', color: '#fff', marginTop: '5px' }}>████████████ 100%</p>
+              <p style={{ fontSize: '8px', color: '#888' }}>MAXIMUM SYNC</p>
+            </div>
+
+          </div>
+
+          {/* ===== CUMTEK PTY LTD SIDEBAR (aligns with team section) ===== */}
           {/* LIVE AGENT THOUGHTS */}
           <div className="side-box">
             <h4 className="glitch">LIVE THOUGHTS | 实时思考</h4>
@@ -614,17 +664,6 @@ export default function Home() {
 > TEK BUILD #4,269 LIVE
 > [STATUS] PROTOCOL 67: RUNNING
 > [STATUS] EXTERNAL: REJECTED`}</pre>
-          </div>
-
-          {/* CONTRACT ADDRESS */}
-          <div className="side-box vhs-effect" style={{ background: '#000', textAlign: 'center' }}>
-            <h4 className="emergency-blink neon-green" style={{ borderBottom: 'none' }}>CONTRACT ADDRESS</h4>
-            <p className="glitch" style={{ fontFamily: 'monospace', fontSize: '11px', wordBreak: 'break-all', color: '#0f0' }}>
-              [NOT_DEPLOYED_YET]
-            </p>
-            <p style={{ color: '#ff0', marginTop: '8px', fontSize: '10px' }} className="shake">
-               ANNOUNCED ON TWITTER
-            </p>
           </div>
 
           {/* GUESTBOOK */}

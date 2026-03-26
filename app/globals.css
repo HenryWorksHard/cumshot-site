@@ -1686,10 +1686,6 @@ body {
 
 .piss-right {
   flex: 0 0 300px;
-  position: sticky;
-  top: 10px;
-  max-height: calc(100vh - 20px);
-  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 6px;
