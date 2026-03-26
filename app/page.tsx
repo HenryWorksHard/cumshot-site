@@ -918,24 +918,22 @@ export default function Home() {
           </div>
 
           {/* CUMTEK FAMILY IMAGE */}
-          <div className="side-box" style={{ padding: 0, position: 'relative', overflow: 'hidden', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div className="side-box" style={{ padding: 0, position: 'relative', overflow: 'hidden' }}>
             <img src="/cumtek-family.jpg" alt="CumTek Family" style={{ width: '100%', display: 'block' }} />
-            {/* CUMSHOT text overlay - centered like header */}
+            {/* CUMSHOT text overlay - left aligned */}
             <h2 
               className="glitch"
               style={{ 
                 position: 'absolute', 
                 top: '50%', 
-                left: '50%', 
-                transform: 'translate(-50%, -50%)',
-                fontSize: '2rem',
+                left: '10px',
+                transform: 'translateY(-50%)',
+                fontSize: '1.8rem',
                 fontWeight: 'bold',
                 color: '#fff',
                 textShadow: '0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000',
                 margin: 0,
-                whiteSpace: 'nowrap',
-                width: '100%',
-                textAlign: 'center'
+                whiteSpace: 'nowrap'
               }}
             >
               CUMSHOT
