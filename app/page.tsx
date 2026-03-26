@@ -15,8 +15,8 @@ const TOKEN_CONFIG = {
   BUY_LINK: '#', // Change to: 'https://pump.fun/coin/YOUR_CA_HERE'
   
   // Social Links
-  TWITTER: 'https://x.com/cumshotonsolana',
-  TWITTER_HANDLE: '@cumshotonsolana',
+  TWITTER: 'https://x.com/CxM5H0T',
+  TWITTER_HANDLE: '@CxM5H0T',
   
   // DEX Links - Update after launch
   PUMP_FUN: '', // 'https://pump.fun/coin/YOUR_CA_HERE'
