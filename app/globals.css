@@ -507,8 +507,9 @@ body {
   75% { transform: translateX(5px); }
 }
 
+/* DISABLED - shake on hover removed for readability */
 .shake-hover:hover {
-  animation: shake 0.1s infinite;
+  /* animation: shake 0.1s infinite; */
 }
 
 /* ===========================================
@@ -1700,8 +1701,9 @@ body {
   display: flex;
   gap: 0;
   align-items: flex-start;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
   padding: 0;
   position: relative;
 }
