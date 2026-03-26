@@ -981,9 +981,9 @@ export default function Home() {
             <p style={{ fontSize: '11px', color: '#666', margin: '6px 0 0 0' }}>[ refreshes every 3s ]</p>
           </div>
 
-          {/* CUMSHOT ROOM IMAGE */}
+          {/* CUMSHOT SLOT GIF */}
           <div className="side-box" style={{ padding: 0, overflow: 'hidden' }}>
-            <img src="/cumshot-room.jpg" alt="CUMSHOT Room" style={{ width: '100%', display: 'block' }} />
+            <img src="/cumshot-slot.gif" alt="CUMSHOT Slot" style={{ width: '100%', display: 'block' }} />
           </div>
 
           {/* CHINESE DIVIDER */}
