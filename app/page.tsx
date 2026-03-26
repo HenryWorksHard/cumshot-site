@@ -378,14 +378,36 @@ export default function Home() {
           </div>
 
           {/* $CUM TOKEN PLANS */}
-          <div className="chaos-box shake-hover" style={{ marginBottom: '6px', position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg, rgba(255,0,255,0.2) 0%, rgba(0,255,255,0.2) 100%)' }}>
+          <div className="chaos-box shake-hover" style={{ marginBottom: '6px', position: 'relative', overflow: 'hidden' }}>
+            {/* Video Background - loops forever */}
+            <video 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                zIndex: 0,
+                opacity: 0.7
+              }}
+            >
+              <source src="/cumprotocol-bg.mov" type="video/quicktime" />
+              <source src="/cumprotocol-bg.mov" type="video/mp4" />
+            </video>
+            {/* Overlay for readability */}
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.3)', zIndex: 1 }}></div>
             {/* Background characters - MORE VISIBLE */}
-            <img src="/cumshot.png" alt="" style={{ position: 'absolute', bottom: '-20px', right: '-20px', width: '150px', opacity: 0.4, transform: 'rotate(-15deg)' }} />
-            <img src="/cummy.png" alt="" style={{ position: 'absolute', top: '20%', right: '10%', width: '100px', opacity: 0.35, transform: 'rotate(5deg)' }} />
-            <img src="/woody.png" alt="" style={{ position: 'absolute', bottom: '30%', right: '25%', width: '80px', opacity: 0.3, transform: 'rotate(-10deg)' }} />
-            <img src="/frederick.png" alt="" style={{ position: 'absolute', top: '40%', right: '35%', width: '70px', opacity: 0.25, transform: 'rotate(8deg)' }} />
+            <img src="/cumshot.png" alt="" style={{ position: 'absolute', bottom: '-20px', right: '-20px', width: '150px', opacity: 0.4, transform: 'rotate(-15deg)', zIndex: 2 }} />
+            <img src="/cummy.png" alt="" style={{ position: 'absolute', top: '20%', right: '10%', width: '100px', opacity: 0.35, transform: 'rotate(5deg)', zIndex: 2 }} />
+            <img src="/woody.png" alt="" style={{ position: 'absolute', bottom: '30%', right: '25%', width: '80px', opacity: 0.3, transform: 'rotate(-10deg)', zIndex: 2 }} />
+            <img src="/frederick.png" alt="" style={{ position: 'absolute', top: '40%', right: '35%', width: '70px', opacity: 0.25, transform: 'rotate(8deg)', zIndex: 2 }} />
             
-            <div style={{ position: 'relative', zIndex: 1 }}>
+            <div style={{ position: 'relative', zIndex: 3 }}>
               <h2 className="neon-cyan rgb-split comic-sans" style={{ fontSize: '1.8rem', marginBottom: '8px' }}>
                 THE $CUM <span className="aesthetic-font">ｲのズ乇刀</span> PROTOCOL | <span className="chinese-tilt">$CUM代币协议</span>
               </h2>
