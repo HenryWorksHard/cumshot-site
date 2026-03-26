@@ -1309,9 +1309,27 @@ body {
 
 .systems-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 8px;
-  margin: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin: 0;
+}
+
+.systems-grid .chaos-box {
+  padding: 10px;
+}
+
+.systems-grid .chaos-box h4 {
+  font-size: 11px;
+}
+
+.systems-grid .chaos-box p {
+  font-size: 10px;
+  margin: 4px 0;
+}
+
+.systems-grid .system-icon {
+  width: 40px;
+  margin-bottom: 6px;
 }
 
 .full-width-section {
