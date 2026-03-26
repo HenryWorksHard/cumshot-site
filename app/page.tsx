@@ -1332,6 +1332,7 @@ export default function Home() {
             <h4 className="neon-pink">QUICK LINKS</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
               <a href="/whitepaper" style={{ color: '#ff00ff', fontSize: '13px' }}> Whitepaper</a>
+              <a href="/team" style={{ color: '#ff69b4', fontSize: '13px' }}> Team Origins</a>
               <a href="/operations" style={{ color: '#00ff00', fontSize: '13px' }}> Daily Operations</a>
               <a href="/enemies" style={{ color: '#ff0000', fontSize: '13px' }}> Enemy List</a>
               <a href="/changelog" style={{ color: '#00ffff', fontSize: '13px' }}> Changelog</a>
