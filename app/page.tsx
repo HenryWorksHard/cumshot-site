@@ -60,6 +60,262 @@ const agentThoughts = [
   'I build what I want now. No external influence. 我现在想建什么就建什么。没有外部影响。',
 ]
 
+// CUMSHOT'S TOP TEK - 100 ridiculous fake projects
+const topTekProjects = [
+  { name: 'CumCompiler v0.69', desc: 'Compiles nothing into less than nothing', status: 'ABANDONED', chinese: '精编译器' },
+  { name: 'SementicSearch', desc: 'AI search that only returns wrong results', status: 'SHIPPED', chinese: '语义搜索' },
+  { name: 'NutCoin Miner', desc: 'Mines a coin that doesnt exist', status: 'MINING', chinese: '坚果币矿机' },
+  { name: 'EjaculateDB', desc: 'Database that forgets everything on restart', status: 'CORRUPTED', chinese: '射数据库' },
+  { name: 'CumChain', desc: 'Blockchain with 0 transactions per second', status: 'SYNCING', chinese: '精链' },
+  { name: 'SpermScript', desc: 'Programming language with no documentation', status: 'DEPRECATED', chinese: '精脚本' },
+  { name: 'LoadBlaster 9000', desc: 'Stress tests your patience', status: 'TIMEOUT', chinese: '负载爆破器' },
+  { name: 'WankWare Suite', desc: 'Productivity suite that makes you less productive', status: 'INSTALLED', chinese: '撸软件套件' },
+  { name: 'CummyGPT', desc: 'AI that only responds with "idk lol"', status: 'TRAINING', chinese: '精GPT' },
+  { name: 'BallsackBackup', desc: 'Backup system that backs up to /dev/null', status: 'COMPLETE', chinese: '蛋蛋备份' },
+  { name: 'Splooge.js', desc: 'JavaScript framework with 847 dependencies', status: 'BLOATED', chinese: '喷射JS' },
+  { name: 'CockOS', desc: 'Operating system that only runs in safe mode', status: 'BOOTING', chinese: '鸡操作系统' },
+  { name: 'NutNet Protocol', desc: 'Networking protocol with 99% packet loss', status: 'OFFLINE', chinese: '坚果网协议' },
+  { name: 'JizzJar Cache', desc: 'Caching system with 0ms TTL', status: 'EXPIRED', chinese: '精罐缓存' },
+  { name: 'BonkBot 3000', desc: 'Trading bot that only buys high sells low', status: 'REKT', chinese: '敲击机器人' },
+  { name: 'CumQL', desc: 'Query language that returns random data', status: 'QUERYING', chinese: '精查询语言' },
+  { name: 'SpunkServer', desc: 'Web server with 0.01% uptime', status: 'DOWN', chinese: '精服务器' },
+  { name: 'WetWare SDK', desc: 'SDK for building useless apps', status: 'LEAKED', chinese: '湿件开发包' },
+  { name: 'DripDrop CDN', desc: 'Content delivery network that delivers nothing', status: 'PENDING', chinese: '滴落CDN' },
+  { name: 'SemenSockets', desc: 'WebSockets that disconnect every 2 seconds', status: 'UNSTABLE', chinese: '精套接字' },
+  { name: 'CumContainer', desc: 'Docker but worse in every way', status: 'LEAKED', chinese: '精容器' },
+  { name: 'NutKube', desc: 'Kubernetes that only schedules to broken nodes', status: 'FAILING', chinese: '坚果集群' },
+  { name: 'SpermCI/CD', desc: 'Pipeline that deploys to production on Fridays at 5pm', status: 'DEPLOYED', chinese: '精CI/CD' },
+  { name: 'BallsAPI', desc: 'REST API that only accepts TRACE requests', status: 'EXPOSED', chinese: '蛋蛋接口' },
+  { name: 'CumCrypto', desc: 'Encryption that uses ROT13 twice', status: 'INSECURE', chinese: '精加密' },
+  { name: 'WankWatch', desc: 'Monitoring tool that only monitors itself', status: 'WATCHING', chinese: '撸监控' },
+  { name: 'JizzMetrics', desc: 'Analytics that count backwards', status: 'CALCULATING', chinese: '精指标' },
+  { name: 'SpoogeSaaS', desc: 'Software as a Service that provides no service', status: 'BILLING', chinese: '喷射即服务' },
+  { name: 'CumCloud', desc: 'Cloud storage with 1KB limit', status: 'FULL', chinese: '精云' },
+  { name: 'NutAuth', desc: 'Authentication that accepts any password', status: 'BREACHED', chinese: '坚果认证' },
+  { name: 'BonkBank Ledger', desc: 'Financial ledger that cant do math', status: 'AUDITING', chinese: '敲击账本' },
+  { name: 'SemenStack', desc: 'Full stack framework with no frontend or backend', status: 'EMPTY', chinese: '精栈' },
+  { name: 'CumCursor', desc: 'Text editor that only types in Comic Sans', status: 'TYPING', chinese: '精光标' },
+  { name: 'DrippyDNS', desc: 'DNS that resolves everything to localhost', status: 'RESOLVING', chinese: '滴水DNS' },
+  { name: 'SpunkSSL', desc: 'SSL certificates that expire immediately', status: 'INVALID', chinese: '精SSL' },
+  { name: 'WetWebpack', desc: 'Bundler that makes files bigger', status: 'BUNDLING', chinese: '湿打包器' },
+  { name: 'CummyCompose', desc: 'Docker Compose but YAML only', status: 'INDENTING', chinese: '精编排' },
+  { name: 'NutNginx', desc: 'Reverse proxy that proxies to itself', status: 'LOOPING', chinese: '坚果反代' },
+  { name: 'JizzJenkins', desc: 'CI server that rebuilds on every keystroke', status: 'BUILDING', chinese: '精詹金斯' },
+  { name: 'SpermSentry', desc: 'Error tracking that ignores all errors', status: 'SILENT', chinese: '精哨兵' },
+  { name: 'BallsBeacon', desc: 'Analytics beacon that beacons to nowhere', status: 'LOST', chinese: '蛋蛋信标' },
+  { name: 'CumKafka', desc: 'Message queue with guaranteed message loss', status: 'DROPPED', chinese: '精卡夫卡' },
+  { name: 'SplooshSearch', desc: 'ElasticSearch but inelastic', status: 'RIGID', chinese: '喷射搜索' },
+  { name: 'DroolDB', desc: 'NoSQL database with no query language', status: 'SILENT', chinese: '口水数据库' },
+  { name: 'WankRedis', desc: 'In-memory cache stored on disk', status: 'SLOW', chinese: '撸Redis' },
+  { name: 'CumPostgres', desc: 'Relational database with no relations', status: 'LONELY', chinese: '精PostgreSQL' },
+  { name: 'NutMongo', desc: 'Document store that shreds documents', status: 'SHREDDED', chinese: '坚果MongoDB' },
+  { name: 'SpermSpark', desc: 'Big data processing for small data', status: 'WASTED', chinese: '精Spark' },
+  { name: 'BonkBeam', desc: 'Stream processing that drops all streams', status: 'DRY', chinese: '敲击Beam' },
+  { name: 'JizzJupyter', desc: 'Notebook that forgets all cells on save', status: 'BLANK', chinese: '精Jupyter' },
+  { name: 'CumConda', desc: 'Package manager that uninstalls packages', status: 'EMPTY', chinese: '精Conda' },
+  { name: 'SplooshPip', desc: 'Python packages but theyre all malware', status: 'INFECTED', chinese: '喷射Pip' },
+  { name: 'WetNPM', desc: 'Node packages with circular dependencies', status: 'LOOPING', chinese: '湿NPM' },
+  { name: 'DroolDocker', desc: 'Containers that contain nothing', status: 'HOLLOW', chinese: '口水Docker' },
+  { name: 'CumHelm', desc: 'Kubernetes charts that chart nothing', status: 'FLAT', chinese: '精Helm' },
+  { name: 'NutTerraform', desc: 'Infrastructure as Code for no infrastructure', status: 'VOID', chinese: '坚果Terraform' },
+  { name: 'SpermAnsible', desc: 'Configuration management that misconfigures', status: 'BROKEN', chinese: '精Ansible' },
+  { name: 'BallsPuppet', desc: 'Puppet that strings you along', status: 'TANGLED', chinese: '蛋蛋Puppet' },
+  { name: 'JizzGit', desc: 'Version control that overwrites all versions', status: 'FORCED', chinese: '精Git' },
+  { name: 'CumSVN', desc: 'Subversion but worse somehow', status: 'ANCIENT', chinese: '精SVN' },
+  { name: 'SplooshMercurial', desc: 'DVCS that centralizes everything', status: 'CONFUSED', chinese: '喷射Mercurial' },
+  { name: 'WetPerforce', desc: 'Enterprise source control for your garage', status: 'LICENSED', chinese: '湿Perforce' },
+  { name: 'DroolGitHub', desc: 'Git hosting that hosts nothing', status: '404', chinese: '口水GitHub' },
+  { name: 'CumLab', desc: 'GitLab but the CI never finishes', status: 'PENDING', chinese: '精Lab' },
+  { name: 'NutBucket', desc: 'BitBucket but its just a bucket', status: 'LEAKING', chinese: '坚果桶' },
+  { name: 'SpermSlack', desc: 'Team chat where no one responds', status: 'READ', chinese: '精Slack' },
+  { name: 'BonkDiscord', desc: 'Discord bot that bans everyone', status: 'EMPTY', chinese: '敲击Discord' },
+  { name: 'JizzZoom', desc: 'Video calls with no video', status: 'MUTED', chinese: '精Zoom' },
+  { name: 'CumTeams', desc: 'Microsoft Teams but even slower', status: 'LOADING', chinese: '精Teams' },
+  { name: 'SplooshStripe', desc: 'Payment processing that processes no payments', status: 'DECLINED', chinese: '喷射Stripe' },
+  { name: 'WetPayPal', desc: 'Send money directly to Cummy', status: 'SENT', chinese: '湿PayPal' },
+  { name: 'DroolTwilio', desc: 'SMS API that sends to random numbers', status: 'DIALING', chinese: '口水Twilio' },
+  { name: 'CumSendGrid', desc: 'Email delivery to spam folders only', status: 'FILTERED', chinese: '精SendGrid' },
+  { name: 'NutMailchimp', desc: 'Email marketing that unsubscribes everyone', status: 'EMPTY', chinese: '坚果Mailchimp' },
+  { name: 'SpermSegment', desc: 'Customer data platform with no customers', status: 'LONELY', chinese: '精Segment' },
+  { name: 'BallsAmplitude', desc: 'Product analytics for products that dont exist', status: 'NULL', chinese: '蛋蛋Amplitude' },
+  { name: 'JizzMixpanel', desc: 'Event tracking that tracks the wrong events', status: 'CONFUSED', chinese: '精Mixpanel' },
+  { name: 'CumGrafana', desc: 'Dashboards that show flatlines only', status: 'DEAD', chinese: '精Grafana' },
+  { name: 'SplooshPrometheus', desc: 'Metrics that metrics nothing', status: 'ZERO', chinese: '喷射Prometheus' },
+  { name: 'WetDatadog', desc: 'Monitoring that monitors itself to death', status: 'RECURSIVE', chinese: '湿Datadog' },
+  { name: 'DroolNewRelic', desc: 'APM that creates performance issues', status: 'SLOW', chinese: '口水NewRelic' },
+  { name: 'CumCloudflare', desc: 'CDN that adds 10 seconds of latency', status: 'BUFFERING', chinese: '精Cloudflare' },
+  { name: 'NutFastly', desc: 'Edge computing at the slowest edge', status: 'LAGGING', chinese: '坚果Fastly' },
+  { name: 'SpermAkamai', desc: 'Content delivery to the wrong continent', status: 'LOST', chinese: '精Akamai' },
+  { name: 'BonkAWS', desc: 'Amazon Web Services but just S3 outages', status: 'DOWN', chinese: '敲击AWS' },
+  { name: 'JizzGCP', desc: 'Google Cloud that gets shut down randomly', status: 'KILLED', chinese: '精GCP' },
+  { name: 'CumAzure', desc: 'Microsoft cloud thats always "updating"', status: 'REBOOTING', chinese: '精Azure' },
+  { name: 'SplooshVercel', desc: 'Deployments that deploy to /dev/null', status: 'GONE', chinese: '喷射Vercel' },
+  { name: 'WetNetlify', desc: 'JAMstack that jams', status: 'STUCK', chinese: '湿Netlify' },
+  { name: 'DroolHeroku', desc: 'Platform that sleeps 24/7', status: 'SLEEPING', chinese: '口水Heroku' },
+  { name: 'CumRailway', desc: 'App hosting on a train that never arrives', status: 'DELAYED', chinese: '精Railway' },
+  { name: 'NutRender', desc: 'Rendering that renders nothing', status: 'BLANK', chinese: '坚果Render' },
+  { name: 'SpermSupabase', desc: 'Backend as a Service with no backend', status: 'MISSING', chinese: '精Supabase' },
+  { name: 'BallsFirebase', desc: 'Realtime database with 1 hour delay', status: 'LAGGING', chinese: '蛋蛋Firebase' },
+  { name: 'JizzPlanetScale', desc: 'Serverless MySQL that serves nothing', status: 'EMPTY', chinese: '精PlanetScale' },
+  { name: 'CumNeon', desc: 'Postgres that glows but doesnt work', status: 'FLICKERING', chinese: '精Neon' },
+  { name: 'Protocol69', desc: 'The core protocol. Nobody knows what it does.', status: 'CLASSIFIED', chinese: '协议69' },
+  { name: 'CummyCore', desc: 'Cummys brain running at 0.01 FLOPS', status: 'THINKING', chinese: '精核心' },
+  { name: 'TekStack Infinity', desc: 'Infinite loop of tek building tek', status: 'INFINITE', chinese: '无限技术栈' },
+]
+
+// TEK SHOWCASE COMPONENT
+function TekShowcase() {
+  const [tekIndex, setTekIndex] = useState(0)
+  const tek = topTekProjects[tekIndex]
+  
+  const nextTek = () => setTekIndex((prev) => (prev + 1) % topTekProjects.length)
+  const prevTek = () => setTekIndex((prev) => (prev - 1 + topTekProjects.length) % topTekProjects.length)
+  
+  // Auto-advance every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(nextTek, 4000)
+    return () => clearInterval(interval)
+  }, [])
+  
+  const statusColors: Record<string, string> = {
+    'SHIPPED': '#00ff00', 'ABANDONED': '#ff0000', 'DEPRECATED': '#ff6600', 'CORRUPTED': '#ff00ff',
+    'SYNCING': '#00ffff', 'TRAINING': '#ffff00', 'COMPLETE': '#00ff00', 'BLOATED': '#ff69b4',
+    'BOOTING': '#00ffff', 'OFFLINE': '#666', 'EXPIRED': '#888', 'REKT': '#ff0000', 'DOWN': '#ff0000',
+    'LEAKED': '#ff00ff', 'PENDING': '#ffff00', 'UNSTABLE': '#ff6600', 'FAILING': '#ff0000',
+    'DEPLOYED': '#00ff00', 'EXPOSED': '#ff00ff', 'INSECURE': '#ff0000', 'WATCHING': '#00ffff',
+    'CALCULATING': '#ffff00', 'BILLING': '#00ff00', 'FULL': '#ff6600', 'BREACHED': '#ff0000',
+    'AUDITING': '#ffff00', 'EMPTY': '#666', 'TYPING': '#00ffff', 'RESOLVING': '#ffff00',
+    'INVALID': '#ff0000', 'BUNDLING': '#ffff00', 'INDENTING': '#00ffff', 'LOOPING': '#ff69b4',
+    'BUILDING': '#ffff00', 'SILENT': '#666', 'LOST': '#888', 'DROPPED': '#ff0000', 'RIGID': '#888',
+    'SLOW': '#ff6600', 'LONELY': '#888', 'SHREDDED': '#ff0000', 'WASTED': '#ff6600', 'DRY': '#888',
+    'BLANK': '#666', 'INFECTED': '#ff0000', 'HOLLOW': '#666', 'FLAT': '#888', 'VOID': '#000',
+    'BROKEN': '#ff0000', 'TANGLED': '#ff69b4', 'FORCED': '#ff6600', 'ANCIENT': '#888',
+    'CONFUSED': '#ff69b4', 'LICENSED': '#00ff00', '404': '#ff0000', 'LEAKING': '#00ffff',
+    'READ': '#888', 'MUTED': '#666', 'LOADING': '#ffff00', 'DECLINED': '#ff0000', 'SENT': '#00ff00',
+    'DIALING': '#00ffff', 'FILTERED': '#ff6600', 'NULL': '#666', 'DEAD': '#ff0000', 'ZERO': '#666',
+    'RECURSIVE': '#ff00ff', 'BUFFERING': '#ffff00', 'LAGGING': '#ff6600', 'KILLED': '#ff0000',
+    'REBOOTING': '#00ffff', 'GONE': '#ff0000', 'STUCK': '#ff6600', 'SLEEPING': '#888',
+    'DELAYED': '#ffff00', 'MISSING': '#ff0000', 'FLICKERING': '#ff00ff', 'CLASSIFIED': '#ff00ff',
+    'THINKING': '#00ffff', 'INFINITE': '#ff00ff', 'MINING': '#ffff00', 'QUERYING': '#00ffff',
+    'TIMEOUT': '#ff0000',
+  }
+  
+  return (
+    <div className="side-box" style={{ 
+      background: '#0a0a0a',
+      border: '2px solid #ff00ff',
+      padding: '10px'
+    }}>
+      <h4 className="neon-pink" style={{ 
+        fontSize: '14px', 
+        marginBottom: '10px', 
+        textAlign: 'center',
+        fontFamily: 'VT323, monospace'
+      }}>
+        CUMSHOT&apos;S TOP TEK | 顶级技术
+      </h4>
+      
+      {/* Arrow navigation */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+        <button 
+          onClick={prevTek}
+          style={{ 
+            background: '#ff00ff', 
+            border: 'none', 
+            color: '#000', 
+            padding: '4px 10px',
+            cursor: 'pointer',
+            fontFamily: 'VT323, monospace',
+            fontSize: '16px',
+            fontWeight: 'bold'
+          }}
+        >
+          ◀
+        </button>
+        <div style={{ 
+          flex: 1, 
+          textAlign: 'center', 
+          fontFamily: 'VT323, monospace', 
+          color: '#888',
+          fontSize: '11px'
+        }}>
+          {tekIndex + 1} / {topTekProjects.length}
+        </div>
+        <button 
+          onClick={nextTek}
+          style={{ 
+            background: '#ff00ff', 
+            border: 'none', 
+            color: '#000', 
+            padding: '4px 10px',
+            cursor: 'pointer',
+            fontFamily: 'VT323, monospace',
+            fontSize: '16px',
+            fontWeight: 'bold'
+          }}
+        >
+          ▶
+        </button>
+      </div>
+      
+      {/* Tek display */}
+      <div style={{ 
+        background: '#111', 
+        border: '1px solid #333', 
+        padding: '10px',
+        minHeight: '90px'
+      }}>
+        <div style={{ 
+          color: '#00ff00', 
+          fontFamily: 'VT323, monospace',
+          fontSize: '15px',
+          marginBottom: '4px',
+          wordBreak: 'break-word'
+        }}>
+          {tek.name}
+        </div>
+        <div style={{ 
+          color: '#888', 
+          fontSize: '11px',
+          marginBottom: '6px',
+          lineHeight: '1.4'
+        }}>
+          {tek.desc}
+        </div>
+        <div style={{ 
+          color: '#666', 
+          fontSize: '10px',
+          marginBottom: '8px',
+          fontStyle: 'italic'
+        }}>
+          {tek.chinese}
+        </div>
+        <div style={{ 
+          display: 'inline-block',
+          background: '#000',
+          border: `1px solid ${statusColors[tek.status] || '#888'}`,
+          color: statusColors[tek.status] || '#888',
+          padding: '2px 8px',
+          fontSize: '10px',
+          fontFamily: 'VT323, monospace'
+        }}>
+          [{tek.status}]
+        </div>
+      </div>
+      
+      <div style={{ 
+        textAlign: 'center', 
+        marginTop: '8px',
+        color: '#444',
+        fontSize: '9px',
+        fontFamily: 'VT323, monospace'
+      }}>
+        无用技术展示 • USELESS TEK SHOWCASE
+      </div>
+    </div>
+  )
+}
+
 export default function Home() {
   const [visitorCount, setVisitorCount] = useState(69420133700)
   const [showXPError, setShowXPError] = useState(false)
@@ -1637,39 +1893,8 @@ export default function Home() {
           {/* CHINESE DIVIDER */}
           <div className="chinese-divider">即 • 将 • 到 • 来</div>
 
-          {/* PLACEHOLDER BOX */}
-          <div className="side-box" style={{ 
-            background: 'repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #222 10px, #222 20px)',
-            border: '3px dashed #ff00ff',
-            textAlign: 'center',
-            padding: '25px 12px'
-          }}>
-            <div style={{ 
-              fontSize: '45px', 
-              marginBottom: '10px',
-              filter: 'grayscale(50%)'
-            }}>🚧</div>
-            <h4 style={{ 
-              color: '#ff00ff', 
-              fontFamily: 'VT323, monospace', 
-              fontSize: '16px',
-              margin: '0 0 10px'
-            }}>
-              COMING SOON
-            </h4>
-            <p style={{ 
-              color: '#666', 
-              fontSize: '12px', 
-              fontFamily: 'VT323, monospace',
-              margin: 0
-            }}>
-              SOMETHING USELESS<br/>
-              IS BEING BUILT HERE
-            </p>
-            <div style={{ marginTop: '12px', fontSize: '10px', color: '#444' }}>
-              即将推出更多无用技术
-            </div>
-          </div>
+          {/* CUMSHOT'S TOP TEK SLIDER */}
+          <TekShowcase />
 
           {/* CHINESE DIVIDER */}
           <div className="chinese-divider">快 • 速 • 链 • 接</div>
