@@ -74,6 +74,8 @@ export default function CommunityPage() {
   const [loading, setLoading] = useState(true)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const messagesContainerRef = useRef<HTMLDivElement>(null)
+  const prevMessageCountRef = useRef<number>(0)
+  const isInitialLoadRef = useRef<boolean>(true)
 
   // Fetch messages from Supabase
   const fetchMessages = async () => {
@@ -89,7 +91,8 @@ export default function CommunityPage() {
       )
       const data = await res.json()
       // Reverse to show oldest first
-      setMessages((data || []).reverse())
+      const newMessages = (data || []).reverse()
+      setMessages(newMessages)
       setLoading(false)
     } catch (e) {
       console.error('Failed to fetch messages:', e)
@@ -104,11 +107,23 @@ export default function CommunityPage() {
     return () => clearInterval(interval)
   }, [])
 
-  // Auto-scroll to bottom on new messages (within chat container only, NOT the page)
+  // Auto-scroll to bottom ONLY on initial load OR when new messages arrive
   useEffect(() => {
-    if (messagesContainerRef.current) {
+    if (!messagesContainerRef.current || messages.length === 0) return
+    
+    // Scroll on initial load
+    if (isInitialLoadRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight
+      isInitialLoadRef.current = false
+      prevMessageCountRef.current = messages.length
+      return
+    }
+    
+    // Scroll only if NEW messages arrived (count increased)
+    if (messages.length > prevMessageCountRef.current) {
       messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight
     }
+    prevMessageCountRef.current = messages.length
   }, [messages])
 
   // Fake online counter that fluctuates
