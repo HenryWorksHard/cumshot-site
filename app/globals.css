@@ -1587,6 +1587,34 @@ body {
   transform: scale(1.05);
 }
 
+/* Terminal stream - continuous running text */
+.terminal-stream {
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-scroll-1, .terminal-scroll-2, .terminal-scroll-3, .terminal-scroll-4 {
+  animation: terminalScroll 6s linear infinite;
+}
+
+.terminal-scroll-2 {
+  animation-delay: -1.5s;
+}
+
+.terminal-scroll-3 {
+  animation-delay: -3s;
+}
+
+.terminal-scroll-4 {
+  animation-delay: -4.5s;
+}
+
+@keyframes terminalScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+/* Old code scroll (legacy) */
 .code-scroll {
   position: relative;
   overflow: hidden;

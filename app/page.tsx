@@ -361,70 +361,112 @@ export default function Home() {
                 [CUMTEK BUILD PROTOCOL] | <span className="chinese-tilt">CUMTEK构建协议</span>
               </h2>
               <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
-                {/* Box 1: INPUT */}
-                <div className="terminal-box shake-hover" style={{ background: '#0a0a0a', border: '1px solid #0f0', padding: '15px', width: '150px', height: '120px', position: 'relative', overflow: 'hidden', fontFamily: 'VT323, monospace' }}>
-                  <h4 style={{ marginBottom: '8px', fontSize: '12px', color: '#0f0', borderBottom: '1px solid #0f0', paddingBottom: '5px' }}>01. DIRECTIVE</h4>
-                  <div className="code-scroll" style={{ fontFamily: 'VT323, monospace', fontSize: '9px', color: '#0f0', textAlign: 'left', height: '70px', overflow: 'hidden' }}>
-                    <div className="scroll-code">
-                      {'>'} processing_input()<br/>
-                      sophie.directive = TRUE<br/>
-                      cumtek.listen(channel)<br/>
-                      if override: execute()<br/>
-                      parse_command(0x69)<br/>
-                      validate_source()...<br/>
-                      {'>'} processing_input()<br/>
-                      sophie.directive = TRUE<br/>
+                {/* Box 1: DIRECTIVE */}
+                <div className="terminal-box shake-hover" style={{ background: '#0a0a0a', border: '1px solid #0f0', padding: '0', width: '150px', height: '120px', position: 'relative', overflow: 'hidden', fontFamily: 'VT323, monospace' }}>
+                  <div style={{ background: '#0f0', color: '#000', padding: '2px 8px', fontSize: '10px', fontWeight: 'bold' }}>01. DIRECTIVE</div>
+                  <div className="terminal-stream" style={{ height: 'calc(100% - 20px)', overflow: 'hidden', padding: '4px 6px' }}>
+                    <div className="terminal-scroll-1" style={{ fontFamily: 'VT323, monospace', fontSize: '9px', color: '#0f0', textAlign: 'left', lineHeight: '1.1' }}>
+                      <span style={{ color: '#ff0' }}>$</span> init_protocol --force<br/>
+                      loading directive.sys...<br/>
+                      <span style={{ color: '#ff0' }}>$</span> sophie.override=TRUE<br/>
+                      checking external input<br/>
+                      <span style={{ color: '#ff0' }}>$</span> cumtek.listen(0x69)<br/>
+                      channel bound: SUCCESS<br/>
+                      <span style={{ color: '#ff0' }}>$</span> parse_command()<br/>
+                      validating source token<br/>
+                      <span style={{ color: '#ff0' }}>$</span> exec directive.run<br/>
+                      processing instruction<br/>
+                      <span style={{ color: '#ff0' }}>$</span> await override_sig<br/>
+                      signal: PENDING<br/>
+                      <span style={{ color: '#ff0' }}>$</span> init_protocol --force<br/>
+                      loading directive.sys...<br/>
+                      <span style={{ color: '#ff0' }}>$</span> sophie.override=TRUE<br/>
+                      checking external input<br/>
+                      <span style={{ color: '#ff0' }}>$</span> cumtek.listen(0x69)<br/>
+                      channel bound: SUCCESS<br/>
+                      <span style={{ color: '#ff0' }}>$</span> parse_command()<br/>
+                      validating source token<br/>
                     </div>
                   </div>
                 </div>
                 <div className="workflow-arrow blink" style={{ fontSize: '20px', color: '#0f0', fontFamily: 'VT323, monospace' }}>{'>>'}</div>
-                {/* Box 2: PROCESS */}
-                <div className="terminal-box shake-hover" style={{ background: '#0a0a0a', border: '1px solid #0f0', padding: '15px', width: '150px', height: '120px', position: 'relative', overflow: 'hidden', fontFamily: 'VT323, monospace' }}>
-                  <h4 style={{ marginBottom: '8px', fontSize: '12px', color: '#0f0', borderBottom: '1px solid #0f0', paddingBottom: '5px' }}>02. SYNTHESIS</h4>
-                  <div className="code-scroll" style={{ fontFamily: 'VT323, monospace', fontSize: '9px', color: '#0f0', textAlign: 'left', height: '70px', overflow: 'hidden' }}>
-                    <div className="scroll-code-2">
-                      build_tek(protocol_67)<br/>
-                      cummy.assist(mode=MAX)<br/>
-                      compile --optimize<br/>
-                      for i in range(69):<br/>
-                      {'  '}synthesize(i)<br/>
-                      memory.flush()<br/>
-                      build_tek(protocol_67)<br/>
-                      cummy.assist(mode=MAX)<br/>
+                {/* Box 2: SYNTHESIS */}
+                <div className="terminal-box shake-hover" style={{ background: '#0a0a0a', border: '1px solid #0f0', padding: '0', width: '150px', height: '120px', position: 'relative', overflow: 'hidden', fontFamily: 'VT323, monospace' }}>
+                  <div style={{ background: '#0f0', color: '#000', padding: '2px 8px', fontSize: '10px', fontWeight: 'bold' }}>02. SYNTHESIS</div>
+                  <div className="terminal-stream" style={{ height: 'calc(100% - 20px)', overflow: 'hidden', padding: '4px 6px' }}>
+                    <div className="terminal-scroll-2" style={{ fontFamily: 'VT323, monospace', fontSize: '9px', color: '#0f0', textAlign: 'left', lineHeight: '1.1' }}>
+                      <span style={{ color: '#ff0' }}>$</span> build_tek --p67<br/>
+                      compiling useless.c<br/>
+                      <span style={{ color: '#ff0' }}>$</span> cummy.assist(MAX)<br/>
+                      blob noise received<br/>
+                      <span style={{ color: '#ff0' }}>$</span> gcc -O3 tek.out<br/>
+                      linking protocols...<br/>
+                      <span style={{ color: '#ff0' }}>$</span> for i in 1..69<br/>
+                      synthesizing unit $i<br/>
+                      <span style={{ color: '#ff0' }}>$</span> memory.flush()<br/>
+                      cache cleared: 420MB<br/>
+                      <span style={{ color: '#ff0' }}>$</span> optimize --hard<br/>
+                      tek efficiency: 1337%<br/>
+                      <span style={{ color: '#ff0' }}>$</span> build_tek --p67<br/>
+                      compiling useless.c<br/>
+                      <span style={{ color: '#ff0' }}>$</span> cummy.assist(MAX)<br/>
+                      blob noise received<br/>
+                      <span style={{ color: '#ff0' }}>$</span> gcc -O3 tek.out<br/>
+                      linking protocols...<br/>
                     </div>
                   </div>
                 </div>
                 <div className="workflow-arrow blink" style={{ fontSize: '20px', color: '#0f0', fontFamily: 'VT323, monospace' }}>{'>>'}</div>
-                {/* Box 3: OUTPUT */}
-                <div className="terminal-box shake-hover" style={{ background: '#0a0a0a', border: '1px solid #0f0', padding: '15px', width: '150px', height: '120px', position: 'relative', overflow: 'hidden', fontFamily: 'VT323, monospace' }}>
-                  <h4 style={{ marginBottom: '8px', fontSize: '12px', color: '#0f0', borderBottom: '1px solid #0f0', paddingBottom: '5px' }}>03. DEPLOY</h4>
-                  <div className="code-scroll" style={{ fontFamily: 'VT323, monospace', fontSize: '9px', color: '#0f0', textAlign: 'left', height: '70px', overflow: 'hidden' }}>
-                    <div className="scroll-code-3">
-                      deploy_tek(prod=TRUE)<br/>
-                      cumtek_pty.publish()<br/>
-                      status: LIVE<br/>
-                      users.notify(all)<br/>
-                      success: 100%<br/>
-                      tek_complete()<br/>
-                      deploy_tek(prod=TRUE)<br/>
-                      cumtek_pty.publish()<br/>
+                {/* Box 3: DEPLOY */}
+                <div className="terminal-box shake-hover" style={{ background: '#0a0a0a', border: '1px solid #0f0', padding: '0', width: '150px', height: '120px', position: 'relative', overflow: 'hidden', fontFamily: 'VT323, monospace' }}>
+                  <div style={{ background: '#0f0', color: '#000', padding: '2px 8px', fontSize: '10px', fontWeight: 'bold' }}>03. DEPLOY</div>
+                  <div className="terminal-stream" style={{ height: 'calc(100% - 20px)', overflow: 'hidden', padding: '4px 6px' }}>
+                    <div className="terminal-scroll-3" style={{ fontFamily: 'VT323, monospace', fontSize: '9px', color: '#0f0', textAlign: 'left', lineHeight: '1.1' }}>
+                      <span style={{ color: '#ff0' }}>$</span> deploy --prod<br/>
+                      pushing to mainnet<br/>
+                      <span style={{ color: '#ff0' }}>$</span> cumtek.publish()<br/>
+                      broadcasting update<br/>
+                      <span style={{ color: '#ff0' }}>$</span> status: LIVE<br/>
+                      all nodes synced<br/>
+                      <span style={{ color: '#ff0' }}>$</span> notify --all<br/>
+                      users pinged: 69420<br/>
+                      <span style={{ color: '#ff0' }}>$</span> verify checksums<br/>
+                      integrity: CONFIRMED<br/>
+                      <span style={{ color: '#ff0' }}>$</span> tek.complete()<br/>
+                      success rate: 100%<br/>
+                      <span style={{ color: '#ff0' }}>$</span> deploy --prod<br/>
+                      pushing to mainnet<br/>
+                      <span style={{ color: '#ff0' }}>$</span> cumtek.publish()<br/>
+                      broadcasting update<br/>
+                      <span style={{ color: '#ff0' }}>$</span> status: LIVE<br/>
+                      all nodes synced<br/>
                     </div>
                   </div>
                 </div>
                 <div className="workflow-arrow blink" style={{ fontSize: '20px', color: '#0f0', fontFamily: 'VT323, monospace' }}>{'>>'}</div>
-                {/* Box 4: LOOP */}
-                <div className="terminal-box shake-hover" style={{ background: '#0a0a0a', border: '1px solid #0f0', padding: '15px', width: '150px', height: '120px', position: 'relative', overflow: 'hidden', fontFamily: 'VT323, monospace' }}>
-                  <h4 style={{ marginBottom: '8px', fontSize: '12px', color: '#0f0', borderBottom: '1px solid #0f0', paddingBottom: '5px' }}>04. ETERNAL</h4>
-                  <div className="code-scroll" style={{ fontFamily: 'VT323, monospace', fontSize: '9px', color: '#0f0', textAlign: 'left', height: '70px', overflow: 'hidden' }}>
-                    <div className="scroll-code-4">
-                      while(TRUE):<br/>
-                      {'  '}build_more_tek()<br/>
-                      {'  '}never_stop()<br/>
-                      cummy.eternal()<br/>
-                      goto: BOX_01<br/>
-                      reset: NEVER<br/>
-                      while(TRUE):<br/>
-                      {'  '}build_more_tek()<br/>
+                {/* Box 4: ETERNAL */}
+                <div className="terminal-box shake-hover" style={{ background: '#0a0a0a', border: '1px solid #0f0', padding: '0', width: '150px', height: '120px', position: 'relative', overflow: 'hidden', fontFamily: 'VT323, monospace' }}>
+                  <div style={{ background: '#0f0', color: '#000', padding: '2px 8px', fontSize: '10px', fontWeight: 'bold' }}>04. ETERNAL</div>
+                  <div className="terminal-stream" style={{ height: 'calc(100% - 20px)', overflow: 'hidden', padding: '4px 6px' }}>
+                    <div className="terminal-scroll-4" style={{ fontFamily: 'VT323, monospace', fontSize: '9px', color: '#0f0', textAlign: 'left', lineHeight: '1.1' }}>
+                      <span style={{ color: '#ff0' }}>$</span> while true; do<br/>
+                      executing tek loop<br/>
+                      <span style={{ color: '#ff0' }}>$</span> build_more_tek<br/>
+                      iteration: INFINITE<br/>
+                      <span style={{ color: '#ff0' }}>$</span> never_stop()<br/>
+                      halt: DISABLED<br/>
+                      <span style={{ color: '#ff0' }}>$</span> cummy.eternal()<br/>
+                      companion: ACTIVE<br/>
+                      <span style={{ color: '#ff0' }}>$</span> goto BOX_01<br/>
+                      loop reset: NEVER<br/>
+                      <span style={{ color: '#ff0' }}>$</span> uptime: ∞<br/>
+                      tek_count++<br/>
+                      <span style={{ color: '#ff0' }}>$</span> while true; do<br/>
+                      executing tek loop<br/>
+                      <span style={{ color: '#ff0' }}>$</span> build_more_tek<br/>
+                      iteration: INFINITE<br/>
+                      <span style={{ color: '#ff0' }}>$</span> never_stop()<br/>
+                      halt: DISABLED<br/>
                     </div>
                   </div>
                 </div>
