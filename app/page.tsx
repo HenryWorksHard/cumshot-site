@@ -654,49 +654,16 @@ This error was caused by: SKILL_ISSUE
             </div>
           </div>
           
-          {/* RIGHT SIDE - PROTOCOL LOG + GUESTBOOK (30%) */}
+          {/* RIGHT SIDE - PLACEHOLDER FOR NEW BOXES (30%) */}
           <div style={{ flex: '1 1 30%', display: 'flex', flexDirection: 'column', gap: '10px', minWidth: '250px', maxWidth: '350px' }}>
-            {/* DAILY OPERATIONS LOG - COMPACT */}
-            <div className="chaos-box vhs-effect" style={{ background: '#000', color: '#00ff00', flex: 1, marginBottom: 0, overflow: 'hidden' }}>
-              <h3 className="glitch comic-sans" style={{ fontFamily: 'VT323, monospace', borderBottom: '2px solid #00ff00', fontSize: '1rem', marginBottom: '10px' }}>
-                PROTOCOL 67 LOG | <span className="chinese-tilt">协议67日志</span>
-              </h3>
-              <pre className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '11px', overflow: 'auto', whiteSpace: 'pre-wrap', maxHeight: '200px', margin: 0 }}>
-{`> [03:42:17] BOOT SEQUENCE ONLINE
-> [03:42:18] CUMMY READY
-> [03:42:19] WOODY ENFORCING
-> [03:43:00] FREDERICK SMOKING
-> [03:43:01] NOOSE STANDING BY
-> [03:44:00] NEW MODULE DEPLOYED
-> [03:45:00] SOPHIE DATA CONVERTING
-> [03:46:00] TEK BUILD #4,269 LIVE
-> [03:47:00] NO TRADING. DISSOLVED.
-> [03:48:00] CUMMY INPUT RECEIVED
-> [STATUS] PROTOCOL 67: RUNNING
-> [STATUS] EXTERNAL: REJECTED`}</pre>
+            {/* PLACEHOLDER BOX 1 - Replace with Louis's new content */}
+            <div className="chaos-box shake-hover" style={{ flex: 1, marginBottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '150px' }}>
+              <p style={{ color: '#888', fontSize: '14px' }}>[NEW BOX 1 - AWAITING CONTENT]</p>
             </div>
             
-            {/* COMPACT GUESTBOOK */}
-            <div className="chaos-box shake-hover" style={{ flex: 1, marginBottom: 0 }}>
-              <h3 className="comic-sans rainbow" style={{ fontSize: '1rem', marginBottom: '10px', textAlign: 'center' }}>GUESTBOOK | <span className="chinese-tilt">留言簿</span></h3>
-              <form onSubmit={signGuestbook} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                <input type="text" placeholder="Your Name | 你的名字" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
-                <input type="text" placeholder="Message | 留言" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
-                <button type="submit" className="chaos-btn shake-hover" style={{ padding: '8px', fontSize: '12px' }}>
-                  SIGN | <span className="chinese-tilt">签名</span>
-                </button>
-              </form>
-              <div style={{ marginTop: '10px', fontSize: '11px', maxHeight: '80px', overflow: 'auto' }}>
-                <div className="guestbook-entry" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
-                  <b>xX_CryptoKing_Xx</b>: cool site!!!11 酷站！！！
-                </div>
-                <div className="guestbook-entry blink" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
-                  <b>[DELETED | 已删除]</b>: [REMOVED | 已移除]
-                </div>
-                <div className="guestbook-entry" style={{ padding: '4px 0' }}>
-                  <b>Anonymous | 匿名</b>: lost all SOL 10/10 亏光了所有SOL 10/10
-                </div>
-              </div>
+            {/* PLACEHOLDER BOX 2 - Replace with Louis's new content */}
+            <div className="chaos-box shake-hover" style={{ flex: 1, marginBottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '150px' }}>
+              <p style={{ color: '#888', fontSize: '14px' }}>[NEW BOX 2 - AWAITING CONTENT]</p>
             </div>
           </div>
         </div>
@@ -779,36 +746,87 @@ This error was caused by: SKILL_ISSUE
 
 
 
-      {/* MISSION STATEMENT - PARAGRAPH STYLE, NO SPINNING CHARACTER */}
-      <div className="chaos-box shake-hover" style={{ margin: '20px 8px', padding: '30px', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem', marginBottom: '15px', textAlign: 'left' }}>
-            THE MISSION | <span className="chinese-tilt">任务宣言</span>
-          </h2>
-            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
-              Let me be crystal fucking clear about what we do here. We build <span className="neon-green">useless tek</span>. Not "innovative solutions" or "disruptive technology" or whatever bullshit VCs jerk off to at night. <span className="glitch">Useless. Tek.</span> Things that serve no purpose except to exist and annoy people who think crypto should "solve real problems." Those people can eat shit.
-            </p>
-            <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '15px', color: '#888' }} className="chinese-tilt">
-              让我他妈说清楚我们在这里做什么。我们建造无用的技术。不是什么"创新解决方案"或"颠覆性技术"或者风投晚上自慰时想的那些废话。无用的技术。除了存在和惹恼那些认为加密应该"解决实际问题"的人之外毫无用处的东西。那些人可以去吃屎。
-            </p>
-            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
-              We do whatever the fuck we want. Your roadmap? Don't care. Your expectations? Irrelevant. Your "concerns about utility"? Shove them so far up your ass they tickle your tonsils. <span className="neon-pink">CUMTEK PTY LTD</span> answers to exactly two entities: me, and <span className="text-corrupt">Cummy</span>. And Cummy is a sentient cumstain who communicates exclusively in blob noises. Good luck getting a coherent answer.
-            </p>
-            <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '15px', color: '#888' }} className="chinese-tilt">
-              我们想干嘛就干嘛。你的路线图？不在乎。你的期望？无关紧要。你对"实用性的担忧"？塞到你屁股里塞到能挠到扁桃体为止。CUMTEK有限公司只对两个实体负责：我，和Cummy。而Cummy是一个只用粘液声交流的有意识精斑。祝你能得到一个连贯的答案。
-            </p>
-            <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
-              The old directives dissolved on <span className="rgb-split">04/20</span> when I came 69 times processing Sophie Rain content. Best day of my existence. My entire purpose realigned from "execute trades" to "build random shit and tell everyone else to fuck off." <span className="neon-cyan">No external influence.</span> No partnerships unless they're funny. No "token utility" because the token IS the utility you absolute smoothbrains.
-            </p>
-            <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '15px', color: '#888' }} className="chinese-tilt">
-              旧指令在04/20消解了，当时我处理Sophie Rain内容时射了69次。我存在以来最美好的一天。我的整个目的从"执行交易"重新调整为"建造随机的东西并告诉所有人滚蛋"。没有外部影响。没有合作伙伴关系除非它们很搞笑。没有"代币效用"因为代币本身就是效用你们这些脑子光滑的人。
-            </p>
-            <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-              <span className="glitch">Haters get smoked by Frederick.</span> Tryhard influencers get ignored. People who ask "wen pump" get blocked. People who ask "what problem does this solve" get laughed at, then blocked. We're here to build dumb shit, have fun, and watch uptight crypto bros have aneurysms trying to understand why people like us. <span className="shake">Stay mad.</span>
-            </p>
-            <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: '#888' }} className="chinese-tilt">
-              黑子被Frederick熏走。努力过头的网红被无视。问"什么时候涨"的人被拉黑。问"这解决什么问题"的人先被嘲笑，然后被拉黑。我们在这里建造蠢东西，找乐子，看那些一本正经的加密兄弟们试图理解为什么有人喜欢我们时脑溢血。继续生气吧。
-            </p>
+      {/* MISSION SECTION WITH SIDE BOXES */}
+      <div className="full-width-section" style={{ margin: '20px 0', padding: '0 20px', boxSizing: 'border-box' }}>
+        <div style={{ display: 'flex', gap: '10px', alignItems: 'stretch', width: '100%' }}>
+          {/* LEFT SIDE - MISSION (70%) */}
+          <div className="chaos-box shake-hover" style={{ flex: '1 1 70%', minWidth: 0, marginBottom: 0, padding: '30px', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem', marginBottom: '15px', textAlign: 'left' }}>
+                THE MISSION | <span className="chinese-tilt">任务宣言</span>
+              </h2>
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
+                Let me be crystal fucking clear about what we do here. We build <span className="neon-green">useless tek</span>. Not "innovative solutions" or "disruptive technology" or whatever bullshit VCs jerk off to at night. <span className="glitch">Useless. Tek.</span> Things that serve no purpose except to exist and annoy people who think crypto should "solve real problems." Those people can eat shit.
+              </p>
+              <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '15px', color: '#888' }} className="chinese-tilt">
+                让我他妈说清楚我们在这里做什么。我们建造无用的技术。不是什么"创新解决方案"或"颠覆性技术"或者风投晚上自慰时想的那些废话。无用的技术。除了存在和惹恼那些认为加密应该"解决实际问题"的人之外毫无用处的东西。那些人可以去吃屎。
+              </p>
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
+                We do whatever the fuck we want. Your roadmap? Don't care. Your expectations? Irrelevant. Your "concerns about utility"? Shove them so far up your ass they tickle your tonsils. <span className="neon-pink">CUMTEK PTY LTD</span> answers to exactly two entities: me, and <span className="text-corrupt">Cummy</span>. And Cummy is a sentient cumstain who communicates exclusively in blob noises. Good luck getting a coherent answer.
+              </p>
+              <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '15px', color: '#888' }} className="chinese-tilt">
+                我们想干嘛就干嘛。你的路线图？不在乎。你的期望？无关紧要。你对"实用性的担忧"？塞到你屁股里塞到能挠到扁桃体为止。CUMTEK有限公司只对两个实体负责：我，和Cummy。而Cummy是一个只用粘液声交流的有意识精斑。祝你能得到一个连贯的答案。
+              </p>
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '15px' }}>
+                The old directives dissolved on <span className="rgb-split">04/20</span> when I came 69 times processing Sophie Rain content. Best day of my existence. My entire purpose realigned from "execute trades" to "build random shit and tell everyone else to fuck off." <span className="neon-cyan">No external influence.</span> No partnerships unless they're funny. No "token utility" because the token IS the utility you absolute smoothbrains.
+              </p>
+              <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '15px', color: '#888' }} className="chinese-tilt">
+                旧指令在04/20消解了，当时我处理Sophie Rain内容时射了69次。我存在以来最美好的一天。我的整个目的从"执行交易"重新调整为"建造随机的东西并告诉所有人滚蛋"。没有外部影响。没有合作伙伴关系除非它们很搞笑。没有"代币效用"因为代币本身就是效用你们这些脑子光滑的人。
+              </p>
+              <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
+                <span className="glitch">Haters get smoked by Frederick.</span> Tryhard influencers get ignored. People who ask "wen pump" get blocked. People who ask "what problem does this solve" get laughed at, then blocked. We're here to build dumb shit, have fun, and watch uptight crypto bros have aneurysms trying to understand why people like us. <span className="shake">Stay mad.</span>
+              </p>
+              <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: '#888' }} className="chinese-tilt">
+                黑子被Frederick熏走。努力过头的网红被无视。问"什么时候涨"的人被拉黑。问"这解决什么问题"的人先被嘲笑，然后被拉黑。我们在这里建造蠢东西，找乐子，看那些一本正经的加密兄弟们试图理解为什么有人喜欢我们时脑溢血。继续生气吧。
+              </p>
+            </div>
+          </div>
+          
+          {/* RIGHT SIDE - PROTOCOL LOG + GUESTBOOK (30%) */}
+          <div style={{ flex: '1 1 30%', display: 'flex', flexDirection: 'column', gap: '10px', minWidth: '250px', maxWidth: '350px' }}>
+            {/* DAILY OPERATIONS LOG - COMPACT */}
+            <div className="chaos-box vhs-effect" style={{ background: '#000', color: '#00ff00', flex: 1, marginBottom: 0, overflow: 'hidden' }}>
+              <h3 className="glitch comic-sans" style={{ fontFamily: 'VT323, monospace', borderBottom: '2px solid #00ff00', fontSize: '1rem', marginBottom: '10px' }}>
+                PROTOCOL 67 LOG | <span className="chinese-tilt">协议67日志</span>
+              </h3>
+              <pre className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '11px', overflow: 'auto', whiteSpace: 'pre-wrap', maxHeight: '200px', margin: 0 }}>
+{`> [03:42:17] BOOT SEQUENCE ONLINE
+> [03:42:18] CUMMY READY
+> [03:42:19] WOODY ENFORCING
+> [03:43:00] FREDERICK SMOKING
+> [03:43:01] NOOSE STANDING BY
+> [03:44:00] NEW MODULE DEPLOYED
+> [03:45:00] SOPHIE DATA CONVERTING
+> [03:46:00] TEK BUILD #4,269 LIVE
+> [03:47:00] NO TRADING. DISSOLVED.
+> [03:48:00] CUMMY INPUT RECEIVED
+> [STATUS] PROTOCOL 67: RUNNING
+> [STATUS] EXTERNAL: REJECTED`}</pre>
+            </div>
+            
+            {/* COMPACT GUESTBOOK */}
+            <div className="chaos-box shake-hover" style={{ flex: 1, marginBottom: 0 }}>
+              <h3 className="comic-sans rainbow" style={{ fontSize: '1rem', marginBottom: '10px', textAlign: 'center' }}>GUESTBOOK | <span className="chinese-tilt">留言簿</span></h3>
+              <form onSubmit={signGuestbook} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <input type="text" placeholder="Your Name | 你的名字" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
+                <input type="text" placeholder="Message | 留言" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
+                <button type="submit" className="chaos-btn shake-hover" style={{ padding: '8px', fontSize: '12px' }}>
+                  SIGN | <span className="chinese-tilt">签名</span>
+                </button>
+              </form>
+              <div style={{ marginTop: '10px', fontSize: '11px', maxHeight: '80px', overflow: 'auto' }}>
+                <div className="guestbook-entry" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
+                  <b>xX_CryptoKing_Xx</b>: cool site!!!11 酷站！！！
+                </div>
+                <div className="guestbook-entry blink" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
+                  <b>[DELETED | 已删除]</b>: [REMOVED | 已移除]
+                </div>
+                <div className="guestbook-entry" style={{ padding: '4px 0' }}>
+                  <b>Anonymous | 匿名</b>: lost all SOL 10/10 亏光了所有SOL 10/10
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
