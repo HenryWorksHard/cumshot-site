@@ -435,22 +435,67 @@ export default function Home() {
             </div>
           </div>
 
-          {/* KAOMOJI ARMY - Split Section */}
-          <div style={{ display: 'flex', gap: '10px', marginBottom: '8px' }}>
-            <div className="chaos-box chaos-box-green shake-hover" style={{ textAlign: 'center', width: '50%', margin: 0 }}>
-              <h3 className="rgb-split comic-sans">CUMSHOTARMY SAYS:</h3>
-              <p className="float" style={{ fontSize: '2rem' }}>
-                (╯°□°）╯︵ ┻━┻
-              </p>
-              <p style={{ fontSize: '2rem' }} className="glitch">
-                ┬─┬ノ( º _ ºノ)
-              </p>
-              <p className="shake" style={{ fontSize: '2rem' }}>
-                (ノಠ益ಠ)ノ彡┻━┻
-              </p>
-              <p style={{ fontSize: '2rem' }} className="blink">
-                ( ͡° ͜ʖ ͡°)
-              </p>
+          {/* CUMSHOT SHOP - RETRO VENDING MACHINE */}
+          <div style={{ display: 'flex', gap: '6px', marginBottom: '8px' }}>
+            <div className="vending-machine" style={{ width: '50%', margin: 0, background: 'linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%)', border: '4px solid #444', borderRadius: '8px', padding: '10px', position: 'relative', overflow: 'hidden' }}>
+              {/* Machine Header */}
+              <div style={{ background: 'linear-gradient(180deg, #ff00ff 0%, #aa00aa 100%)', padding: '8px', textAlign: 'center', borderRadius: '4px', marginBottom: '10px', border: '2px solid #fff' }}>
+                <h3 className="glitch comic-sans" style={{ margin: 0, color: '#fff', textShadow: '2px 2px #000', fontSize: '1.2rem' }}>
+                  🎰 CUMSHOT SHOP 🎰
+                </h3>
+                <p style={{ margin: '4px 0 0 0', fontSize: '10px', color: '#ffff00' }}>INSERT $CUM TO PURCHASE</p>
+              </div>
+              
+              {/* Vending Items Grid */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px' }}>
+                {[
+                  { id: 'A1', emoji: '🍆', name: 'DILDO', cn: '假阳具' },
+                  { id: 'A2', emoji: '🧴', name: 'LOTION', cn: '润滑剂' },
+                  { id: 'A3', emoji: '🎈', name: 'CONDOM', cn: '套套' },
+                  { id: 'B1', emoji: '💦', name: 'CUMMY', cn: '精斑' },
+                  { id: 'B2', emoji: '🌧️', name: 'SOPHIE PIC', cn: 'Sophie图' },
+                  { id: 'B3', emoji: '👃', name: 'NOSE HAIR', cn: '鼻毛' },
+                  { id: 'C1', emoji: '🧻', name: 'CUM RAG', cn: '擦精布' },
+                  { id: 'C2', emoji: '🥒', name: 'CUCUMBER', cn: '黄瓜' },
+                  { id: 'C3', emoji: '🧦', name: 'CUM SOCK', cn: '精袜' },
+                ].map((item) => (
+                  <button 
+                    key={item.id}
+                    onClick={() => alert(`🎰 ITEM: ${item.name}\n💰 PRICE: $69 $CUM\n\n❌ TRANSACTION FAILED\nReason: You're too broke lmao\n\n物品: ${item.cn}\n价格: 69 $CUM\n交易失败：你太穷了哈哈`)}
+                    className="vending-item shake-hover"
+                    style={{ 
+                      background: 'linear-gradient(180deg, #333 0%, #222 100%)', 
+                      border: '2px solid #555', 
+                      borderRadius: '4px', 
+                      padding: '8px 4px', 
+                      cursor: 'pointer',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      gap: '2px'
+                    }}
+                  >
+                    <span style={{ background: '#ff0', color: '#000', padding: '1px 4px', fontSize: '9px', fontWeight: 'bold', borderRadius: '2px' }}>{item.id}</span>
+                    <span style={{ fontSize: '24px' }}>{item.emoji}</span>
+                    <span style={{ fontSize: '8px', color: '#0f0', fontFamily: 'VT323, monospace' }}>{item.name}</span>
+                    <span style={{ fontSize: '7px', color: '#888' }}>{item.cn}</span>
+                    <span style={{ fontSize: '10px', color: '#ff0', fontWeight: 'bold' }}>$69</span>
+                  </button>
+                ))}
+              </div>
+              
+              {/* Coin Slot */}
+              <div style={{ marginTop: '10px', display: 'flex', justifyContent: 'center', gap: '10px', alignItems: 'center' }}>
+                <div style={{ background: '#111', border: '2px inset #333', padding: '4px 15px', borderRadius: '4px' }}>
+                  <span style={{ color: '#0f0', fontFamily: 'VT323, monospace', fontSize: '12px' }}>BALANCE: 0 $CUM</span>
+                </div>
+                <div style={{ background: '#000', border: '2px solid #ff0', width: '30px', height: '6px', borderRadius: '2px' }}></div>
+              </div>
+              
+              {/* Dispensing Slot */}
+              <div style={{ marginTop: '8px', background: '#000', border: '3px inset #333', height: '30px', borderRadius: '0 0 8px 8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ color: '#666', fontSize: '10px', fontFamily: 'VT323, monospace' }}>[ COLLECT ITEM HERE ]</span>
+              </div>
             </div>
             <div className="chaos-box shake-hover" style={{ width: '50%', margin: 0, padding: 0, overflow: 'hidden', position: 'relative' }}>
               <img src="/cumshotarmy.jpg" alt="The CUMSHOTARMY" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
