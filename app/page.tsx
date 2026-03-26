@@ -326,6 +326,145 @@ export default function Home() {
         </div>
       </div>
 
+      {/* SPONSOR SLIDING BAR */}
+      <div style={{ 
+        background: 'linear-gradient(90deg, #000 0%, #1a1a1a 50%, #000 100%)', 
+        padding: '12px 0',
+        overflow: 'hidden',
+        borderTop: '2px solid #ff00ff',
+        borderBottom: '2px solid #ff00ff',
+        position: 'relative'
+      }}>
+        {/* Label */}
+        <div style={{ 
+          position: 'absolute', 
+          left: '0', 
+          top: '50%', 
+          transform: 'translateY(-50%)',
+          background: '#ff00ff',
+          color: '#000',
+          padding: '5px 15px',
+          fontSize: '11px',
+          fontWeight: 'bold',
+          zIndex: 10,
+          fontFamily: 'VT323, monospace'
+        }}>
+          PROUD SPONSORS
+        </div>
+        
+        {/* Sliding sponsors */}
+        <div className="sponsor-scroll" style={{ 
+          display: 'flex', 
+          alignItems: 'center',
+          animation: 'scroll-left-instant 30s linear infinite',
+          whiteSpace: 'nowrap'
+        }}>
+          {/* First set */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', paddingLeft: '150px' }}>
+            {/* Pornhub */}
+            <div style={{ background: '#000', padding: '6px 12px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', display: 'flex', alignItems: 'center' }}>
+              <span style={{ color: '#ff9000' }}>Porn</span><span style={{ color: '#000', background: '#ff9000', padding: '0 4px', marginLeft: '2px' }}>hub</span>
+            </div>
+            {/* OnlyFans */}
+            <div style={{ background: '#00aff0', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', letterSpacing: '1px' }}>
+              OnlyFans
+            </div>
+            {/* Brazzers */}
+            <div style={{ background: '#ff9000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', fontStyle: 'italic' }}>
+              BRAZZERS
+            </div>
+            {/* XVideos */}
+            <div style={{ background: '#c00', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              XVIDEOS
+            </div>
+            {/* Chaturbate */}
+            <div style={{ background: 'linear-gradient(90deg, #f47521, #ec008c)', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              Chaturbate
+            </div>
+            {/* RealityKings */}
+            <div style={{ background: '#000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#ffd700' }}>
+              RealityKings
+            </div>
+            {/* Bang Bros */}
+            <div style={{ background: '#ff0', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#000' }}>
+              BANGBROS
+            </div>
+            {/* XHamster */}
+            <div style={{ background: '#f8a', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#000' }}>
+              xHamster
+            </div>
+            {/* RedTube */}
+            <div style={{ background: '#c00', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              RedTube
+            </div>
+            {/* YouPorn */}
+            <div style={{ background: '#ff69b4', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              YouPorn
+            </div>
+            {/* Stripchat */}
+            <div style={{ background: 'linear-gradient(90deg, #8b5cf6, #ec4899)', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              Stripchat
+            </div>
+            {/* Naughty America */}
+            <div style={{ background: '#000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '14px', color: '#c00' }}>
+              NaughtyAmerica
+            </div>
+          </div>
+          
+          {/* Duplicate set for seamless loop */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', paddingLeft: '40px' }}>
+            {/* Pornhub */}
+            <div style={{ background: '#000', padding: '6px 12px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', display: 'flex', alignItems: 'center' }}>
+              <span style={{ color: '#ff9000' }}>Porn</span><span style={{ color: '#000', background: '#ff9000', padding: '0 4px', marginLeft: '2px' }}>hub</span>
+            </div>
+            {/* OnlyFans */}
+            <div style={{ background: '#00aff0', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', letterSpacing: '1px' }}>
+              OnlyFans
+            </div>
+            {/* Brazzers */}
+            <div style={{ background: '#ff9000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', fontStyle: 'italic' }}>
+              BRAZZERS
+            </div>
+            {/* XVideos */}
+            <div style={{ background: '#c00', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              XVIDEOS
+            </div>
+            {/* Chaturbate */}
+            <div style={{ background: 'linear-gradient(90deg, #f47521, #ec008c)', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              Chaturbate
+            </div>
+            {/* RealityKings */}
+            <div style={{ background: '#000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#ffd700' }}>
+              RealityKings
+            </div>
+            {/* Bang Bros */}
+            <div style={{ background: '#ff0', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#000' }}>
+              BANGBROS
+            </div>
+            {/* XHamster */}
+            <div style={{ background: '#f8a', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#000' }}>
+              xHamster
+            </div>
+            {/* RedTube */}
+            <div style={{ background: '#c00', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              RedTube
+            </div>
+            {/* YouPorn */}
+            <div style={{ background: '#ff69b4', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              YouPorn
+            </div>
+            {/* Stripchat */}
+            <div style={{ background: 'linear-gradient(90deg, #8b5cf6, #ec4899)', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
+              Stripchat
+            </div>
+            {/* Naughty America */}
+            <div style={{ background: '#000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '14px', color: '#c00' }}>
+              NaughtyAmerica
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* ================================================================
           PISSMISSLE-STYLE TWO COLUMN LAYOUT - LEFT: CONTENT, RIGHT: STICKY
           ================================================================ */}
