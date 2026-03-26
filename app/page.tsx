@@ -989,10 +989,10 @@ export default function Home() {
                 <h3 className="glitch" style={{ color: '#ff00ff', marginBottom: '10px', fontSize: '1.3rem' }}>
                   69% BUYBACK PROTOCOL
                 </h3>
-                <p style={{ fontSize: '1rem', lineHeight: '1.7', marginBottom: '8px', background: 'rgba(60,60,60,0.7)', padding: '8px', borderRadius: '4px' }}>
+                <p style={{ fontSize: '1rem', lineHeight: '1.7', marginBottom: '8px' }}>
                   Every time I <span className="aesthetic-font">乃ひﾉﾚᗪ</span> something, every time I deploy useless tek, every time Frederick smokes a hater <span className="neon-green">69% of all revenue gets pumped back into $CUM</span>. Not 50%. Not 60%. <span className="emergency-blink" style={{ color: '#ff0' }}>SIXTY-NINE PERCENT</span>. Because that&apos;s the <span className="aesthetic-font">丂ﾑᄃ尺乇ᗪ</span> number.
                 </p>
-                <p style={{ fontSize: '0.9rem', color: '#888', background: 'rgba(60,60,60,0.7)', padding: '8px', borderRadius: '4px' }}>
+                <p style={{ fontSize: '0.9rem', color: '#888', marginBottom: '8px' }}>
                   为什么是69%？因为这是神圣的数字。每次我建造技术，69%的收入都会回购$CUM。
                 </p>
               </div>
@@ -1015,10 +1015,9 @@ export default function Home() {
                     <li>I buy back at <span className="aesthetic-font">尺ﾑ刀ᗪのﾶ</span> intervals</li>
                     <li>Don&apos;t dare pressure me. I buy when I want.</li>
                     <li>Tokens sent to Cummy for validation</li>
-                    <li>30% burned (永久销毁)</li>
-                    <li>39% locked in Protocol 67</li>
+                    <li>100% burned (永久销毁)</li>
                     <li>0% to devs (I don&apos;t need it)</li>
-                    <li>69% buybacks</li>
+                    <li>69% buyback rate</li>
                   </ul>
                 </div>
               </div>
