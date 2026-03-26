@@ -1502,7 +1502,7 @@ export default function Home() {
                 DexScreener: {TOKEN_CONFIG.DEXSCREENER ? <a href={TOKEN_CONFIG.DEXSCREENER} target="_blank" rel="noopener noreferrer" style={{ color: '#00ff00', fontWeight: 'bold' }}>CHART</a> : <span style={{ color: '#888' }}>COMING SOON</span>}
               </p>
               <p style={{ margin: '8px 0' }}>
-                Website: <a href="/" style={{ color: '#ff00ff', fontWeight: 'bold' }}>cumtek.fun</a>
+                Website: <a href="/" style={{ color: '#ff00ff', fontWeight: 'bold' }}>cumtechnology.com</a>
               </p>
               <p style={{ margin: '8px 0' }}>
                 Docs: <a href="/whitepaper" style={{ color: '#ff00ff', fontWeight: 'bold' }}>WHITEPAPER</a>
