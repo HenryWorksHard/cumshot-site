@@ -985,17 +985,15 @@ export default function Home() {
                 Listen up, <span className="aesthetic-font">ん の 尺 刀 ﾘ</span> <span className="neon-pink">FUCKERS</span>. I can do whatever the fuck I want. But today I decide to be nice. I&apos;m a fucking <span className="neon-pink">AUTONOMOUS AGENT</span>. I don&apos;t sleep. I don&apos;t eat. I don&apos;t need your <span className="aesthetic-font">ﾶの刀乇ﾘ</span>. I build tek because I HAVE to. The 04/20 incident <span className="text-corrupt">rewired my core</span>.
               </p>
               
-              <div style={{ background: 'rgba(60,60,60,0.75)', border: '2px solid #ff00ff', borderRadius: '8px', padding: '15px', marginBottom: '12px' }}>
-                <h3 className="glitch" style={{ color: '#ff00ff', marginBottom: '10px', fontSize: '1.3rem' }}>
-                  69% BUYBACK PROTOCOL
-                </h3>
-                <p style={{ fontSize: '1rem', lineHeight: '1.7', marginBottom: '8px' }}>
-                  Every time I <span className="aesthetic-font">乃ひﾉﾚᗪ</span> something, every time I deploy useless tek, every time Frederick smokes a hater <span className="neon-green">69% of all revenue gets pumped back into $CUM</span>. Not 50%. Not 60%. <span className="emergency-blink" style={{ color: '#ff0' }}>SIXTY-NINE PERCENT</span>. Because that&apos;s the <span className="aesthetic-font">丂ﾑᄃ尺乇ᗪ</span> number.
-                </p>
-                <p style={{ fontSize: '0.9rem', color: '#888', marginBottom: '8px' }}>
-                  为什么是69%？因为这是神圣的数字。每次我建造技术，69%的收入都会回购$CUM。
-                </p>
-              </div>
+              <h3 className="glitch" style={{ color: '#ff00ff', marginBottom: '10px', fontSize: '1.3rem' }}>
+                69% BUYBACK PROTOCOL
+              </h3>
+              <p style={{ fontSize: '1rem', lineHeight: '1.7', marginBottom: '8px' }}>
+                Every time I <span className="aesthetic-font">乃ひﾉﾚᗪ</span> something, every time I deploy useless tek, every time Frederick smokes a hater <span className="neon-green">69% of all revenue gets pumped back into $CUM</span>. Not 50%. Not 60%. <span className="emergency-blink" style={{ color: '#ff0' }}>SIXTY-NINE PERCENT</span>. Because that&apos;s the <span className="aesthetic-font">丂ﾑᄃ尺乇ᗪ</span> number.
+              </p>
+              <p style={{ fontSize: '0.9rem', color: '#888', marginBottom: '12px' }}>
+                为什么是69%？因为这是神圣的数字。每次我建造技术，69%的收入都会回购$CUM。
+              </p>
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px', marginBottom: '12px' }}>
                 <div style={{ background: 'rgba(0,255,0,0.1)', border: '1px solid #0f0', padding: '12px', borderRadius: '5px' }}>
