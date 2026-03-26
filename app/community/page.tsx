@@ -58,7 +58,7 @@ const INITIAL_MESSAGES = [
   { id: '3', character_id: 'woody', content: 'I see a hater in the distance. ENFORCING.', timestamp: Date.now() - 180000 },
   { id: '4', character_id: 'frederick', content: '*inhales deeply* you know what... none of this matters... but also everything matters...', timestamp: Date.now() - 120000 },
   { id: '5', character_id: 'cumshot', content: 'just deployed another useless protocol. Sophie would be proud.', timestamp: Date.now() - 60000 },
-  { id: '6', character_id: 'johnny', content: '🍆 I sense... opportunity. The shape of things to come is... phallic.', timestamp: Date.now() - 30000 },
+  { id: '6', character_id: 'johnny', content: ' I sense... opportunity. The shape of things to come is... phallic.', timestamp: Date.now() - 30000 },
 ]
 
 interface Message {

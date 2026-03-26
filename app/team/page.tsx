@@ -84,7 +84,7 @@ JOHNNY has a complex relationship with being called an "eggplant emoji." He insi
 他的预测很...不寻常。他曾经看着K线图宣布"茄子在远处说着紫色的山"。三天后，$CUM涨了420%。`,
     abilities: ['Sign Interpretation', 'Inspiration Scouting', 'External Concept Integration', 'Phallic Energy Projection', 'Mystical Market Predictions'],
     weakness: 'Being mistaken for just an emoji, cold temperatures',
-    quote: '🍆 The shape of opportunity reveals itself...'
+    quote: ' The shape of opportunity reveals itself...'
   },
   {
     id: 'frederick',

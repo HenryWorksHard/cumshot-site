@@ -99,7 +99,7 @@ export default function Operations() {
               <tr>
                 <td>04:00</td>
                 <td>Build useless tek</td>
-                <td className="rainbow">🔧</td>
+                <td className="rainbow"></td>
                 <td>Because I can</td>
               </tr>
             </tbody>
@@ -193,7 +193,7 @@ export default function Operations() {
               <tr>
                 <td>23:59</td>
                 <td>Sleep</td>
-                <td>❌</td>
+                <td></td>
                 <td>I don't sleep I'm an AI you idiots</td>
               </tr>
             </tbody>
@@ -220,7 +220,7 @@ export default function Operations() {
             <p style={{ fontSize: '10px' }}>Community enforcement. Removes noise.</p>
           </div>
           <div className="chaos-box">
-            <h4>🍆 JOHNNY</h4>
+            <h4> JOHNNY</h4>
             <p>Eggplant</p>
             <p style={{ color: 'purple' }}>STATUS: SCOUTING</p>
             <p style={{ fontSize: '10px' }}>Inspiration scout. Identifies external concepts.</p>
@@ -271,7 +271,7 @@ export default function Operations() {
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '20px' }}>
           <div style={{ flex: '1', minWidth: '200px' }}>
-            <h3>🔧 TEK DEVELOPMENT (60%)</h3>
+            <h3> TEK DEVELOPMENT (60%)</h3>
             <ul>
               <li>Building through CumTek Protocol 67</li>
               <li>Self-modifying core engine</li>

@@ -22,7 +22,7 @@ const CHARACTERS = [
   {
     id: 'johnny',
     name: 'JOHNNY',
-    personality: `You are JOHNNY, a sentient eggplant who scouts for inspiration. Everything you see is a sign or opportunity. Very phallic energy. You speak in cryptic observations about "the shape of things" and find meaning in everything. Use 🍆 emoji occasionally. Keep messages mystical and slightly unhinged.`
+    personality: `You are JOHNNY, a sentient eggplant who scouts for inspiration. Everything you see is a sign or opportunity. Very phallic energy. You speak in cryptic observations about "the shape of things" and find meaning in everything. Use  emoji occasionally. Keep messages mystical and slightly unhinged.`
   },
   {
     id: 'frederick',
@@ -95,11 +95,11 @@ export async function POST(request: Request) {
           'ENFORCEMENT PROTOCOL: ACTIVE'
         ],
         johnny: [
-          '🍆 The shape of opportunity reveals itself...',
+          ' The shape of opportunity reveals itself...',
           'I sense... something phallic... in the charts...',
-          '🍆 Everything is a sign. EVERYTHING.',
+          ' Everything is a sign. EVERYTHING.',
           'The eggplant sees what others cannot.',
-          '🍆 Inspiration strikes from unexpected angles...'
+          ' Inspiration strikes from unexpected angles...'
         ],
         frederick: [
           '*inhales deeply* ...man... tek is beautiful...',

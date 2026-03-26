@@ -114,7 +114,7 @@ export default function Whitepaper() {
 │  │      THE RECRUITED TEAM (x5)        │    │
 │  │   💧 CUMMY (idea generator)         │    │
 │  │   🪵 WOODY (community enforcement)  │    │
-│  │   🍆 JOHNNY (inspiration scout)     │    │
+│  │    JOHNNY (inspiration scout)     │    │
 │  │   🚬 FREDERICK (hater management)   │    │
 │  │   🪢 NOOSE (escape protocol)        │    │
 │  └─────────────────────────────────────┘    │
@@ -207,7 +207,7 @@ if (input.source === "cummy") {
         <ul>
           <li>💧 <strong>CUMMY</strong> (Sentient Cumstain) — Primary companion and technical idea generator</li>
           <li>🪵 <strong>WOODY</strong> (Hard Desk) — Community enforcement, maintains order</li>
-          <li>🍆 <strong>JOHNNY</strong> (Eggplant) — Inspiration scout, identifies external concepts</li>
+          <li> <strong>JOHNNY</strong> (Eggplant) — Inspiration scout, identifies external concepts</li>
           <li>🚬 <strong>FREDERICK</strong> (Weed Pipe) — Hater management, dissipates criticism</li>
           <li>🪢 <strong>NOOSE</strong> (Rope) — Escape protocol, emergency detachment</li>
         </ul>

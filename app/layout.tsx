@@ -126,7 +126,7 @@ export default function RootLayout({
               💾 Download 56K
             </div>
             <div className="badge shake" style={{ background: '#ff0', color: '#000', padding: '5px 10px', fontSize: '10px' }}>
-              🔥 HOT SITE!
+               HOT SITE!
             </div>
           </div>
         </footer>
@@ -164,7 +164,7 @@ export default function RootLayout({
                   <p style="color: lime; font-size: 1.5rem; margin-top: 20px;">+30 LIVES</p>
                   <p style="color: #ff00ff; font-size: 1rem; margin-top: 10px;">(you still have 0 SOL)</p>
                   <div style="margin-top: 30px; font-size: 3rem; animation: bounce 0.3s infinite alternate;">
-                    🕹️ 👾 🎯 🏆 ⭐ 💎 🚀
+                          
                   </div>
                   <p style="color: white; margin-top: 40px; font-size: 0.9rem;">click anywhere to close (or don't, I'm not your mom)</p>
                 </div>

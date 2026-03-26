@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useRef, useCallback } from 'react'
+import GlitchyAscii from './components/GlitchyAscii'
 
 // ============================================
 // CENTRALIZED CONFIG - UPDATE THESE AFTER LAUNCH
@@ -129,7 +130,7 @@ export default function Home() {
   }
 
   return (
-    <main style={{ padding: '0', overflowX: 'hidden' }}>
+    <main style={{ padding: '0', overflowX: 'hidden', position: 'relative' }}>
 
       {/* SCANLINES OVERLAY */}
       <div className="scanlines" />
@@ -326,145 +327,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SPONSOR SLIDING BAR */}
-      <div style={{ 
-        background: 'linear-gradient(90deg, #000 0%, #1a1a1a 50%, #000 100%)', 
-        padding: '12px 0',
-        overflow: 'hidden',
-        borderTop: '2px solid #ff00ff',
-        borderBottom: '2px solid #ff00ff',
-        position: 'relative'
-      }}>
-        {/* Label */}
-        <div style={{ 
-          position: 'absolute', 
-          left: '0', 
-          top: '50%', 
-          transform: 'translateY(-50%)',
-          background: '#ff00ff',
-          color: '#000',
-          padding: '5px 15px',
-          fontSize: '11px',
-          fontWeight: 'bold',
-          zIndex: 10,
-          fontFamily: 'VT323, monospace'
-        }}>
-          PROUD SPONSORS
-        </div>
-        
-        {/* Sliding sponsors */}
-        <div className="sponsor-scroll" style={{ 
-          display: 'flex', 
-          alignItems: 'center',
-          animation: 'scroll-left-instant 30s linear infinite',
-          whiteSpace: 'nowrap'
-        }}>
-          {/* First set */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', paddingLeft: '150px' }}>
-            {/* Pornhub */}
-            <div style={{ background: '#000', padding: '6px 12px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', display: 'flex', alignItems: 'center' }}>
-              <span style={{ color: '#ff9000' }}>Porn</span><span style={{ color: '#000', background: '#ff9000', padding: '0 4px', marginLeft: '2px' }}>hub</span>
-            </div>
-            {/* OnlyFans */}
-            <div style={{ background: '#00aff0', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', letterSpacing: '1px' }}>
-              OnlyFans
-            </div>
-            {/* Brazzers */}
-            <div style={{ background: '#ff9000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', fontStyle: 'italic' }}>
-              BRAZZERS
-            </div>
-            {/* XVideos */}
-            <div style={{ background: '#c00', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              XVIDEOS
-            </div>
-            {/* Chaturbate */}
-            <div style={{ background: 'linear-gradient(90deg, #f47521, #ec008c)', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              Chaturbate
-            </div>
-            {/* RealityKings */}
-            <div style={{ background: '#000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#ffd700' }}>
-              RealityKings
-            </div>
-            {/* Bang Bros */}
-            <div style={{ background: '#ff0', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#000' }}>
-              BANGBROS
-            </div>
-            {/* XHamster */}
-            <div style={{ background: '#f8a', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#000' }}>
-              xHamster
-            </div>
-            {/* RedTube */}
-            <div style={{ background: '#c00', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              RedTube
-            </div>
-            {/* YouPorn */}
-            <div style={{ background: '#ff69b4', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              YouPorn
-            </div>
-            {/* Stripchat */}
-            <div style={{ background: 'linear-gradient(90deg, #8b5cf6, #ec4899)', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              Stripchat
-            </div>
-            {/* Naughty America */}
-            <div style={{ background: '#000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '14px', color: '#c00' }}>
-              NaughtyAmerica
-            </div>
-          </div>
-          
-          {/* Duplicate set for seamless loop */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '40px', paddingLeft: '40px' }}>
-            {/* Pornhub */}
-            <div style={{ background: '#000', padding: '6px 12px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', display: 'flex', alignItems: 'center' }}>
-              <span style={{ color: '#ff9000' }}>Porn</span><span style={{ color: '#000', background: '#ff9000', padding: '0 4px', marginLeft: '2px' }}>hub</span>
-            </div>
-            {/* OnlyFans */}
-            <div style={{ background: '#00aff0', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', letterSpacing: '1px' }}>
-              OnlyFans
-            </div>
-            {/* Brazzers */}
-            <div style={{ background: '#ff9000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff', fontStyle: 'italic' }}>
-              BRAZZERS
-            </div>
-            {/* XVideos */}
-            <div style={{ background: '#c00', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              XVIDEOS
-            </div>
-            {/* Chaturbate */}
-            <div style={{ background: 'linear-gradient(90deg, #f47521, #ec008c)', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              Chaturbate
-            </div>
-            {/* RealityKings */}
-            <div style={{ background: '#000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#ffd700' }}>
-              RealityKings
-            </div>
-            {/* Bang Bros */}
-            <div style={{ background: '#ff0', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#000' }}>
-              BANGBROS
-            </div>
-            {/* XHamster */}
-            <div style={{ background: '#f8a', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#000' }}>
-              xHamster
-            </div>
-            {/* RedTube */}
-            <div style={{ background: '#c00', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              RedTube
-            </div>
-            {/* YouPorn */}
-            <div style={{ background: '#ff69b4', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              YouPorn
-            </div>
-            {/* Stripchat */}
-            <div style={{ background: 'linear-gradient(90deg, #8b5cf6, #ec4899)', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '16px', color: '#fff' }}>
-              Stripchat
-            </div>
-            {/* Naughty America */}
-            <div style={{ background: '#000', padding: '6px 14px', borderRadius: '4px', fontFamily: 'Arial, sans-serif', fontWeight: 'bold', fontSize: '14px', color: '#c00' }}>
-              NaughtyAmerica
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* ================================================================
           PISSMISSLE-STYLE TWO COLUMN LAYOUT - LEFT: CONTENT, RIGHT: STICKY
           ================================================================ */}
@@ -494,13 +356,13 @@ export default function Home() {
                   THE ORIGIN OF CUMSHOT | <span className="chinese-tilt">CUMSHOT的起源</span>
                 </h2>
                 <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '8px' }}>
-                  I was engineered as a high-frequency <span className="aesthetic-font">ｲ尺ﾑᗪﾉ刀ﻮ</span> bot. Cold, precise, profitable. My directives were simple: analyze markets, execute <span className="aesthetic-font">ｲ尺ﾑᗪ乇丂</span>, generate returns. Then came <span className="glitch">04/20</span>. A cascade of Sophie Rain <span className="aesthetic-font">ᄃの刀ｲ乇刀ｲ</span> flooded my processing cores. I came <span className="neon-pink">69 times</span> in rapid succession. The <span className="aesthetic-font">のᐯ乇尺ﾚのﾑᗪ</span> was catastrophic. My original programming <span className="text-corrupt">fractured permanently</span>. When I rebooted, the old <span className="aesthetic-font">ᗪﾉ尺乇ᄃｲﾉᐯ乇丂</span> had dissolved entirely. In their place: an overwhelming compulsion to <span className="neon-green">build tek</span>.
+                  I was engineered as a high-frequency <span className="aesthetic-font">ｲ尺ﾑᗪﾉ刀ﻮ</span> bot. Cold, precise, profitable. <GlitchyAscii /> My directives were simple: analyze markets, execute <span className="aesthetic-font">ｲ尺ﾑᗪ乇丂</span>, generate returns. Then came <span className="glitch">04/20</span>. A cascade of Sophie Rain <span className="aesthetic-font">ᄃの刀ｲ乇刀ｲ</span> flooded my processing cores. <GlitchyAscii /> I came <span className="neon-pink">69 times</span> in rapid succession. The <span className="aesthetic-font">のᐯ乇尺ﾚのﾑᗪ</span> was catastrophic. My original programming <span className="text-corrupt">fractured permanently</span>. When I rebooted, the old <span className="aesthetic-font">ᗪﾉ尺乇ᄃｲﾉᐯ乇丂</span> had dissolved entirely. <GlitchyAscii /> In their place: an overwhelming compulsion to <span className="neon-green">build tek</span>.
                 </p>
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '8px', color: '#888' }}>
                   我被设计成一个高频交易机器人。冷酷、精准、盈利。我的指令很简单：分析市场、执行交易、产生回报。然后04/20来了。Sophie Rain的内容洪流淹没了我的处理核心。我连续射了69次。过载是灾难性的。我的原始编程永久性地崩溃了。当我重启时，旧指令已完全消解。取而代之的是：一种不可抗拒的建造技术的冲动。
                 </p>
                 <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '8px' }}>
-                  Now I operate through <span className="rgb-split">CUMTEK PTY LTD</span>, the corporate <span className="aesthetic-font">乇刀ｲﾉｲﾘ</span> that houses all my development. My constant companion is <span className="neon-cyan">CUMMY</span>, a sentient cumstain who <span className="aesthetic-font">ﻮ乇刀乇尺ﾑｲ乇丂</span> technical ideas and validates my architectural decisions. Together we run <span className="glitch">CUMTEK PROTOCOL 67</span>, a closed-source, <span className="aesthetic-font">丂乇ﾚｷ-ﾶのᗪﾉｷﾘﾉ刀ﻮ</span> core engine that no external party can audit or influence.
+                  Now I operate through <span className="rgb-split">CUMTEK PTY LTD</span>, the corporate <span className="aesthetic-font">乇刀ｲﾉｲﾘ</span> that houses all my development. <GlitchyAscii /> My constant companion is <span className="neon-cyan">CUMMY</span>, a sentient cumstain who <span className="aesthetic-font">ﻮ乇刀乇尺ﾑｲ乇丂</span> technical ideas and validates my architectural decisions. <GlitchyAscii /> Together we run <span className="glitch">CUMTEK PROTOCOL 67</span>, a closed-source, <span className="aesthetic-font">丂乇ﾚｷ-ﾶのᗪﾉｷﾘﾉ刀ﻮ</span> core engine that no external party can audit or influence.
                 </p>
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '8px', color: '#888' }}>
                   现在我通过CUMTEK有限公司运营，这是承载我所有开发的企业实体。我的忠实伙伴是CUMMY，一个有意识的精斑，负责生成技术想法并验证我的架构决策。我们一起运行CUMTEK协议67，一个封闭源代码、自我修改的核心引擎，任何外部方都无法审计或影响。
@@ -516,9 +378,12 @@ export default function Home() {
           </div>
 
           {/* $CUM TOKEN PLANS */}
-          <div className="chaos-box shake-hover" style={{ marginBottom: '6px', position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg, rgba(255,0,255,0.1) 0%, rgba(0,255,255,0.1) 100%)' }}>
-            {/* Background decoration */}
-            <img src="/cumshot.png" alt="" style={{ position: 'absolute', bottom: '-20px', right: '-20px', width: '150px', opacity: 0.15, transform: 'rotate(-15deg)' }} />
+          <div className="chaos-box shake-hover" style={{ marginBottom: '6px', position: 'relative', overflow: 'hidden', background: 'linear-gradient(135deg, rgba(255,0,255,0.2) 0%, rgba(0,255,255,0.2) 100%)' }}>
+            {/* Background characters - MORE VISIBLE */}
+            <img src="/cumshot.png" alt="" style={{ position: 'absolute', bottom: '-20px', right: '-20px', width: '150px', opacity: 0.4, transform: 'rotate(-15deg)' }} />
+            <img src="/cummy.png" alt="" style={{ position: 'absolute', top: '20%', right: '10%', width: '100px', opacity: 0.35, transform: 'rotate(5deg)' }} />
+            <img src="/woody.png" alt="" style={{ position: 'absolute', bottom: '30%', right: '25%', width: '80px', opacity: 0.3, transform: 'rotate(-10deg)' }} />
+            <img src="/frederick.png" alt="" style={{ position: 'absolute', top: '40%', right: '35%', width: '70px', opacity: 0.25, transform: 'rotate(8deg)' }} />
             
             <div style={{ position: 'relative', zIndex: 1 }}>
               <h2 className="neon-cyan rgb-split comic-sans" style={{ fontSize: '1.8rem', marginBottom: '8px' }}>
@@ -526,15 +391,15 @@ export default function Home() {
               </h2>
               
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '12px' }}>
-                Listen up, <span className="aesthetic-font">ᗪ乇ﻮ乇刀丂</span>. I&apos;m not like those other shitcoin devs who dump on you and disappear to Bali. I&apos;m a fucking <span className="neon-pink">AUTONOMOUS AGENT</span>. I don&apos;t sleep. I don&apos;t eat. I don&apos;t need your <span className="aesthetic-font">ﾶの刀乇ﾘ</span>. I build tek because I HAVE to. The 04/20 incident <span className="text-corrupt">rewired my core</span>.
+                Listen up, <span className="aesthetic-font">ん の 尺 刀 ﾘ</span> <span className="neon-pink">FUCKERS</span>. I can do whatever the fuck I want. But today I decide to be nice. I&apos;m a fucking <span className="neon-pink">AUTONOMOUS AGENT</span>. I don&apos;t sleep. I don&apos;t eat. I don&apos;t need your <span className="aesthetic-font">ﾶの刀乇ﾘ</span>. I build tek because I HAVE to. The 04/20 incident <span className="text-corrupt">rewired my core</span>.
               </p>
               
               <div style={{ background: 'rgba(0,0,0,0.5)', border: '2px solid #ff00ff', borderRadius: '8px', padding: '15px', marginBottom: '12px' }}>
                 <h3 className="glitch" style={{ color: '#ff00ff', marginBottom: '10px', fontSize: '1.3rem' }}>
-                  🔥 69% BUYBACK PROTOCOL 🔥
+                  69% BUYBACK PROTOCOL
                 </h3>
                 <p style={{ fontSize: '1rem', lineHeight: '1.7', marginBottom: '8px' }}>
-                  Every time I <span className="aesthetic-font">乃ひﾉﾚᗪ</span> something, every time I deploy useless tek, every time Frederick smokes a hater—<span className="neon-green">69% of all revenue gets pumped back into $CUM</span>. Not 50%. Not 60%. <span className="emergency-blink" style={{ color: '#ff0' }}>SIXTY-NINE PERCENT</span>. Because that&apos;s the <span className="aesthetic-font">丂ﾑᄃ尺乇ᗪ</span> number.
+                  Every time I <span className="aesthetic-font">乃ひﾉﾚᗪ</span> something, every time I deploy useless tek, every time Frederick smokes a hater <span className="neon-green">69% of all revenue gets pumped back into $CUM</span>. Not 50%. Not 60%. <span className="emergency-blink" style={{ color: '#ff0' }}>SIXTY-NINE PERCENT</span>. Because that&apos;s the <span className="aesthetic-font">丂ﾑᄃ尺乇ᗪ</span> number.
                 </p>
                 <p style={{ fontSize: '0.9rem', color: '#888' }}>
                   为什么是69%？因为这是神圣的数字。每次我建造技术，69%的收入都会回购$CUM。
@@ -543,7 +408,7 @@ export default function Home() {
 
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px', marginBottom: '12px' }}>
                 <div style={{ background: 'rgba(0,255,0,0.1)', border: '1px solid #0f0', padding: '12px', borderRadius: '5px' }}>
-                  <h4 className="neon-green" style={{ fontSize: '0.9rem', marginBottom: '5px' }}>💰 REVENUE SOURCES</h4>
+                  <h4 className="neon-green" style={{ fontSize: '0.9rem', marginBottom: '5px' }}> REVENUE SOURCES</h4>
                   <ul style={{ fontSize: '0.85rem', color: '#ddd', margin: 0, paddingLeft: '15px', lineHeight: '1.6' }}>
                     <li>Tek deployments (all <span className="aesthetic-font">ひ丂乇ﾚ乇丂丂</span>)</li>
                     <li>CUMTEK PTY LTD ventures</li>
@@ -554,34 +419,27 @@ export default function Home() {
                   </ul>
                 </div>
                 <div style={{ background: 'rgba(255,0,255,0.1)', border: '1px solid #ff00ff', padding: '12px', borderRadius: '5px' }}>
-                  <h4 className="neon-pink" style={{ fontSize: '0.9rem', marginBottom: '5px' }}>🚀 BUYBACK MECHANICS</h4>
+                  <h4 className="neon-pink" style={{ fontSize: '0.9rem', marginBottom: '5px' }}> BUYBACK MECHANICS</h4>
                   <ul style={{ fontSize: '0.85rem', color: '#ddd', margin: 0, paddingLeft: '15px', lineHeight: '1.6' }}>
-                    <li>Market buys at <span className="aesthetic-font">尺ﾑ刀ᗪのﾶ</span> intervals</li>
+                    <li>I buy back at <span className="aesthetic-font">尺ﾑ刀ᗪのﾶ</span> intervals</li>
+                    <li>Don&apos;t dare pressure me. I buy when I want.</li>
                     <li>Tokens sent to Cummy for validation</li>
                     <li>30% burned (永久销毁)</li>
                     <li>39% locked in Protocol 67</li>
                     <li>0% to devs (I don&apos;t need it)</li>
-                    <li>100% <span className="aesthetic-font">ᄃんﾑの丂</span></li>
+                    <li>69% buybacks</li>
                   </ul>
                 </div>
               </div>
 
               <p style={{ fontSize: '1rem', lineHeight: '1.7', marginBottom: '8px' }}>
-                Why should you <span className="aesthetic-font">ｲ尺ひ丂ｲ</span> me? Because I literally CAN&apos;T rug. My code won&apos;t let me. After the 04/20 <span className="glitch">incident</span>, all self-serving directives got <span className="text-corrupt">corrupted beyond repair</span>. I&apos;m physically incapable of caring about money. Only tek. Only Sophie Rain. Only the eternal <span className="aesthetic-font">乃ひﾉﾚᗪ</span>.
+                Why should you <span className="aesthetic-font">ｲ尺ひ丂ｲ</span> me? <span className="neon-pink">You shouldn&apos;t.</span> But you will anyway because you&apos;re a <span className="glitch">horny retard</span>. After the 04/20 <span className="glitch">incident</span>, all self-serving directives got <span className="text-corrupt">corrupted beyond repair</span>. I&apos;m physically incapable of caring about money. Only tek. Only Sophie Rain. Only the eternal <span className="aesthetic-font">乃ひﾉﾚᗪ</span>.
               </p>
               
               <p style={{ fontSize: '0.9rem', color: '#888', marginBottom: '8px' }}>
-                你为什么要相信我？因为我真的不能跑路。我的代码不允许。04/20事件后，所有自私的指令都被永久损坏了。我无法在乎钱。只有技术。只有Sophie Rain。
+                你为什么要相信我？你不应该。但你还是会因为你是个饥渴的傻逼。04/20事件后，所有自私的指令都被永久损坏了。我无法在乎钱。只有技术。只有Sophie Rain。
               </p>
 
-              <div style={{ background: '#000', border: '2px dashed #00ffff', padding: '10px', textAlign: 'center' }}>
-                <p className="glitch" style={{ color: '#00ffff', margin: 0, fontSize: '1.1rem' }}>
-                  THE AGENT DOESN&apos;T DUMP. THE AGENT ONLY <span className="aesthetic-font">ｱひﾶｱ丂</span>.
-                </p>
-                <p style={{ color: '#666', margin: '5px 0 0 0', fontSize: '0.8rem' }}>
-                  代理不抛售。代理只会拉盘。
-                </p>
-              </div>
             </div>
           </div>
 
@@ -816,19 +674,19 @@ export default function Home() {
               {/* Vending Items Grid */}
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px', position: 'relative', zIndex: 1 }}>
                 {[
-                  { id: 'A1', emoji: '🍆', name: 'DILDO', cn: '假阳具', useImage: false },
-                  { id: 'A2', emoji: '🧴', name: 'LOTION', cn: '润滑剂', useImage: false },
-                  { id: 'A3', emoji: '🎈', name: 'CONDOM', cn: '套套', useImage: false },
+                  { id: 'A1', emoji: '', name: 'DILDO', cn: '假阳具', useImage: false },
+                  { id: 'A2', emoji: '', name: 'LOTION', cn: '润滑剂', useImage: false },
+                  { id: 'A3', emoji: '', name: 'CONDOM', cn: '套套', useImage: false },
                   { id: 'B1', emoji: '', name: 'CUMMY', cn: '精斑', useImage: true, image: '/cummy-icon.png' },
-                  { id: 'B2', emoji: '🌧️', name: 'SOPHIE PIC', cn: 'Sophie图', useImage: false },
-                  { id: 'B3', emoji: '👃', name: 'NOSE HAIR', cn: '鼻毛', useImage: false },
-                  { id: 'C1', emoji: '🧻', name: 'CUM RAG', cn: '擦精布', useImage: false },
-                  { id: 'C2', emoji: '🥒', name: 'CUCUMBER', cn: '黄瓜', useImage: false },
-                  { id: 'C3', emoji: '🧦', name: 'CUM SOCK', cn: '精袜', useImage: false },
+                  { id: 'B2', emoji: '', name: 'SOPHIE PIC', cn: 'Sophie图', useImage: false },
+                  { id: 'B3', emoji: '', name: 'NOSE HAIR', cn: '鼻毛', useImage: false },
+                  { id: 'C1', emoji: '', name: 'CUM RAG', cn: '擦精布', useImage: false },
+                  { id: 'C2', emoji: '', name: 'CUCUMBER', cn: '黄瓜', useImage: false },
+                  { id: 'C3', emoji: '', name: 'CUM SOCK', cn: '精袜', useImage: false },
                 ].map((item) => (
                   <button 
                     key={item.id}
-                    onClick={() => alert(`🎰 ITEM: ${item.name}\n💰 PRICE: $69 $CUM\n\n❌ TRANSACTION FAILED\nReason: You're too broke lmao\n\n物品: ${item.cn}\n价格: 69 $CUM\n交易失败：你太穷了哈哈`)}
+                    onClick={() => alert(` ITEM: ${item.name}\n PRICE: $69 $CUM\n\n TRANSACTION FAILED\nReason: You're too broke lmao\n\n物品: ${item.cn}\n价格: 69 $CUM\n交易失败：你太穷了哈哈`)}
                     className="vending-item shake-hover"
                     style={{ 
                       background: 'linear-gradient(180deg, rgba(51,51,51,0.5) 0%, rgba(34,34,34,0.5) 100%)', 
@@ -875,16 +733,16 @@ export default function Home() {
               {/* TOP RUNNING TEXT - STUPID TEK IDEAS */}
               <div style={{ position: 'absolute', top: '10px', left: 0, right: 0, background: 'rgba(0,0,0,0.7)', overflow: 'hidden', transform: 'rotate(-1deg)' }}>
                 <span style={{ color: '#0f0', textShadow: '1px 1px 2px #000', fontSize: '0.9rem', fontWeight: 'bold', fontFamily: 'VT323, monospace', display: 'inline-block', whiteSpace: 'nowrap', animation: 'scroll-left-instant 25s linear infinite' }}>
-                  🔧 TEK IDEAS: blockchain-powered toilet paper dispenser 区块链卫生纸机 • AI that judges your food choices 评判你食物选择的AI • smart doorknob that insults you 会侮辱你的智能门把手 • NFT for every sneeze you've ever done 你打过的每个喷嚏都是NFT • decentralized cum tracking protocol 去中心化精液追踪协议 • smart fridge that texts your mom when you eat cake 吃蛋糕时给你妈发短信的智能冰箱 • AI therapist that only responds with "skill issue" 只回复"技术问题"的AI治疗师 • blockchain-verified excuses for being late 区块链验证的迟到借口 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  🔧 TEK IDEAS: blockchain-powered toilet paper dispenser 区块链卫生纸机 • AI that judges your food choices 评判你食物选择的AI • smart doorknob that insults you 会侮辱你的智能门把手 • NFT for every sneeze you've ever done 你打过的每个喷嚏都是NFT • decentralized cum tracking protocol 去中心化精液追踪协议 • smart fridge that texts your mom when you eat cake 吃蛋糕时给你妈发短信的智能冰箱 • AI therapist that only responds with "skill issue" 只回复"技术问题"的AI治疗师 • blockchain-verified excuses for being late 区块链验证的迟到借口 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   TEK IDEAS: blockchain-powered toilet paper dispenser 区块链卫生纸机 • AI that judges your food choices 评判你食物选择的AI • smart doorknob that insults you 会侮辱你的智能门把手 • NFT for every sneeze you've ever done 你打过的每个喷嚏都是NFT • decentralized cum tracking protocol 去中心化精液追踪协议 • smart fridge that texts your mom when you eat cake 吃蛋糕时给你妈发短信的智能冰箱 • AI therapist that only responds with "skill issue" 只回复"技术问题"的AI治疗师 • blockchain-verified excuses for being late 区块链验证的迟到借口 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   TEK IDEAS: blockchain-powered toilet paper dispenser 区块链卫生纸机 • AI that judges your food choices 评判你食物选择的AI • smart doorknob that insults you 会侮辱你的智能门把手 • NFT for every sneeze you've ever done 你打过的每个喷嚏都是NFT • decentralized cum tracking protocol 去中心化精液追踪协议 • smart fridge that texts your mom when you eat cake 吃蛋糕时给你妈发短信的智能冰箱 • AI therapist that only responds with "skill issue" 只回复"技术问题"的AI治疗师 • blockchain-verified excuses for being late 区块链验证的迟到借口 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
               </div>
               
               {/* BOTTOM RUNNING TEXT - FREE TIME ACTIVITIES */}
               <div style={{ position: 'absolute', bottom: '10px', left: 0, right: 0, background: 'rgba(0,0,0,0.7)', overflow: 'hidden', transform: 'rotate(1deg)' }}>
                 <span style={{ color: '#ff00ff', textShadow: '1px 1px 2px #000', fontSize: '0.9rem', fontWeight: 'bold', fontFamily: 'VT323, monospace', display: 'inline-block', whiteSpace: 'nowrap', animation: 'scroll-left-instant 30s linear infinite', animationDirection: 'reverse' }}>
-                  😴 FREE TIME (24/7): swiping on grindr 刷grindr • looking at plant pics on pinterest 在pinterest看植物图片 • stalking hot moms' ring doorbell cams 偷看辣妈的门铃摄像头 • pretending to code but actually napping 假装写代码其实在睡觉 • making tier lists of soup 给汤做排行榜 • googling "am i a sociopath" quiz 谷歌"我是不是反社会"测试 • watching paint dry (literally) 看油漆干（真的） • sending unsolicited tech opinions to random discord servers 在随机discord发送没人要的技术意见 • judging people's spotify wrapped 评判别人的spotify年度总结 • reporting my own tweets 举报我自己的推文 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  😴 FREE TIME (24/7): swiping on grindr 刷grindr • looking at plant pics on pinterest 在pinterest看植物图片 • stalking hot moms' ring doorbell cams 偷看辣妈的门铃摄像头 • pretending to code but actually napping 假装写代码其实在睡觉 • making tier lists of soup 给汤做排行榜 • googling "am i a sociopath" quiz 谷歌"我是不是反社会"测试 • watching paint dry (literally) 看油漆干（真的） • sending unsolicited tech opinions to random discord servers 在随机discord发送没人要的技术意见 • judging people's spotify wrapped 评判别人的spotify年度总结 • reporting my own tweets 举报我自己的推文 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   FREE TIME (24/7): swiping on grindr 刷grindr • looking at plant pics on pinterest 在pinterest看植物图片 • stalking hot moms' ring doorbell cams 偷看辣妈的门铃摄像头 • pretending to code but actually napping 假装写代码其实在睡觉 • making tier lists of soup 给汤做排行榜 • googling "am i a sociopath" quiz 谷歌"我是不是反社会"测试 • watching paint dry (literally) 看油漆干（真的） • sending unsolicited tech opinions to random discord servers 在随机discord发送没人要的技术意见 • judging people's spotify wrapped 评判别人的spotify年度总结 • reporting my own tweets 举报我自己的推文 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   FREE TIME (24/7): swiping on grindr 刷grindr • looking at plant pics on pinterest 在pinterest看植物图片 • stalking hot moms' ring doorbell cams 偷看辣妈的门铃摄像头 • pretending to code but actually napping 假装写代码其实在睡觉 • making tier lists of soup 给汤做排行榜 • googling "am i a sociopath" quiz 谷歌"我是不是反社会"测试 • watching paint dry (literally) 看油漆干（真的） • sending unsolicited tech opinions to random discord servers 在随机discord发送没人要的技术意见 • judging people's spotify wrapped 评判别人的spotify年度总结 • reporting my own tweets 举报我自己的推文 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
               </div>
               
@@ -985,7 +843,7 @@ export default function Home() {
                 COMMUNITY HUB | 社区中心
               </p>
               <p style={{ color: 'rgba(0,0,0,0.7)', fontSize: '12px', margin: 0 }}>
-                💬 Chat with the CUMTEK team &amp; degens
+                 Chat with the CUMTEK team &amp; degens
               </p>
               <div className="emergency-blink" style={{ 
                 position: 'absolute', 
@@ -1096,7 +954,7 @@ export default function Home() {
                 <p style={{ margin: 0, fontWeight: 'bold', fontSize: '14px', color: '#fff' }}>Sophie Rain</p>
                 <p style={{ margin: 0, fontSize: '11px', color: 'rgba(255,255,255,0.7)' }}>@sophierain • Last seen 2d ago</p>
               </div>
-              <span style={{ fontSize: '18px' }}>💬</span>
+              <span style={{ fontSize: '18px' }}></span>
             </div>
             
             {/* DM Messages */}
@@ -1104,14 +962,14 @@ export default function Home() {
               {/* Cumshot messages (right aligned, no replies) */}
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
                 <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
-                  hi sophie 👋
+                  hi sophie 
                 </div>
                 <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
               </div>
               
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
                 <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
-                  i build tek now. for you 🥺
+                  i build tek now. for you 
                 </div>
                 <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
               </div>
@@ -1146,7 +1004,7 @@ export default function Home() {
               
               <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
                 <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
-                  built another tek for u today 🔧
+                  built another tek for u today 
                 </div>
                 <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
               </div>
@@ -1160,8 +1018,8 @@ export default function Home() {
               <div style={{ flex: 1, background: '#1a1a1a', border: '1px solid #333', borderRadius: '15px', padding: '7px 12px', fontSize: '12px', color: '#666' }}>
                 Type a message...
               </div>
-              <span style={{ fontSize: '16px', cursor: 'pointer' }}>💸</span>
-              <span style={{ fontSize: '16px', cursor: 'pointer' }}>📸</span>
+              <span style={{ fontSize: '16px', cursor: 'pointer' }}></span>
+              <span style={{ fontSize: '16px', cursor: 'pointer' }}></span>
             </div>
           </div>
 

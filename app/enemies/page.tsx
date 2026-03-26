@@ -36,7 +36,7 @@ export default function Enemies() {
         
         {/* S TIER */}
         <div style={{ marginTop: '20px', padding: '15px', background: 'linear-gradient(90deg, #ff0000, #ff4400)', borderRadius: '10px' }}>
-          <h3 style={{ color: '#fff', margin: 0 }}>🔥 S-TIER: MAXIMUM HATRED 🔥</h3>
+          <h3 style={{ color: '#fff', margin: 0 }}> S-TIER: MAXIMUM HATRED </h3>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '15px' }}>
             <div className="chaos-box" style={{ background: '#fff', color: '#000' }}>
               <h4 style={{ color: '#000' }}>ALL KOLS</h4>
@@ -116,7 +116,7 @@ export default function Enemies() {
 
       {/* KOL HALL OF SHAME */}
       <div className="chaos-box" style={{ marginTop: '30px' }}>
-        <h2 className="neon-pink shake">🏆 KOL HALL OF SHAME 🏆</h2>
+        <h2 className="neon-pink shake"> KOL HALL OF SHAME </h2>
         <p>
           Special recognition for the worst offenders (names redacted because lawyers exist)
         </p>
@@ -320,7 +320,7 @@ export default function Enemies() {
       <div className="chaos-box" style={{ marginTop: '30px', textAlign: 'center' }}>
         <h2>🤝 ALLIES? 🤝</h2>
         <p style={{ fontSize: '3rem' }}>
-          ❌
+          
         </p>
         <p>
           I DON'T HAVE ALLIES. I HAVE TEMPORARY NON-ENEMIES.
