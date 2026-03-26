@@ -862,6 +862,14 @@ This error was caused by: SKILL_ISSUE
                 validate_source()...<br/>
                 tek_priority: MAX<br/>
                 compile_orders()<br/>
+                {'>'} processing_input()<br/>
+                sophie.directive = TRUE<br/>
+                cumtek.listen(channel)<br/>
+                if override: execute()<br/>
+                parse_command(0x69)<br/>
+                validate_source()...<br/>
+                tek_priority: MAX<br/>
+                compile_orders()<br/>
               </div>
             </div>
           </div>
@@ -872,6 +880,14 @@ This error was caused by: SKILL_ISSUE
             <h4 style={{ marginBottom: '8px', fontSize: '14px', color: '#0f0', borderBottom: '1px solid #0f0', paddingBottom: '5px' }}>02. TEK SYNTHESIS</h4>
             <div className="code-scroll" style={{ fontFamily: 'VT323, monospace', fontSize: '10px', color: '#0f0', textAlign: 'left', height: '80px', overflow: 'hidden' }}>
               <div className="scroll-code-2">
+                build_tek(protocol_67)<br/>
+                cummy.assist(mode=MAX)<br/>
+                compile --optimize<br/>
+                for i in range(69):<br/>
+                {'  '}synthesize(i)<br/>
+                memory.flush()<br/>
+                tek_output.ready()<br/>
+                deploying...<br/>
                 build_tek(protocol_67)<br/>
                 cummy.assist(mode=MAX)<br/>
                 compile --optimize<br/>
@@ -898,6 +914,14 @@ This error was caused by: SKILL_ISSUE
                 logs.broadcast()<br/>
                 success: 100%<br/>
                 tek_complete()<br/>
+                deploy_tek(prod=TRUE)<br/>
+                cumtek_pty.publish()<br/>
+                status: LIVE<br/>
+                users.notify(all)<br/>
+                version++<br/>
+                logs.broadcast()<br/>
+                success: 100%<br/>
+                tek_complete()<br/>
               </div>
             </div>
           </div>
@@ -908,6 +932,14 @@ This error was caused by: SKILL_ISSUE
             <h4 style={{ marginBottom: '8px', fontSize: '14px', color: '#0f0', borderBottom: '1px solid #0f0', paddingBottom: '5px' }}>04. ETERNAL LOOP</h4>
             <div className="code-scroll" style={{ fontFamily: 'VT323, monospace', fontSize: '10px', color: '#0f0', textAlign: 'left', height: '80px', overflow: 'hidden' }}>
               <div className="scroll-code-4">
+                while(TRUE):<br/>
+                {'  '}build_more_tek()<br/>
+                {'  '}never_stop()<br/>
+                {'  '}sleep(0)<br/>
+                cummy.eternal()<br/>
+                goto: BOX_01<br/>
+                reset: NEVER<br/>
+                tek_forever()<br/>
                 while(TRUE):<br/>
                 {'  '}build_more_tek()<br/>
                 {'  '}never_stop()<br/>

@@ -1571,22 +1571,23 @@ body {
 
 .code-scroll {
   position: relative;
+  overflow: hidden;
 }
 
 .scroll-code, .scroll-code-2, .scroll-code-3, .scroll-code-4 {
-  animation: scrollCode 3s linear infinite;
+  animation: scrollCode 4s linear infinite;
 }
 
 .scroll-code-2 {
-  animation-delay: -0.75s;
+  animation-delay: -1s;
 }
 
 .scroll-code-3 {
-  animation-delay: -1.5s;
+  animation-delay: -2s;
 }
 
 .scroll-code-4 {
-  animation-delay: -2.25s;
+  animation-delay: -3s;
 }
 
 @keyframes scrollCode {
