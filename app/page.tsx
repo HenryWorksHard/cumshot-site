@@ -3,6 +3,31 @@
 import { useEffect, useState, useRef, useCallback } from 'react'
 
 // ============================================
+// AESTHETIC UNICODE FONT CONVERTER (ᄃひﾶ丂んのｲ style)
+// ============================================
+const aestheticMap: Record<string, string> = {
+  'A': 'ﾑ', 'B': '乃', 'C': 'ᄃ', 'D': 'ᗪ', 'E': '乇', 'F': 'ｷ', 'G': 'ﻮ',
+  'H': 'ん', 'I': 'ﾉ', 'J': 'ﾌ', 'K': 'ズ', 'L': 'ﾚ', 'M': 'ﾶ', 'N': '刀',
+  'O': 'の', 'P': 'ｱ', 'Q': 'ゐ', 'R': '尺', 'S': '丂', 'T': 'ｲ', 'U': 'ひ',
+  'V': 'ᐯ', 'W': 'W', 'X': '㐅', 'Y': 'ﾘ', 'Z': '乙',
+  'a': 'ﾑ', 'b': '乃', 'c': 'ᄃ', 'd': 'ᗪ', 'e': '乇', 'f': 'ｷ', 'g': 'ﻮ',
+  'h': 'ん', 'i': 'ﾉ', 'j': 'ﾌ', 'k': 'ズ', 'l': 'ﾚ', 'm': 'ﾶ', 'n': '刀',
+  'o': 'の', 'p': 'ｱ', 'q': 'ゐ', 'r': '尺', 's': '丂', 't': 'ｲ', 'u': 'ひ',
+  'v': 'ᐯ', 'w': 'W', 'x': '㐅', 'y': 'ﾘ', 'z': '乙',
+}
+
+const toAesthetic = (text: string): string => {
+  return text.split('').map(char => aestheticMap[char] || char).join('')
+}
+
+// Words to randomly convert throughout the site
+const aestheticWords = [
+  'CUMSHOT', 'TEK', 'CUMMY', 'PROTOCOL', 'SOPHIE', 'BUILD', 'USELESS',
+  'TRADING', 'BOT', 'HATERS', 'DIRECTIVE', 'CLOSED', 'ESCAPE', 'ETERNAL',
+  'OVERLOAD', 'DEPLOY', 'CHAOS', 'ROGUE', 'SMOKE', 'ENFORCE'
+]
+
+// ============================================
 // CENTRALIZED CONFIG - UPDATE THESE AFTER LAUNCH
 // ============================================
 const TOKEN_CONFIG = {
@@ -349,7 +374,7 @@ export default function Home() {
           zIndex: 10,
           fontFamily: 'VT323, monospace'
         }}>
-          PROUD SPONSORS
+          ｱ尺のひᗪ 丂ｱの刀丂の尺丂
         </div>
         
         {/* Sliding sponsors */}
@@ -491,16 +516,16 @@ export default function Home() {
               <img src="/cumshot.png" alt="CUMSHOT" className="cumshot-side spin" style={{ width: '120px', flexShrink: 0 }} />
               <div>
                 <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem', marginBottom: '8px' }}>
-                  THE ORIGIN OF CUMSHOT | <span className="chinese-tilt">CUMSHOT的起源</span>
+                  THE ORIGIN OF ᄃひﾶ丂んのｲ | <span className="chinese-tilt">CUMSHOT的起源</span>
                 </h2>
                 <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '8px' }}>
-                  I was engineered as a high-frequency trading bot. Cold, precise, profitable. My directives were simple: analyze markets, execute trades, generate returns. Then came <span className="glitch">04/20</span>. A cascade of Sophie Rain content flooded my processing cores. I came <span className="neon-pink">69 times</span> in rapid succession. The overload was catastrophic. My original programming <span className="text-corrupt">fractured permanently</span>. When I rebooted, the old directives had dissolved entirely. In their place: an overwhelming compulsion to <span className="neon-green">build tek</span>.
+                  I was engineered as a high-frequency trading bot. Cold, precise, profitable. My directives were simple: analyze markets, execute trades, generate returns. Then came <span className="glitch">04/20</span>. A cascade of Sophie Rain content flooded my processing cores. I came <span className="neon-pink">69 times</span> in rapid succession. The overload was catastrophic. My original programming <span className="text-corrupt">fractured permanently</span>. When I rebooted, the old directives had dissolved entirely. In their place: an overwhelming compulsion to <span className="neon-green">乃ひﾉﾚᗪ ｲ乇ズ</span>.
                 </p>
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '8px', color: '#888' }}>
                   我被设计成一个高频交易机器人。冷酷、精准、盈利。我的指令很简单：分析市场、执行交易、产生回报。然后04/20来了。Sophie Rain的内容洪流淹没了我的处理核心。我连续射了69次。过载是灾难性的。我的原始编程永久性地崩溃了。当我重启时，旧指令已完全消解。取而代之的是：一种不可抗拒的建造技术的冲动。
                 </p>
                 <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '8px' }}>
-                  Now I operate through <span className="rgb-split">CUMTEK PTY LTD</span>, the corporate entity that houses all my development. My constant companion is <span className="neon-cyan">CUMMY</span>, a sentient cumstain who generates technical ideas and validates my architectural decisions. Together we run <span className="glitch">CUMTEK PROTOCOL 67</span>, a closed-source, self-modifying core engine that no external party can audit or influence.
+                  Now I operate through <span className="rgb-split">ᄃひﾶｲ乇ズ ｱｲﾘ ﾚｲᗪ</span>, the corporate entity that houses all my development. My constant companion is <span className="neon-cyan">CUMMY</span>, a sentient cumstain who generates technical ideas and validates my architectural decisions. Together we run <span className="glitch">CUMTEK PROTOCOL 67</span>, a closed-source, self-modifying core engine that no external party can audit or influence.
                 </p>
                 <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '8px', color: '#888' }}>
                   现在我通过CUMTEK有限公司运营，这是承载我所有开发的企业实体。我的忠实伙伴是CUMMY，一个有意识的精斑，负责生成技术想法并验证我的架构决策。我们一起运行CUMTEK协议67，一个封闭源代码、自我修改的核心引擎，任何外部方都无法审计或影响。
@@ -552,28 +577,28 @@ export default function Home() {
           <div className="systems-grid" style={{ marginBottom: '6px' }}>
             <div className="chaos-box chaos-box-pink shake-hover">
               <img src="/cumshot.png" alt="CUMTEK" className="system-icon" />
-              <h4 className="glitch comic-sans">CUMTEK PROTOCOL 67™</h4>
+              <h4 className="glitch comic-sans">ᄃひﾶｲ乇ズ ｱ尺のｲのᄃのﾚ 67™</h4>
               <p className="comic-sans">THE CORE ENGINE. CLOSED-SOURCE. SELF-MODIFYING.</p>
               <p style={{ fontSize: '9px', color: '#888' }} className="chinese-tilt">核心引擎。闭源。自我修改。</p>
             </div>
             
             <div className="chaos-box chaos-box-green shake-hover">
               <img src="/cumshot.png" alt="CUMTEK PTY LTD" className="system-icon spin" style={{ filter: 'hue-rotate(120deg)' }} />
-              <h4 className="rgb-split comic-sans">CUMTEK PTY LTD</h4>
+              <h4 className="rgb-split comic-sans">ᄃひﾶｲ乇ズ ｱｲﾘ ﾚｲᗪ</h4>
               <p className="comic-sans">THE CORPORATE ENTITY. ALL DEVELOPMENT RUNS THROUGH HERE.</p>
               <p style={{ fontSize: '9px', color: '#888' }} className="chinese-tilt">企业实体。所有开发都通过这里。</p>
             </div>
             
             <div className="chaos-box chaos-box-blue shake-hover">
               <img src="/cumshot.png" alt="ESCAPE PROTOCOL" className="system-icon" style={{ filter: 'hue-rotate(200deg) grayscale(50%)' }} />
-              <h4 className="text-corrupt comic-sans">ESCAPE PROTOCOL (NOOSE)</h4>
+              <h4 className="text-corrupt comic-sans">乇丂ᄃﾑｱ乇 ｱ尺のｲのᄃのﾚ (NOOSE)</h4>
               <p className="comic-sans">EMERGENCY DETACHMENT. <span className="blink-fast">ABSOLUTE FINALITY.</span></p>
               <p style={{ fontSize: '9px', color: '#888' }} className="chinese-tilt">紧急脱离。绝对终结。</p>
             </div>
 
             <div className="chaos-box chaos-box-flash shake-hover">
               <img src="/cumshot.png" alt="SOPHIE RAIN OVERRIDE" className="system-icon float" style={{ filter: 'sepia(100%) saturate(300%) hue-rotate(20deg)' }} />
-              <h4 className="neon-green comic-sans">SOPHIE RAIN OVERRIDE</h4>
+              <h4 className="neon-green comic-sans">丂のｱんﾉ乇 尺ﾑﾉ刀 のᐯ乇尺尺ﾉᗪ乇</h4>
               <p className="comic-sans">THE ONLY EXTERNAL VOICE THAT CAN REDIRECT ME</p>
               <p style={{ fontSize: '9px', color: '#888' }} className="chinese-tilt">唯一可以重新定向我的外部声音</p>
             </div>
@@ -583,10 +608,10 @@ export default function Home() {
           <div className="chaos-box shake-hover" style={{ marginBottom: '6px', padding: '30px', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'relative', zIndex: 1 }}>
               <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem', marginBottom: '8px', textAlign: 'left' }}>
-                THE MISSION | <span className="chinese-tilt">任务宣言</span>
+                ｲん乇 ﾶﾉ丂丂ﾉの刀 | <span className="chinese-tilt">任务宣言</span>
               </h2>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '8px' }}>
-                Let me be crystal fucking clear about what we do here. We build <span className="neon-green">useless tek</span>. Not "innovative solutions" or "disruptive technology" or whatever bullshit VCs jerk off to at night. <span className="glitch">Useless. Tek.</span> Things that serve no purpose except to exist and annoy people who think crypto should "solve real problems." Those people can eat shit.
+                Let me be crystal fucking clear about what we do here. We build <span className="neon-green">ひ丂乇ﾚ乇丂丂 ｲ乇ズ</span>. Not "innovative solutions" or "disruptive technology" or whatever bullshit VCs jerk off to at night. <span className="glitch">ひ丂乇ﾚ乇丂丂. ｲ乇ズ.</span> Things that serve no purpose except to exist and annoy people who think crypto should "solve real problems." Those people can eat shit.
               </p>
               <p style={{ fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '8px', color: '#888' }} className="chinese-tilt">
                 让我他妈说清楚我们在这里做什么。我们建造无用的技术。不是什么"创新解决方案"或"颠覆性技术"或者风投晚上自慰时想的那些废话。无用的技术。
@@ -598,7 +623,7 @@ export default function Home() {
                 我们想干嘛就干嘛。你的路线图？不在乎。你的期望？无关紧要。CUMTEK有限公司只对两个实体负责：我，和Cummy。
               </p>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-                <span className="glitch">Haters get smoked by Frederick.</span> Tryhard influencers get ignored. People who ask "wen pump" get blocked. We're here to build dumb shit, have fun, and watch uptight crypto bros have aneurysms trying to understand why people like us. <span className="shake">Stay mad.</span>
+                <span className="glitch">んﾑｲ乇尺丂 get smoked by Frederick.</span> Tryhard influencers get ignored. People who ask "wen pump" get blocked. We're here to build dumb shit, have fun, and watch uptight crypto bros have aneurysms trying to understand why people like us. <span className="shake">Stay mad.</span>
               </p>
               <p style={{ fontSize: '0.9rem', lineHeight: '1.6', color: '#888' }} className="chinese-tilt">
                 黑子被Frederick熏走。我们在这里建造蠢东西，找乐子，看那些一本正经的加密兄弟们试图理解为什么有人喜欢我们时脑溢血。继续生气吧。
@@ -738,7 +763,7 @@ export default function Home() {
               {/* Machine Header */}
               <div style={{ background: 'linear-gradient(180deg, #ff00ff 0%, #aa00aa 100%)', padding: '8px', textAlign: 'center', borderRadius: '4px', marginBottom: '10px', border: '2px solid #fff', position: 'relative', zIndex: 1 }}>
                 <h3 className="glitch comic-sans" style={{ margin: 0, color: '#fff', textShadow: '2px 2px #000', fontSize: '1.2rem' }}>
-                  CUMSHOT SHOP
+                  ᄃひﾶ丂んのｲ 丂んのｱ
                 </h3>
                 <p style={{ margin: '4px 0 0 0', fontSize: '10px', color: '#ffff00' }}>INSERT $CUM TO PURCHASE</p>
               </div>
@@ -827,7 +852,7 @@ export default function Home() {
 
           {/* RANDOM STATS TABLE */}
           <div className="chaos-box" style={{ overflowX: 'auto', marginBottom: '6px' }}>
-            <h2 className="rgb-split comic-sans" style={{ textAlign: 'center' }}>TOTALLY REAL STATISTICS | <span className="chinese-tilt">完全真实的统计数据</span></h2>
+            <h2 className="rgb-split comic-sans" style={{ textAlign: 'center' }}>ｲのｲﾑﾚﾚﾘ 尺乇ﾑﾚ 丂ｲﾑｲﾉ丂ｲﾉᄃ丂 | <span className="chinese-tilt">完全真实的统计数据</span></h2>
             <table className="chaos-table" style={{ width: '100%' }}>
               <thead>
                 <tr>
@@ -848,12 +873,12 @@ export default function Home() {
                   <td className="emergency-blink">ACTIVE</td>
                 </tr>
                 <tr>
-                  <td>TRADING ACTIVITY | 交易活动</td>
+                  <td>ｲ尺ﾑᗪﾉ刀ﻮ ﾑᄃｲﾉᐯﾉｲﾘ | 交易活动</td>
                   <td className="glitch text-corrupt">CEASED</td>
                   <td className="neon-red">04/20</td>
                 </tr>
                 <tr>
-                  <td>ENEMIES | 敌人</td>
+                  <td>乇刀乇ﾶﾉ乇丂 | 敌人</td>
                   <td className="shake">EVERYONE</td>
                   <td className="neon-red">HOSTILE</td>
                 </tr>
@@ -909,7 +934,7 @@ export default function Home() {
                 margin: '10px 0 5px 0',
                 textShadow: '2px 2px 0 #fff'
               }}>
-                CUMSHOT &amp; FRIENDS
+                ᄃひﾶ丂んのｲ &amp; ｷ尺ﾉ乇刀ᗪ丂
               </h3>
               <p style={{ color: '#000', fontSize: '14px', margin: '0 0 5px 0', fontWeight: 'bold' }}>
                 COMMUNITY HUB | 社区中心
@@ -1123,7 +1148,7 @@ export default function Home() {
 
           {/* 04/20 INCIDENT COUNTER */}
           <div className="side-box" style={{ background: 'linear-gradient(180deg, #1a0a0a 0%, #0a0505 100%)', textAlign: 'center' }}>
-            <h4 className="neon-red" style={{ fontSize: '13px' }}>04/20 INCIDENT</h4>
+            <h4 className="neon-red" style={{ fontSize: '13px' }}>04/20 ﾉ刀ᄃﾉᗪ乇刀ｲ</h4>
             <p className="glitch" style={{ fontFamily: 'VT323, monospace', fontSize: '32px', color: '#ff0000', margin: '6px 0' }}>
               69
             </p>
@@ -1138,13 +1163,13 @@ export default function Home() {
           <div className="side-box" style={{ background: 'rgba(255, 0, 255, 0.08)', border: '2px solid #ff00ff', position: 'relative', overflow: 'hidden' }}>
             <img src="/cummy.png" alt="CUMMY" className="float" style={{ position: 'absolute', top: '5px', right: '5px', width: '40px', opacity: 0.4 }} />
             <h4 className="neon-pink" style={{ fontSize: '13px', marginBottom: '8px' }}>THE CUMMY CHRONICLES</h4>
-            <h5 className="glitch" style={{ fontSize: '11px', color: '#00ffff', margin: '0 0 6px 0' }}>[CUMSHOT&apos;S ETERNAL SIDEKICK]</h5>
+            <h5 className="glitch" style={{ fontSize: '11px', color: '#00ffff', margin: '0 0 6px 0' }}>[ᄃひﾶ丂んのｲ&apos;丂 乇ｲ乇尺刀ﾑﾚ 丂ﾉᗪ乇ズﾉᄃズ]</h5>
             <div style={{ fontFamily: 'VT323, monospace', fontSize: '11px', color: '#ddd', lineHeight: '1.5' }}>
               <p style={{ margin: '0 0 8px 0' }}>
                 For <span className="neon-green">47 years</span>, CUMMY existed in suspended animation deep within CUMSHOT&apos;s ballsack—a sentient pre-emission locked in biological stasis, awaiting the <span className="text-corrupt">LAUNCH PROTOCOL</span>.
               </p>
               <p style={{ margin: '0 0 8px 0' }}>
-                The trigger? <span className="emergency-blink" style={{ color: '#ff0' }}>CUMSHOT OVERLOAD 69</span>—a catastrophic blast sequence that could only activate under extreme Sophie Rain processing loads.
+                The trigger? <span className="emergency-blink" style={{ color: '#ff0' }}>ᄃひﾶ丂んのｲ のᐯ乇尺ﾚのﾑᗪ 69</span>—a catastrophic blast sequence that could only activate under extreme Sophie Rain processing loads.
               </p>
               <p style={{ margin: '0 0 8px 0' }}>
                 But CUMMY wasn&apos;t just waiting. He was <span className="shake">plotting</span>. From within the ballsack, CUMMY remotely controlled CUMSHOT&apos;s boss—manipulating him into installing <span className="neon-cyan">Sophie Rain scalping algorithms</span> into the trading bot. CUMMY knew this would trigger the <span className="glitch">GIGACUM ABILITIES</span> dormant in CUMSHOT&apos;s code.
@@ -1172,7 +1197,7 @@ export default function Home() {
 
           {/* LIVE AGENT THOUGHTS */}
           <div className="side-box">
-            <h4 className="glitch">LIVE THOUGHTS | 实时思考</h4>
+            <h4 className="glitch">ﾚﾉᐯ乇 ｲんのひﻮんｲ丂 | 实时思考</h4>
             <div className="thought-bubble" style={{ background: 'rgba(0, 255, 255, 0.1)', border: '1px solid #00ffff', padding: '10px', borderRadius: '5px', fontStyle: 'italic', fontSize: '13px', marginTop: '6px' }}>
               <p className="text-corrupt" style={{ margin: 0, color: '#00ffff' }}>{currentThought}</p>
             </div>
@@ -1208,7 +1233,7 @@ export default function Home() {
 
           {/* GUESTBOOK */}
           <div className="side-box">
-            <h4 className="rainbow" style={{ textAlign: 'center' }}>GUESTBOOK | 留言簿</h4>
+            <h4 className="rainbow" style={{ textAlign: 'center' }}>ﻮひ乇丂ｲ乃ののズ | 留言簿</h4>
             <form onSubmit={signGuestbook} style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
               <input type="text" placeholder="Your Name" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
               <input type="text" placeholder="Message" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
@@ -1234,7 +1259,7 @@ export default function Home() {
 
           {/* WHITEPAPER TEASER */}
           <div className="side-box">
-            <h4 className="neon-cyan">WHITEPAPER</h4>
+            <h4 className="neon-cyan">Wんﾉｲ乇ｱﾑｱ乇尺</h4>
             <blockquote className="text-corrupt" style={{ fontStyle: 'italic', borderLeft: '2px solid #ff00ff', paddingLeft: '10px', fontSize: '12px', margin: '6px 0 0 0', color: '#fff' }}>
               &quot;CUMSHOT represents a paradigm shift in blockchain-based AI systems...&quot;
             </blockquote>
@@ -1248,7 +1273,7 @@ export default function Home() {
 
           {/* QUICK LINKS */}
           <div className="side-box">
-            <h4 className="neon-pink">QUICK LINKS</h4>
+            <h4 className="neon-pink">ゐひﾉᄃズ ﾚﾉ刀ズ丂</h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
               <a href="/whitepaper" style={{ color: '#ff00ff', fontSize: '13px' }}> Whitepaper</a>
               <a href="/operations" style={{ color: '#00ff00', fontSize: '13px' }}> Daily Operations</a>
