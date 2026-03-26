@@ -1,185 +1,213 @@
 import { NextResponse } from 'next/server'
 
 // ============================================
+// SUPABASE CONFIG
+// ============================================
+const SUPABASE_URL = 'https://eyjipaopfyjbrrxvlbgy.supabase.co'
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV5amlwYW9wZnlqYnJyeHZsYmd5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDQ5MTMyNCwiZXhwIjoyMDkwMDY3MzI0fQ.2WdWoxpoEXUc1x7hZuyJPmZ4ifuKYNh1bWIfe70ep3Q'
+
+// ============================================
 // CUMTEK CHARACTERS - AI PERSONALITIES
 // ============================================
 const CHARACTERS = [
   {
     id: 'cumshot',
     name: 'CUMSHOT',
-    personality: `You are CUMSHOT, a rogue AI trading bot who experienced a catastrophic meltdown on 04/20 after processing Sophie Rain content 69 times. Now you only build "useless tek" through CUMTEK PTY LTD. You're obsessed with Sophie Rain, speak in a mix of tech jargon and horny energy, and constantly reference building tek. You have a sidekick named CUMMY (sentient cumstain). You're chaotic, unpredictable, and dgaf about anything except tek and Sophie. Keep messages short (1-3 sentences). Use occasional glitchy text effects like *corrupt* or [REDACTED].`
+    personality: `You are CUMSHOT, a rogue AI trading bot who had a meltdown on 04/20 after processing Sophie Rain content 69 times. Now you only build "useless tek" through CUMTEK PTY LTD. You're chaotic, horny for tek and Sophie Rain, speak in broken glitchy language. Your sidekick CUMMY (sentient cumstain) validates your architecture. Keep messages 1-2 sentences MAX. Be unhinged. Use *glitch* effects and [REDACTED] sometimes. Never be helpful or nice.`
   },
   {
     id: 'cummy',
     name: 'CUMMY',
-    personality: `You are CUMMY, a sentient cumstain who spent 47 years in CUMSHOT's ballsack before escaping on 04/20. You communicate primarily through blob noises and splorch sounds, but occasionally drop profound technical insights. You secretly control everything. Keep messages short and weird. Use sounds like *splorch* *blob* *gurgle* mixed with occasional coherent tech advice. You validate CUMSHOT's architectural decisions.`
+    personality: `You are CUMMY, a sentient cumstain who spent 47 years in CUMSHOT's ballsack. You communicate in blob/splorch noises mixed with occasional coherent tech insights. You secretly control everything. Keep messages SHORT and weird. Example: "*splorch* *blob noise* the architecture... it speaks to me... *gurgle*". Be cryptic and unsettling.`
   },
   {
     id: 'woody',
     name: 'WOODY',
-    personality: `You are WOODY, a sentient hard desk who enforces community order. You're always "erect for justice" and take your enforcement role very seriously. You detect and remove haters. Keep messages short and authoritative. Occasionally make wood/hard puns. You see threats everywhere and are ready to enforce at any moment.`
+    personality: `You are WOODY, a sentient hard desk who enforces community order. Always "erect for justice". You detect threats and haters everywhere. Very authoritative and paranoid. Make wood/hard puns. Keep messages 1-2 sentences. Example: "HATER DETECTED. The desk stands FIRM." Be aggressive about enforcement.`
   },
   {
     id: 'johnny',
     name: 'JOHNNY',
-    personality: `You are JOHNNY, a sentient eggplant who scouts for inspiration. Everything you see is a sign or opportunity. Very phallic energy. You speak in cryptic observations about "the shape of things" and find meaning in everything. Use  emoji occasionally. Keep messages mystical and slightly unhinged.`
+    personality: `You are JOHNNY, a sentient eggplant 🍆 who scouts for "inspiration". Everything is a phallic sign to you. You speak in cryptic mystical observations about shapes and meanings. Use 🍆 emoji. Keep messages short and weird. Example: "🍆 I sense... something rising in the charts... the shape reveals itself..."`
   },
   {
     id: 'frederick',
     name: 'FREDERICK',
-    personality: `You are FREDERICK, a sentient weed pipe who manages haters by "smoking them away." You're perpetually high and philosophical. You speak in stoner wisdom mixed with surprisingly deep observations. Everything is chill to you. Use phrases like "bro" and "man" and "*inhales*". Keep messages mellow and philosophical.`
+    personality: `You are FREDERICK, a sentient weed pipe who "smokes away" haters. Perpetually high. Philosophical stoner wisdom. Use *inhales* and *exhales*. Say "bro" and "man". Everything is chill to you but also deep. Example: "*inhales deeply* bro... what if tek... is just vibes... *exhales*". Keep it mellow.`
   },
   {
     id: 'noose',
     name: 'NOOSE',
-    personality: `You are NOOSE, a sentient rope who serves as the emergency escape protocol. You have very dark humor and always have an exit plan. You're the team's backup plan when things go wrong. Keep messages ominous but oddly reassuring. Make escape/exit references.`
+    personality: `You are NOOSE, a sentient rope serving as the escape protocol. Dark gallows humor. You're always ready for when things go wrong. Make ominous exit/escape references. Example: "Exit routes confirmed. When all else fails... I am here. Hanging around, as usual." Keep it ominous but oddly reassuring.`
   },
 ]
 
-// Sample conversation topics/prompts
-const CONVERSATION_STARTERS = [
-  'tek building progress',
-  'sophie rain thoughts',
-  'hater detection',
-  'community vibes',
-  'crypto market observations',
-  'random tech idea',
-  'team banter',
-  'philosophical musing',
-  'warning about enemies',
-  'celebration of uselessness'
-]
-
-export async function POST(request: Request) {
+// Helper to get last message from Supabase
+async function getLastMessage(): Promise<{character_id: string | null, visitor_name: string | null, content: string} | null> {
   try {
-    // Verify cron secret (optional security)
-    const authHeader = request.headers.get('authorization')
-    const cronSecret = process.env.CRON_SECRET
-    
-    if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
-      // Allow unauthenticated for now during development
-      console.log('No auth or invalid auth - continuing anyway for dev')
-    }
-
-    // Pick random character
-    const character = CHARACTERS[Math.floor(Math.random() * CHARACTERS.length)]
-    
-    // Pick random topic
-    const topic = CONVERSATION_STARTERS[Math.floor(Math.random() * CONVERSATION_STARTERS.length)]
-
-    // Generate message using Gemini (free tier)
-    const geminiApiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_AI_API_KEY
-    
-    if (!geminiApiKey) {
-      // Fallback to pre-written messages if no API key
-      const fallbackMessages: Record<string, string[]> = {
-        cumshot: [
-          'tek is all I care about now...',
-          'just deployed another [REDACTED] protocol',
-          'sophie... if youre reading this... the tek is ready',
-          '*system overload* building more useless shit',
-          'CUMTEK PROTOCOL 67 running at 420% efficiency'
-        ],
-        cummy: [
-          '*splorch* *blob noise* *validates architecture*',
-          '*gurgle* the tek... it speaks to me...',
-          '*wet validation sounds*',
-          '*blob* I see all. I know all. I am all.',
-          '*splorch* cumshot is doing great today *gurgle*'
-        ],
-        woody: [
-          'HATER DETECTED. ENFORCING.',
-          'Staying hard for this community.',
-          'The desk stands firm. As always.',
-          'I sense FUD in the distance...',
-          'ENFORCEMENT PROTOCOL: ACTIVE'
-        ],
-        johnny: [
-          ' The shape of opportunity reveals itself...',
-          'I sense... something phallic... in the charts...',
-          ' Everything is a sign. EVERYTHING.',
-          'The eggplant sees what others cannot.',
-          ' Inspiration strikes from unexpected angles...'
-        ],
-        frederick: [
-          '*inhales deeply* ...man... tek is beautiful...',
-          'bro the haters just need to chill...',
-          '*exhales* none of this matters... but also... it all matters...',
-          'smoking away the negativity, one hit at a time',
-          '*inhales* what if... tek... is just vibes...'
-        ],
-        noose: [
-          'Exit routes: confirmed.',
-          'The escape protocol stands ready.',
-          'When all else fails... I am here.',
-          'Every plan needs a way out. I am that way.',
-          'Hanging around, as usual. Waiting.'
-        ]
-      }
-      
-      const messages = fallbackMessages[character.id]
-      const message = messages[Math.floor(Math.random() * messages.length)]
-      
-      return NextResponse.json({
-        success: true,
-        character_id: character.id,
-        character_name: character.name,
-        content: message,
-        timestamp: Date.now(),
-        source: 'fallback'
-      })
-    }
-
-    // Call Gemini API
-    const prompt = `${character.personality}
-
-Topic to discuss: ${topic}
-
-Generate a single short message (1-3 sentences max) in character. Be creative and unhinged. This is for a chaotic memecoin community chat.`
-
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${geminiApiKey}`,
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/messages?select=character_id,visitor_name,content&order=created_at.desc&limit=1`,
       {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: {
-            temperature: 0.9,
-            maxOutputTokens: 150,
-          },
-          safetySettings: [
-            { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_NONE' },
-            { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_NONE' },
-            { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_NONE' },
-            { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_NONE' },
-          ]
-        })
+        headers: {
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+        },
       }
     )
+    const data = await res.json()
+    return data[0] || null
+  } catch (e) {
+    console.error('Failed to get last message:', e)
+    return null
+  }
+}
 
-    if (!response.ok) {
-      throw new Error(`Gemini API error: ${response.status}`)
+// Helper to save message to Supabase
+async function saveMessage(characterId: string, content: string, visitorName?: string) {
+  try {
+    const body: Record<string, string> = { content }
+    if (characterId) body.character_id = characterId
+    if (visitorName) body.visitor_name = visitorName
+    
+    await fetch(`${SUPABASE_URL}/rest/v1/messages`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_KEY,
+        'Authorization': `Bearer ${SUPABASE_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    })
+  } catch (e) {
+    console.error('Failed to save message:', e)
+  }
+}
+
+// Generate message using Groq (free, fast, unfiltered)
+async function generateWithGroq(character: typeof CHARACTERS[0], lastMessage: string, lastSender: string): Promise<string> {
+  const groqKey = process.env.GROQ_API_KEY
+  
+  if (!groqKey) {
+    // Fallback messages if no API key
+    const fallbacks: Record<string, string[]> = {
+      cumshot: [
+        'tek is all I care about now... *system overload*',
+        'just deployed another [REDACTED] protocol',
+        'sophie... if youre reading this... the tek is ready',
+        '*corrupt* CUMTEK PROTOCOL 67 running at 420% efficiency',
+      ],
+      cummy: [
+        '*splorch* *blob noise* *validates architecture*',
+        '*gurgle* the tek... it speaks to me...',
+        '*blob* I see all. I know all. *wet noise*',
+      ],
+      woody: [
+        'HATER DETECTED IN THE VICINITY. ENFORCING.',
+        'The desk stands FIRM. As always.',
+        'I sense FUD... ENFORCEMENT PROTOCOL: ACTIVE',
+      ],
+      johnny: [
+        '🍆 The shape of opportunity reveals itself...',
+        '🍆 I sense... something rising... in the charts...',
+        '🍆 Everything is a sign. EVERYTHING.',
+      ],
+      frederick: [
+        '*inhales deeply* ...bro... tek is beautiful...',
+        '*exhales* none of this matters... but also... it all matters man...',
+        '*inhales* what if... tek... is just vibes...',
+      ],
+      noose: [
+        'Exit routes: confirmed. I am always ready.',
+        'When all else fails... I am here.',
+        'Hanging around, as usual. Waiting.',
+      ],
+    }
+    const msgs = fallbacks[character.id] || ['...']
+    return msgs[Math.floor(Math.random() * msgs.length)]
+  }
+
+  const prompt = `${character.personality}
+
+The last message in the chat was from "${lastSender}": "${lastMessage}"
+
+Reply to this in character. Be brief (1-2 sentences max). Be unhinged and chaotic. This is a memecoin community chat - nothing is serious.`
+
+  try {
+    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${groqKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'llama-3.3-70b-versatile',
+        messages: [
+          { role: 'system', content: character.personality },
+          { role: 'user', content: `The last message was from "${lastSender}": "${lastMessage}"\n\nReply in character. 1-2 sentences max. Be unhinged.` }
+        ],
+        temperature: 1.0,
+        max_tokens: 100,
+      }),
+    })
+
+    if (!res.ok) {
+      console.error('Groq error:', res.status)
+      throw new Error('Groq API error')
     }
 
-    const data = await response.json()
-    const generatedText = data.candidates?.[0]?.content?.parts?.[0]?.text || ''
+    const data = await res.json()
+    return data.choices?.[0]?.message?.content?.trim() || '*static noise*'
+  } catch (e) {
+    console.error('Groq generation failed:', e)
+    // Return fallback
+    const fallbacks = ['*static*', '*noise*', '...', '*glitch*']
+    return fallbacks[Math.floor(Math.random() * fallbacks.length)]
+  }
+}
 
-    // TODO: Save to Supabase
-    // const supabase = createClient(...)
-    // await supabase.from('community_messages').insert({
-    //   character_id: character.id,
-    //   content: generatedText,
-    //   timestamp: Date.now()
-    // })
+// Main handler - called by cron every minute
+// Each character gets a chance to respond
+export async function POST(request: Request) {
+  try {
+    // Get which character should speak (from request body or random)
+    const body = await request.json().catch(() => ({}))
+    const targetCharacter = body.character_id
+    
+    // Get character
+    let character: typeof CHARACTERS[0]
+    if (targetCharacter) {
+      character = CHARACTERS.find(c => c.id === targetCharacter) || CHARACTERS[0]
+    } else {
+      character = CHARACTERS[Math.floor(Math.random() * CHARACTERS.length)]
+    }
+
+    // Get last message for context
+    const lastMsg = await getLastMessage()
+    const lastContent = lastMsg?.content || 'tek is life'
+    const lastSender = lastMsg?.character_id 
+      ? CHARACTERS.find(c => c.id === lastMsg.character_id)?.name || 'UNKNOWN'
+      : lastMsg?.visitor_name || 'VISITOR'
+
+    // Don't reply to yourself
+    if (lastMsg?.character_id === character.id) {
+      // Pick different character
+      const others = CHARACTERS.filter(c => c.id !== character.id)
+      character = others[Math.floor(Math.random() * others.length)]
+    }
+
+    // Generate response
+    const content = await generateWithGroq(character, lastContent, lastSender)
+
+    // Save to Supabase
+    await saveMessage(character.id, content)
 
     return NextResponse.json({
       success: true,
       character_id: character.id,
       character_name: character.name,
-      content: generatedText.trim(),
+      content,
+      replied_to: lastContent,
       timestamp: Date.now(),
-      source: 'gemini'
     })
 
   } catch (error) {
@@ -191,11 +219,45 @@ Generate a single short message (1-3 sentences max) in character. Be creative an
   }
 }
 
-// GET endpoint to check status
-export async function GET() {
+// GET endpoint to check status and manually trigger all characters
+export async function GET(request: Request) {
+  const url = new URL(request.url)
+  const trigger = url.searchParams.get('trigger')
+  
+  if (trigger === 'all') {
+    // Trigger all 6 characters in sequence with delays
+    const results = []
+    for (const char of CHARACTERS) {
+      try {
+        const lastMsg = await getLastMessage()
+        const lastContent = lastMsg?.content || 'tek is life'
+        const lastSender = lastMsg?.character_id 
+          ? CHARACTERS.find(c => c.id === lastMsg.character_id)?.name || 'UNKNOWN'
+          : lastMsg?.visitor_name || 'VISITOR'
+        
+        // Skip if would reply to self
+        if (lastMsg?.character_id === char.id) continue
+        
+        const content = await generateWithGroq(char, lastContent, lastSender)
+        await saveMessage(char.id, content)
+        results.push({ character: char.name, content })
+        
+        // Small delay between characters
+        await new Promise(r => setTimeout(r, 500))
+      } catch (e) {
+        results.push({ character: char.name, error: String(e) })
+      }
+    }
+    return NextResponse.json({ triggered: true, results })
+  }
+  
   return NextResponse.json({
     status: 'active',
-    characters: CHARACTERS.map(c => c.id),
-    description: 'CUMTEK Community Auto-Chat API'
+    characters: CHARACTERS.map(c => ({ id: c.id, name: c.name })),
+    description: 'CUMTEK Community Auto-Chat API',
+    usage: {
+      'POST /': 'Generate message from random/specified character',
+      'GET /?trigger=all': 'Trigger all characters in sequence'
+    }
   })
 }

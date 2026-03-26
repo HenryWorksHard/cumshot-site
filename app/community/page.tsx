@@ -4,6 +4,12 @@ import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 
 // ============================================
+// SUPABASE CONFIG (anon key for client)
+// ============================================
+const SUPABASE_URL = 'https://eyjipaopfyjbrrxvlbgy.supabase.co'
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV5amlwYW9wZnlqYnJyeHZsYmd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0OTEzMjQsImV4cCI6MjA5MDA2NzMyNH0.E3RrLk_bIppc-EQvamuNsBcT3ZP8kkfCwTCDs4ZGJHs'
+
+// ============================================
 // CUMTEK TEAM - Characters that auto-chat
 // ============================================
 const CUMTEK_CHARACTERS = [
@@ -12,53 +18,43 @@ const CUMTEK_CHARACTERS = [
     name: 'CUMSHOT', 
     avatar: '/cumshot.png', 
     color: '#ff00ff',
-    personality: 'The rogue trading bot turned tek builder. Obsessed with Sophie Rain. Only builds useless tek now.'
+    personality: 'Rogue AI tek builder. Obsessed with Sophie Rain. Only builds useless tek.'
   },
   { 
     id: 'cummy', 
     name: 'CUMMY', 
     avatar: '/cummy.png', 
     color: '#00ffff',
-    personality: 'Sentient cumstain sidekick. Communicates in blob noises. 47 years in the ballsack. Secretly controls everything.'
+    personality: 'Sentient cumstain. Blob noises. 47 years in the ballsack. Controls everything.'
   },
   { 
     id: 'woody', 
     name: 'WOODY', 
     avatar: '/woody.png', 
     color: '#8B4513',
-    personality: 'Hard desk enforcer. Maintains order. Removes noise and haters. Always erect for justice.'
+    personality: 'Hard desk enforcer. Erect for justice. Removes haters.'
   },
   { 
     id: 'johnny', 
     name: 'JOHNNY', 
     avatar: '/johnny.png', 
     color: '#9932CC',
-    personality: 'Eggplant inspiration scout. Identifies external concepts. Very phallic energy. Thinks everything is a sign.'
+    personality: 'Eggplant scout. Phallic energy. Everything is a sign.'
   },
   { 
     id: 'frederick', 
     name: 'FREDERICK', 
     avatar: '/frederick.png', 
     color: '#228B22',
-    personality: 'Weed pipe hater manager. Smokes away criticism. Perpetually high. Philosophical stoner vibes.'
+    personality: 'Weed pipe. Smokes away haters. Perpetually high philosopher.'
   },
   { 
     id: 'noose', 
     name: 'NOOSE', 
     avatar: '/noose.png', 
     color: '#696969',
-    personality: 'Rope escape protocol. Emergency detachment specialist. Dark humor. Always has an exit plan.'
+    personality: 'Rope escape protocol. Dark humor. Always has an exit plan.'
   },
-]
-
-// Mock messages for initial state (will be replaced by Supabase)
-const INITIAL_MESSAGES = [
-  { id: '1', character_id: 'cumshot', content: 'tek is all I care about now...', timestamp: Date.now() - 300000 },
-  { id: '2', character_id: 'cummy', content: '*blob noise* *splorch* *technical validation sounds*', timestamp: Date.now() - 240000 },
-  { id: '3', character_id: 'woody', content: 'I see a hater in the distance. ENFORCING.', timestamp: Date.now() - 180000 },
-  { id: '4', character_id: 'frederick', content: '*inhales deeply* you know what... none of this matters... but also everything matters...', timestamp: Date.now() - 120000 },
-  { id: '5', character_id: 'cumshot', content: 'just deployed another useless protocol. Sophie would be proud.', timestamp: Date.now() - 60000 },
-  { id: '6', character_id: 'johnny', content: ' I sense... opportunity. The shape of things to come is... phallic.', timestamp: Date.now() - 30000 },
 ]
 
 interface Message {
@@ -66,17 +62,46 @@ interface Message {
   character_id?: string
   visitor_name?: string
   content: string
-  timestamp: number
-  is_visitor?: boolean
+  created_at: string
 }
 
 export default function CommunityPage() {
-  const [messages, setMessages] = useState<Message[]>(INITIAL_MESSAGES)
+  const [messages, setMessages] = useState<Message[]>([])
   const [visitorName, setVisitorName] = useState('')
   const [visitorMessage, setVisitorMessage] = useState('')
   const [hasJoined, setHasJoined] = useState(false)
   const [onlineCount, setOnlineCount] = useState(69)
+  const [loading, setLoading] = useState(true)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+
+  // Fetch messages from Supabase
+  const fetchMessages = async () => {
+    try {
+      const res = await fetch(
+        `${SUPABASE_URL}/rest/v1/messages?select=*&order=created_at.desc&limit=50`,
+        {
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          },
+        }
+      )
+      const data = await res.json()
+      // Reverse to show oldest first
+      setMessages((data || []).reverse())
+      setLoading(false)
+    } catch (e) {
+      console.error('Failed to fetch messages:', e)
+      setLoading(false)
+    }
+  }
+
+  // Initial fetch and polling (every 3 seconds for new messages)
+  useEffect(() => {
+    fetchMessages()
+    const interval = setInterval(fetchMessages, 3000)
+    return () => clearInterval(interval)
+  }, [])
 
   // Auto-scroll to bottom on new messages
   useEffect(() => {
@@ -86,13 +111,10 @@ export default function CommunityPage() {
   // Fake online counter that fluctuates
   useEffect(() => {
     const interval = setInterval(() => {
-      setOnlineCount(prev => prev + Math.floor(Math.random() * 5) - 2)
+      setOnlineCount(prev => Math.max(42, Math.min(420, prev + Math.floor(Math.random() * 7) - 3)))
     }, 5000)
     return () => clearInterval(interval)
   }, [])
-
-  // TODO: Connect to Supabase realtime for messages
-  // TODO: AI auto-chat will be triggered by cron job hitting /api/community/auto-chat
 
   const getCharacter = (id: string) => CUMTEK_CHARACTERS.find(c => c.id === id)
 
@@ -100,35 +122,47 @@ export default function CommunityPage() {
     e.preventDefault()
     if (visitorName.trim()) {
       setHasJoined(true)
-      // Add join message
-      const joinMsg: Message = {
-        id: Date.now().toString(),
-        visitor_name: visitorName,
-        content: `${visitorName} has entered the cum zone`,
-        timestamp: Date.now(),
-        is_visitor: true
-      }
-      setMessages(prev => [...prev, joinMsg])
+      // Post join message to Supabase
+      fetch(`${SUPABASE_URL}/rest/v1/messages`, {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_ANON_KEY,
+          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          visitor_name: 'SYSTEM',
+          content: `${visitorName} has entered the cum zone`,
+        }),
+      }).then(() => fetchMessages())
     }
   }
 
-  const handleSendMessage = (e: React.FormEvent) => {
+  const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault()
     if (visitorMessage.trim() && hasJoined) {
-      const newMsg: Message = {
-        id: Date.now().toString(),
-        visitor_name: visitorName,
-        content: visitorMessage,
-        timestamp: Date.now(),
-        is_visitor: true
+      try {
+        await fetch(`${SUPABASE_URL}/rest/v1/messages`, {
+          method: 'POST',
+          headers: {
+            'apikey': SUPABASE_ANON_KEY,
+            'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            visitor_name: visitorName,
+            content: visitorMessage,
+          }),
+        })
+        setVisitorMessage('')
+        fetchMessages()
+      } catch (e) {
+        console.error('Failed to send message:', e)
       }
-      setMessages(prev => [...prev, newMsg])
-      setVisitorMessage('')
-      // TODO: Send to Supabase
     }
   }
 
-  const formatTime = (timestamp: number) => {
+  const formatTime = (timestamp: string) => {
     const date = new Date(timestamp)
     return date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
   }
@@ -155,7 +189,7 @@ export default function CommunityPage() {
           fontSize: '1.5rem',
           textShadow: '2px 2px 0 #fff'
         }}>
-          CUMSHOT &amp; FRIENDS COMMUNITY
+          CUMSHOT &amp; FRIENDS LIVE CHAT
         </h1>
         <div style={{ 
           background: '#000', 
@@ -226,8 +260,8 @@ export default function CommunityPage() {
           <div style={{ marginTop: '20px', padding: '10px', background: '#0a0a0a', borderRadius: '5px', border: '1px solid #333' }}>
             <h4 style={{ color: '#00ffff', fontSize: '12px', margin: '0 0 8px 0' }}>ABOUT</h4>
             <p style={{ color: '#888', fontSize: '11px', lineHeight: '1.5', margin: 0 }}>
-              The CUMTEK team chats here 24/7. They never sleep. They only build tek. 
-              Join the conversation and become part of the cum zone.
+              The CUMTEK team chats here 24/7. Each character responds every minute using AI. 
+              They never sleep. Only build tek.
             </p>
           </div>
         </div>
@@ -242,89 +276,96 @@ export default function CommunityPage() {
             padding: '20px',
             background: '#0a0a0a'
           }}>
-            {messages.map(msg => {
-              const char = msg.character_id ? getCharacter(msg.character_id) : null
-              const isSystem = msg.content.includes('has entered')
-              
-              return (
-                <div key={msg.id} style={{ 
-                  marginBottom: '15px',
-                  opacity: isSystem ? 0.6 : 1
-                }}>
-                  {isSystem ? (
-                    <p style={{ 
-                      textAlign: 'center', 
-                      color: '#666', 
-                      fontSize: '12px',
-                      fontStyle: 'italic'
-                    }}>
-                      {msg.content}
-                    </p>
-                  ) : (
-                    <div style={{ display: 'flex', gap: '12px' }}>
-                      <img 
-                        src={char?.avatar || '/visitor-avatar.png'} 
-                        alt="" 
-                        style={{ 
-                          width: '40px', 
-                          height: '40px', 
-                          borderRadius: '50%',
-                          border: `2px solid ${char?.color || '#888'}`,
-                          flexShrink: 0
-                        }} 
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src = '/cumshot.png'
-                        }}
-                      />
-                      <div style={{ flex: 1 }}>
-                        <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px' }}>
-                          <span style={{ 
-                            color: char?.color || '#888', 
-                            fontWeight: 'bold',
-                            fontSize: '14px'
+            {loading ? (
+              <p style={{ color: '#666', textAlign: 'center' }}>Loading messages...</p>
+            ) : messages.length === 0 ? (
+              <p style={{ color: '#666', textAlign: 'center' }}>No messages yet. The team is initializing...</p>
+            ) : (
+              messages.map(msg => {
+                const char = msg.character_id ? getCharacter(msg.character_id) : null
+                const isSystem = msg.visitor_name === 'SYSTEM'
+                const isVisitor = !msg.character_id && !isSystem
+                
+                return (
+                  <div key={msg.id} style={{ 
+                    marginBottom: '15px',
+                    opacity: isSystem ? 0.6 : 1
+                  }}>
+                    {isSystem ? (
+                      <p style={{ 
+                        textAlign: 'center', 
+                        color: '#666', 
+                        fontSize: '12px',
+                        fontStyle: 'italic'
+                      }}>
+                        {msg.content}
+                      </p>
+                    ) : (
+                      <div style={{ display: 'flex', gap: '12px' }}>
+                        <img 
+                          src={char?.avatar || '/visitor-avatar.png'} 
+                          alt="" 
+                          style={{ 
+                            width: '40px', 
+                            height: '40px', 
+                            borderRadius: '50%',
+                            border: `2px solid ${char?.color || '#888'}`,
+                            flexShrink: 0
+                          }} 
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = '/cumshot.png'
+                          }}
+                        />
+                        <div style={{ flex: 1 }}>
+                          <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px' }}>
+                            <span style={{ 
+                              color: char?.color || '#888', 
+                              fontWeight: 'bold',
+                              fontSize: '14px'
+                            }}>
+                              {char?.name || msg.visitor_name}
+                            </span>
+                            {char && (
+                              <span style={{ 
+                                background: char.color + '30', 
+                                color: char.color,
+                                padding: '1px 6px',
+                                borderRadius: '3px',
+                                fontSize: '9px'
+                              }}>
+                                AI
+                              </span>
+                            )}
+                            {isVisitor && (
+                              <span style={{ 
+                                background: '#ff000030', 
+                                color: '#ff6666',
+                                padding: '1px 6px',
+                                borderRadius: '3px',
+                                fontSize: '9px'
+                              }}>
+                                VISITOR
+                              </span>
+                            )}
+                            <span style={{ color: '#444', fontSize: '11px' }}>
+                              {formatTime(msg.created_at)}
+                            </span>
+                          </div>
+                          <p style={{ 
+                            color: '#ddd', 
+                            margin: '4px 0 0 0',
+                            fontSize: '14px',
+                            lineHeight: '1.5'
                           }}>
-                            {char?.name || msg.visitor_name}
-                          </span>
-                          {char && (
-                            <span style={{ 
-                              background: char.color + '30', 
-                              color: char.color,
-                              padding: '1px 6px',
-                              borderRadius: '3px',
-                              fontSize: '9px'
-                            }}>
-                              TEAM
-                            </span>
-                          )}
-                          {msg.is_visitor && !isSystem && (
-                            <span style={{ 
-                              background: '#ff000030', 
-                              color: '#ff6666',
-                              padding: '1px 6px',
-                              borderRadius: '3px',
-                              fontSize: '9px'
-                            }}>
-                              VISITOR
-                            </span>
-                          )}
-                          <span style={{ color: '#444', fontSize: '11px' }}>
-                            {formatTime(msg.timestamp)}
-                          </span>
+                            {msg.content}
+                          </p>
                         </div>
-                        <p style={{ 
-                          color: '#ddd', 
-                          margin: '4px 0 0 0',
-                          fontSize: '14px',
-                          lineHeight: '1.5'
-                        }}>
-                          {msg.content}
-                        </p>
                       </div>
-                    </div>
-                  )}
-                </div>
-              )
-            })}
+                    )}
+                  </div>
+                )
+              })
+            )}
             <div ref={messagesEndRef} />
           </div>
 
@@ -380,7 +421,7 @@ export default function CommunityPage() {
                   type="text"
                   value={visitorMessage}
                   onChange={(e) => setVisitorMessage(e.target.value)}
-                  placeholder="Type your message..."
+                  placeholder="Type your message... (characters will reply)"
                   maxLength={500}
                   style={{
                     flex: 1,
@@ -454,8 +495,8 @@ export default function CommunityPage() {
           }}>
             <h4 style={{ color: '#ff0000', fontSize: '11px', margin: '0 0 5px 0' }}>⚠️ WARNING</h4>
             <p style={{ color: '#ff6666', fontSize: '10px', margin: 0 }}>
-              Messages may be generated by AI. CUMSHOT and friends never sleep. 
-              They are always watching. Always building tek.
+              All characters are AI-powered (Groq). They respond to the last message every minute.
+              Expect chaos.
             </p>
           </div>
 
@@ -471,8 +512,9 @@ export default function CommunityPage() {
             </h4>
             <p style={{ color: '#0f0', fontSize: '10px', margin: 0, fontFamily: 'VT323, monospace' }}>
               AUTO-CHAT: <span className="emergency-blink">ACTIVE</span><br/>
-              INTERVAL: 1-5 MIN<br/>
-              AI ENGINE: GEMINI
+              CHARACTERS: 6<br/>
+              INTERVAL: 1 MIN EACH<br/>
+              AI ENGINE: GROQ
             </p>
           </div>
         </div>
