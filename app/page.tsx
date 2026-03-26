@@ -40,6 +40,21 @@ export default function Home() {
   const [currentThought, setCurrentThought] = useState(agentThoughts[0])
   const consoleSpamInterval = useRef<NodeJS.Timeout | null>(null)
   const [xpErrorDismissed, setXpErrorDismissed] = useState(false)
+  const [showCummyPopup, setShowCummyPopup] = useState(false)
+
+  // Listen for NOTHING button click (from nav)
+  useEffect(() => {
+    const handleNothingClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      if (target.textContent?.includes('[[NOTHING]]')) {
+        e.preventDefault()
+        setShowCummyPopup(true)
+        setTimeout(() => setShowCummyPopup(false), 5000)
+      }
+    }
+    document.addEventListener('click', handleNothingClick)
+    return () => document.removeEventListener('click', handleNothingClick)
+  }, [])
 
   // Show XP error on load
   useEffect(() => {
@@ -151,6 +166,80 @@ export default function Home() {
               setShowXPError(false)
               setXpErrorDismissed(true)
             }}>Cancel</button>
+          </div>
+        </div>
+      )}
+
+      {/* CUMMY POPUP - NOTHING BUTTON */}
+      {showCummyPopup && (
+        <div className="cummy-popup-overlay" style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 99999,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: 'rgba(0,0,0,0.7)',
+          animation: 'fadeIn 0.3s ease-out'
+        }}>
+          <div className="cummy-popup" style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '20px',
+            animation: 'cummySplash 0.5s ease-out'
+          }}>
+            <img 
+              src="/cummy.png" 
+              alt="CUMMY" 
+              style={{ 
+                width: '200px', 
+                filter: 'drop-shadow(0 0 30px #ff00ff) drop-shadow(0 0 60px #00ffff)',
+                animation: 'cummyBounce 0.5s ease-out'
+              }} 
+            />
+            <div style={{
+              background: '#fff',
+              border: '3px solid #000',
+              borderRadius: '20px',
+              padding: '20px 25px',
+              position: 'relative',
+              maxWidth: '350px',
+              boxShadow: '5px 5px 0 #ff00ff'
+            }}>
+              {/* Speech bubble tail */}
+              <div style={{
+                position: 'absolute',
+                left: '-20px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                width: 0,
+                height: 0,
+                borderTop: '15px solid transparent',
+                borderBottom: '15px solid transparent',
+                borderRight: '20px solid #fff'
+              }}></div>
+              <div style={{
+                position: 'absolute',
+                left: '-24px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                width: 0,
+                height: 0,
+                borderTop: '17px solid transparent',
+                borderBottom: '17px solid transparent',
+                borderRight: '22px solid #000'
+              }}></div>
+              <p style={{
+                color: '#000',
+                fontSize: '18px',
+                fontWeight: 'bold',
+                fontFamily: 'Comic Sans MS, cursive',
+                margin: 0,
+                lineHeight: 1.4
+              }}>
+                It says it does NOTHING you stupid bastard. Continue jerking off to me 😏💦
+              </p>
+            </div>
           </div>
         </div>
       )}
@@ -480,8 +569,8 @@ export default function Home() {
           {/* CUMSHOT SHOP - RETRO VENDING MACHINE */}
           <div style={{ display: 'flex', gap: '6px', marginBottom: '8px' }}>
             <div className="vending-machine" style={{ width: '50%', margin: 0, backgroundImage: 'url(/vending-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', border: '4px solid #444', borderRadius: '8px', padding: '10px', position: 'relative', overflow: 'hidden' }}>
-              {/* Dark overlay for readability */}
-              <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.7)', zIndex: 0 }}></div>
+              {/* Dark overlay for readability - reduced for background visibility */}
+              <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.4)', zIndex: 0 }}></div>
               {/* Machine Header */}
               <div style={{ background: 'linear-gradient(180deg, #ff00ff 0%, #aa00aa 100%)', padding: '8px', textAlign: 'center', borderRadius: '4px', marginBottom: '10px', border: '2px solid #fff', position: 'relative', zIndex: 1 }}>
                 <h3 className="glitch comic-sans" style={{ margin: 0, color: '#fff', textShadow: '2px 2px #000', fontSize: '1.2rem' }}>
@@ -508,15 +597,16 @@ export default function Home() {
                     onClick={() => alert(`🎰 ITEM: ${item.name}\n💰 PRICE: $69 $CUM\n\n❌ TRANSACTION FAILED\nReason: You're too broke lmao\n\n物品: ${item.cn}\n价格: 69 $CUM\n交易失败：你太穷了哈哈`)}
                     className="vending-item shake-hover"
                     style={{ 
-                      background: 'linear-gradient(180deg, #333 0%, #222 100%)', 
-                      border: '2px solid #555', 
+                      background: 'linear-gradient(180deg, rgba(51,51,51,0.5) 0%, rgba(34,34,34,0.5) 100%)', 
+                      border: '2px solid rgba(85,85,85,0.7)', 
                       borderRadius: '4px', 
                       padding: '8px 4px', 
                       cursor: 'pointer',
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
-                      gap: '2px'
+                      gap: '2px',
+                      backdropFilter: 'blur(2px)'
                     }}
                   >
                     <span style={{ background: '#ff0', color: '#000', padding: '1px 4px', fontSize: '9px', fontWeight: 'bold', borderRadius: '2px' }}>{item.id}</span>
