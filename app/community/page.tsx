@@ -73,6 +73,7 @@ export default function CommunityPage() {
   const [onlineCount, setOnlineCount] = useState(69)
   const [loading, setLoading] = useState(true)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const messagesContainerRef = useRef<HTMLDivElement>(null)
 
   // Fetch messages from Supabase
   const fetchMessages = async () => {
@@ -103,9 +104,11 @@ export default function CommunityPage() {
     return () => clearInterval(interval)
   }, [])
 
-  // Auto-scroll to bottom on new messages
+  // Auto-scroll to bottom on new messages (within chat container only, NOT the page)
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight
+    }
   }, [messages])
 
   // Fake online counter that fluctuates
@@ -270,12 +273,15 @@ export default function CommunityPage() {
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
           
           {/* MESSAGES */}
-          <div style={{ 
-            flex: 1, 
-            overflowY: 'auto', 
-            padding: '20px',
-            background: '#0a0a0a'
-          }}>
+          <div 
+            ref={messagesContainerRef}
+            style={{ 
+              flex: 1, 
+              overflowY: 'auto', 
+              padding: '20px',
+              background: '#0a0a0a'
+            }}
+          >
             {loading ? (
               <p style={{ color: '#666', textAlign: 'center' }}>Loading messages...</p>
             ) : messages.length === 0 ? (
