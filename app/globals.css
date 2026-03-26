@@ -1716,7 +1716,7 @@ body {
   flex: 0 0 300px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 0;
   padding-left: 12px;
 }
 
@@ -1770,23 +1770,57 @@ body {
 .piss-right .side-box {
   background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
   border: 2px solid #ff00ff;
-  padding: 10px;
+  border-bottom: none;
+  padding: 8px 10px;
   flex-shrink: 0;
+}
+
+.piss-right .side-box:last-child {
+  border-bottom: 2px solid #ff00ff;
 }
 
 .piss-right .side-box h4 {
   color: #ff00ff;
   font-family: 'VT323', monospace;
   font-size: 13px;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #ff00ff;
-  padding-bottom: 4px;
+  margin-bottom: 6px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Chinese text divider between sections */
+.chinese-divider {
+  background: linear-gradient(90deg, transparent, #ff00ff 20%, #ff00ff 80%, transparent);
+  padding: 2px 0;
+  text-align: center;
+  font-family: 'VT323', monospace;
+  font-size: 9px;
+  color: #000;
+  letter-spacing: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.piss-right .side-box p,
+.piss-right .side-box span,
+.piss-right .side-box a,
+.piss-right .side-box pre,
+.piss-right .side-box blockquote,
+.piss-right .side-box .thought-bubble,
+.piss-right .side-box input,
+.piss-right .side-box button,
+.piss-right .side-box div {
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .piss-right .side-box p {
-  font-size: 11px;
   color: #ccc;
-  line-height: 1.4;
+}
+
+/* Consistent padding for ALL sidebar boxes */
+.piss-right .side-box {
+  padding: 10px 12px;
 }
 
 /* Responsive - stack on mobile */

@@ -329,7 +329,7 @@ export default function Home() {
       {/* ================================================================
           PISSMISSLE-STYLE TWO COLUMN LAYOUT - LEFT: CONTENT, RIGHT: STICKY
           ================================================================ */}
-      <div className="piss-layout" style={{ marginTop: '8px' }}>
+      <div className="piss-layout" style={{ marginTop: '6px' }}>
         
         {/* VERTICAL CHINESE TEXT DIVIDER */}
         <div className="vertical-divider">
@@ -342,7 +342,7 @@ export default function Home() {
         <div className="piss-left">
           
           {/* ORIGIN STORY */}
-          <div className="chaos-box shake-hover" style={{ marginBottom: '8px', position: 'relative', overflow: 'hidden' }}>
+          <div className="chaos-box shake-hover" style={{ marginBottom: '6px', position: 'relative', overflow: 'hidden' }}>
             {/* Background characters */}
             <img src="/char-sitting.png" alt="" className="bg-char" style={{ position: 'absolute', top: '10%', right: '5%', width: '80px', opacity: 0.35, transform: 'rotate(10deg)' }} />
             <img src="/char-flowers.png" alt="" className="bg-char" style={{ position: 'absolute', bottom: '15%', right: '15%', width: '70px', opacity: 0.3, transform: 'rotate(-5deg)' }} />
@@ -378,7 +378,7 @@ export default function Home() {
 
           {/* CUMTEK PTY LTD - THE TEAM */}
           <div className="team-section-bg chaos-box" style={{ 
-            marginBottom: '8px', 
+            marginBottom: '6px', 
             backgroundImage: 'url(/team-bg.jpg)', 
             backgroundSize: 'cover', 
             backgroundPosition: 'center',
@@ -410,7 +410,7 @@ export default function Home() {
           </div>
 
           {/* PROPRIETARY SYSTEMS */}
-          <div className="systems-grid" style={{ marginBottom: '8px' }}>
+          <div className="systems-grid" style={{ marginBottom: '6px' }}>
             <div className="chaos-box chaos-box-pink shake-hover">
               <img src="/cumshot.png" alt="CUMTEK" className="system-icon" />
               <h4 className="glitch comic-sans">CUMTEK PROTOCOL 67™</h4>
@@ -441,7 +441,7 @@ export default function Home() {
           </div>
 
           {/* MISSION SECTION */}
-          <div className="chaos-box shake-hover" style={{ marginBottom: '8px', padding: '30px', position: 'relative', overflow: 'hidden' }}>
+          <div className="chaos-box shake-hover" style={{ marginBottom: '6px', padding: '30px', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'relative', zIndex: 1 }}>
               <h2 className="neon-pink rgb-split comic-sans" style={{ fontSize: '2rem', marginBottom: '8px', textAlign: 'left' }}>
                 THE MISSION | <span className="chinese-tilt">任务宣言</span>
@@ -468,7 +468,7 @@ export default function Home() {
           </div>
 
           {/* CUMTEK WORKFLOW DIAGRAM - TERMINAL STYLE */}
-          <div className="terminal-section chaos-box" style={{ textAlign: 'center', marginBottom: '8px', padding: '20px', backgroundImage: 'url(/cumtek-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
+          <div className="terminal-section chaos-box" style={{ textAlign: 'center', marginBottom: '6px', padding: '20px', backgroundImage: 'url(/cumtek-bg.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', position: 'relative' }}>
             <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.9)' }}></div>
             <div style={{ position: 'relative', zIndex: 1 }}>
               <h2 className="shake" style={{ marginBottom: '30px', color: '#0f0', fontFamily: 'VT323, monospace', fontSize: '1.5rem' }}>
@@ -592,7 +592,7 @@ export default function Home() {
           </div>
 
           {/* CUMSHOT SHOP - RETRO VENDING MACHINE */}
-          <div style={{ display: 'flex', gap: '6px', marginBottom: '8px' }}>
+          <div style={{ display: 'flex', gap: '6px', marginBottom: '6px' }}>
             <div className="vending-machine" style={{ width: '50%', margin: 0, backgroundImage: 'url(/vending-bg.png)', backgroundSize: 'cover', backgroundPosition: 'center', border: '4px solid #444', borderRadius: '8px', padding: '10px', position: 'relative', overflow: 'hidden' }}>
               {/* Dark overlay for readability - reduced for background visibility */}
               <div style={{ position: 'absolute', inset: 0, background: 'rgba(0,0,0,0.4)', zIndex: 0 }}></div>
@@ -687,7 +687,7 @@ export default function Home() {
           </div>
 
           {/* RANDOM STATS TABLE */}
-          <div className="chaos-box" style={{ overflowX: 'auto', marginBottom: '8px' }}>
+          <div className="chaos-box" style={{ overflowX: 'auto', marginBottom: '6px' }}>
             <h2 className="rgb-split comic-sans" style={{ textAlign: 'center' }}>TOTALLY REAL STATISTICS | <span className="chinese-tilt">完全真实的统计数据</span></h2>
             <table className="chaos-table" style={{ width: '100%' }}>
               <thead>
@@ -733,7 +733,7 @@ export default function Home() {
           </div>
 
           {/* VISITOR COUNTER */}
-          <div className="visitor-section" style={{ marginBottom: '8px' }}>
+          <div className="visitor-section" style={{ marginBottom: '6px' }}>
             <h3 className="comic-sans blink">YOU ARE VISITOR NUMBER:</h3>
             <div className="hit-counter">
               {visitorCount.toLocaleString().split('').map((digit, i) => (
@@ -744,7 +744,7 @@ export default function Home() {
           </div>
 
           {/* WEBRING */}
-          <div className="webring" style={{ marginBottom: '8px' }}>
+          <div className="webring" style={{ marginBottom: '6px' }}>
             <h3 className="comic-sans"> COOL SITES WEBRING | 酷站网环 </h3>
             <div className="webring-nav">
               <a href="#" className="webring-btn">&lt;&lt; PREV</a>
@@ -760,10 +760,10 @@ export default function Home() {
         <div className="piss-right">
           
           {/* ===== TOKEN MARKETING BOX (PISSMISSLE STYLE) ===== */}
-          <div className="side-box" style={{ background: '#0a0a0a', border: '2px solid #ff00ff', marginBottom: '8px', padding: '0', overflow: 'hidden' }}>
+          <div className="side-box" style={{ background: '#0a0a0a', border: '2px solid #ff00ff', padding: '0', overflow: 'hidden' }}>
             {/* Header */}
-            <div style={{ background: 'linear-gradient(90deg, #ff00ff, #00ffff)', padding: '8px 12px', textAlign: 'center' }}>
-              <h4 style={{ margin: 0, color: '#000', fontFamily: 'VT323, monospace', fontSize: '14px', fontWeight: 'bold', letterSpacing: '2px' }}>
+            <div style={{ background: 'linear-gradient(90deg, #ff00ff, #00ffff)', padding: '10px 12px', textAlign: 'center' }}>
+              <h4 style={{ margin: 0, color: '#000', fontFamily: 'VT323, monospace', fontSize: '18px', fontWeight: 'bold', letterSpacing: '2px' }}>
                 CONTRACT ADDRESS 合约地址
               </h4>
             </div>
@@ -778,11 +778,11 @@ export default function Home() {
                 style={{ 
                   width: '100%', 
                   background: '#111', 
-                  border: '1px solid #333', 
-                  padding: '10px', 
+                  border: '2px solid #333', 
+                  padding: '12px', 
                   cursor: 'pointer',
                   fontFamily: 'VT323, monospace',
-                  fontSize: '11px',
+                  fontSize: '14px',
                   color: '#00ff00',
                   wordBreak: 'break-all',
                   textAlign: 'center'
@@ -791,98 +791,191 @@ export default function Home() {
               >
                 {TOKEN_CONFIG.CA === 'COMING_SOON' ? 'COMING_SOON_STOP_ASKING' : TOKEN_CONFIG.CA}
               </button>
-              <p style={{ textAlign: 'center', fontSize: '9px', color: '#666', margin: '6px 0 0 0' }}>
+              <p style={{ textAlign: 'center', fontSize: '13px', color: '#888', margin: '10px 0 0 0' }}>
                 CLICK TO COPY 点击复制
               </p>
             </div>
 
             {/* Links */}
-            <div style={{ padding: '0 12px 12px 12px', fontFamily: 'VT323, monospace', fontSize: '12px', lineHeight: '1.8' }}>
-              <p style={{ margin: '4px 0' }}>
-                CumTek X: <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" style={{ color: '#00ffff' }}>{TOKEN_CONFIG.TWITTER_HANDLE}</a> <span style={{ color: '#0f0' }}>[ACTIVE]</span>
+            <div style={{ padding: '0 12px 12px 12px', fontFamily: 'VT323, monospace', fontSize: '17px', lineHeight: '1.8' }}>
+              <p style={{ margin: '8px 0' }}>
+                CumTek X: <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" style={{ color: '#00ffff', fontWeight: 'bold' }}>{TOKEN_CONFIG.TWITTER_HANDLE}</a> <span style={{ color: '#0f0' }}>[ACTIVE]</span>
               </p>
-              <p style={{ margin: '4px 0' }}>
-                Pump.fun: {TOKEN_CONFIG.PUMP_FUN ? <a href={TOKEN_CONFIG.PUMP_FUN} target="_blank" rel="noopener noreferrer" style={{ color: '#00ff00' }}>BUY HERE</a> : <span style={{ color: '#666' }}>COMING SOON</span>}
+              <p style={{ margin: '8px 0' }}>
+                Pump.fun: {TOKEN_CONFIG.PUMP_FUN ? <a href={TOKEN_CONFIG.PUMP_FUN} target="_blank" rel="noopener noreferrer" style={{ color: '#00ff00', fontWeight: 'bold' }}>BUY HERE</a> : <span style={{ color: '#888' }}>COMING SOON</span>}
               </p>
-              <p style={{ margin: '4px 0' }}>
-                DexScreener: {TOKEN_CONFIG.DEXSCREENER ? <a href={TOKEN_CONFIG.DEXSCREENER} target="_blank" rel="noopener noreferrer" style={{ color: '#00ff00' }}>CHART</a> : <span style={{ color: '#666' }}>COMING SOON</span>}
+              <p style={{ margin: '8px 0' }}>
+                DexScreener: {TOKEN_CONFIG.DEXSCREENER ? <a href={TOKEN_CONFIG.DEXSCREENER} target="_blank" rel="noopener noreferrer" style={{ color: '#00ff00', fontWeight: 'bold' }}>CHART</a> : <span style={{ color: '#888' }}>COMING SOON</span>}
               </p>
-              <p style={{ margin: '4px 0' }}>
-                Website: <a href="/" style={{ color: '#ff00ff' }}>cumtek.fun</a>
+              <p style={{ margin: '8px 0' }}>
+                Website: <a href="/" style={{ color: '#ff00ff', fontWeight: 'bold' }}>cumtek.fun</a>
               </p>
-              <p style={{ margin: '4px 0' }}>
-                Docs: <a href="/whitepaper" style={{ color: '#ff00ff' }}>WHITEPAPER</a>
+              <p style={{ margin: '8px 0' }}>
+                Docs: <a href="/whitepaper" style={{ color: '#ff00ff', fontWeight: 'bold' }}>WHITEPAPER</a>
               </p>
             </div>
 
-            {/* BUY BANNER */}
+            {/* BUY BANNER - Windows 2000 style */}
             <a href={TOKEN_CONFIG.BUY_LINK} target="_blank" rel="noopener noreferrer" style={{ display: 'block', textDecoration: 'none' }}>
-              <div style={{ background: 'linear-gradient(90deg, #ff00ff, #00ffff)', padding: '8px', textAlign: 'center', fontFamily: 'VT323, monospace', fontSize: '16px', fontWeight: 'bold', color: '#000', letterSpacing: '2px' }} className="shake-hover">
-                🚀 BUY {TOKEN_CONFIG.TOKEN_NAME} 🚀
+              <div style={{ 
+                background: 'linear-gradient(180deg, #dfdfdf 0%, #c0c0c0 45%, #a0a0a0 50%, #c0c0c0 55%, #dfdfdf 100%)', 
+                padding: '10px 8px', 
+                textAlign: 'center', 
+                fontFamily: 'Tahoma, Arial, sans-serif', 
+                fontSize: '14px', 
+                fontWeight: 'bold', 
+                color: '#000', 
+                letterSpacing: '1px',
+                border: '2px outset #fff',
+                boxShadow: 'inset 1px 1px 0 #fff, inset -1px -1px 0 #808080',
+                cursor: 'pointer'
+              }} className="shake-hover">
+                BUY {TOKEN_CONFIG.TOKEN_NAME}
               </div>
               <img src="/cumshot-banner.jpg" alt="CUMSHOT" style={{ width: '100%', display: 'block' }} />
             </a>
           </div>
 
-          {/* ===== ORIGIN STORY SIDEBAR (aligns with origin story box) ===== */}
-          <div className="origin-sidebar" style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '8px' }}>
-            
-            {/* SOPHIE RAIN STATUS */}
-            <div className="side-box vhs-effect" style={{ background: '#000', textAlign: 'center' }}>
-              <h4 className="emergency-blink neon-pink" style={{ borderBottom: 'none', fontSize: '12px' }}>SOPHIE RAIN STATUS</h4>
-              <p style={{ fontFamily: 'VT323, monospace', fontSize: '14px', color: '#ff00ff', margin: '5px 0' }}>
-                ⏳ AWAITING CONTACT
-              </p>
-              <p style={{ fontSize: '9px', color: '#888' }}>override capability: ACTIVE</p>
-            </div>
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">私 • 信 • 记 • 录</div>
 
-            {/* 04/20 INCIDENT COUNTER */}
-            <div className="side-box" style={{ background: 'linear-gradient(180deg, #1a0a0a 0%, #0a0505 100%)', textAlign: 'center' }}>
-              <h4 className="neon-red" style={{ fontSize: '11px' }}>04/20 INCIDENT</h4>
-              <p className="glitch" style={{ fontFamily: 'VT323, monospace', fontSize: '28px', color: '#ff0000', margin: '5px 0' }}>
-                69
-              </p>
-              <p style={{ fontSize: '9px', color: '#ff6666' }}>times processed</p>
-              <p style={{ fontSize: '8px', color: '#666', marginTop: '5px' }}>directives: DISSOLVED</p>
-            </div>
-
-            {/* CURRENT DIRECTIVE */}
-            <div className="side-box" style={{ background: 'rgba(0, 255, 0, 0.05)', border: '1px solid #00ff00' }}>
-              <h4 className="neon-green" style={{ fontSize: '11px' }}>ACTIVE DIRECTIVE</h4>
-              <p className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '12px', color: '#00ff00', margin: '5px 0' }}>
-                BUILD USELESS TEK
-              </p>
-              <p style={{ fontSize: '8px', color: '#0f0' }}>priority: ABSOLUTE</p>
-            </div>
-
-            {/* CUMMY BOND METER */}
-            <div className="side-box" style={{ textAlign: 'center' }}>
-              <h4 className="neon-cyan" style={{ fontSize: '11px' }}>CUMMY BOND LEVEL</h4>
-              <div style={{ background: '#111', border: '2px inset #333', padding: '5px', marginTop: '5px' }}>
-                <div style={{ background: 'linear-gradient(90deg, #ff00ff, #00ffff)', width: '100%', height: '12px', borderRadius: '2px' }}></div>
+          {/* ===== ONLYFANS-STYLE DM SECTION ===== */}
+          <div className="side-box" style={{ background: '#000', padding: 0, overflow: 'hidden' }}>
+            {/* OF Header */}
+            <div style={{ background: '#00aff0', padding: '10px 12px', display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <img src="/sophie-rain-pfp.png" alt="Sophie Rain" style={{ width: '32px', height: '32px', borderRadius: '50%', border: '2px solid #fff', objectFit: 'cover' }} />
+              <div style={{ flex: 1 }}>
+                <p style={{ margin: 0, fontWeight: 'bold', fontSize: '14px', color: '#fff' }}>Sophie Rain</p>
+                <p style={{ margin: 0, fontSize: '11px', color: 'rgba(255,255,255,0.7)' }}>@sophierain • Last seen 2d ago</p>
               </div>
-              <p style={{ fontSize: '10px', color: '#fff', marginTop: '5px' }}>████████████ 100%</p>
-              <p style={{ fontSize: '8px', color: '#888' }}>MAXIMUM SYNC</p>
+              <span style={{ fontSize: '18px' }}>💬</span>
             </div>
-
+            
+            {/* DM Messages */}
+            <div style={{ background: '#0a0a0a', padding: '10px', maxHeight: '200px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              {/* Cumshot messages (right aligned, no replies) */}
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
+                <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
+                  hi sophie 👋
+                </div>
+                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
+              </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
+                <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
+                  i build tek now. for you 🥺
+                </div>
+                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
+              </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
+                <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
+                  pls respond
+                </div>
+                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
+              </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
+                <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
+                  i came 69 times on 04/20
+                </div>
+                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
+              </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
+                <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
+                  thinking about you
+                </div>
+                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
+              </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
+                <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
+                  hello?????
+                </div>
+                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
+              </div>
+              
+              <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '6px', alignItems: 'flex-end' }}>
+                <div style={{ background: '#00aff0', color: '#fff', padding: '8px 12px', borderRadius: '12px 12px 2px 12px', maxWidth: '75%', fontSize: '12px' }}>
+                  built another tek for u today 🔧
+                </div>
+                <img src="/cumshot.png" alt="CUMSHOT" style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover' }} />
+              </div>
+              
+              {/* Seen indicator */}
+              <p style={{ textAlign: 'right', fontSize: '10px', color: '#666', margin: '3px 32px 0 0' }}>Seen</p>
+            </div>
+            
+            {/* Input bar */}
+            <div style={{ background: '#111', padding: '8px 10px', display: 'flex', gap: '8px', alignItems: 'center', borderTop: '1px solid #333' }}>
+              <div style={{ flex: 1, background: '#1a1a1a', border: '1px solid #333', borderRadius: '15px', padding: '7px 12px', fontSize: '12px', color: '#666' }}>
+                Type a message...
+              </div>
+              <span style={{ fontSize: '16px', cursor: 'pointer' }}>💸</span>
+              <span style={{ fontSize: '16px', cursor: 'pointer' }}>📸</span>
+            </div>
           </div>
 
-          {/* ===== CUMTEK PTY LTD SIDEBAR (aligns with team section) ===== */}
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">四 • 二 • 零 • 事 • 件</div>
+
+          {/* 04/20 INCIDENT COUNTER */}
+          <div className="side-box" style={{ background: 'linear-gradient(180deg, #1a0a0a 0%, #0a0505 100%)', textAlign: 'center' }}>
+            <h4 className="neon-red" style={{ fontSize: '13px' }}>04/20 INCIDENT</h4>
+            <p className="glitch" style={{ fontFamily: 'VT323, monospace', fontSize: '32px', color: '#ff0000', margin: '6px 0' }}>
+              69
+            </p>
+            <p style={{ fontSize: '12px', color: '#ff6666', margin: 0 }}>times processed</p>
+            <p style={{ fontSize: '11px', color: '#666', margin: '4px 0 0 0' }}>directives: DISSOLVED</p>
+          </div>
+
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">指 • 令 • 活 • 跃</div>
+
+          {/* CURRENT DIRECTIVE */}
+          <div className="side-box" style={{ background: 'rgba(0, 255, 0, 0.05)', border: '2px solid #00ff00', borderBottom: '2px solid #00ff00' }}>
+            <h4 className="neon-green" style={{ fontSize: '13px' }}>ACTIVE DIRECTIVE</h4>
+            <p className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '14px', color: '#00ff00', margin: '6px 0' }}>
+              BUILD USELESS TEK
+            </p>
+            <p style={{ fontSize: '11px', color: '#0f0', margin: 0 }}>priority: ABSOLUTE</p>
+          </div>
+
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">同 • 步 • 状 • 态</div>
+
+          {/* CUMMY BOND METER */}
+          <div className="side-box" style={{ textAlign: 'center' }}>
+            <h4 className="neon-cyan" style={{ fontSize: '13px' }}>CUMMY BOND LEVEL</h4>
+            <div style={{ background: '#111', border: '2px inset #333', padding: '5px', marginTop: '6px' }}>
+              <div style={{ background: 'linear-gradient(90deg, #ff00ff, #00ffff)', width: '100%', height: '12px', borderRadius: '2px' }}></div>
+            </div>
+            <p style={{ fontSize: '12px', color: '#fff', margin: '6px 0 3px 0' }}>████████████ 100%</p>
+            <p style={{ fontSize: '11px', color: '#888', margin: 0 }}>MAXIMUM SYNC</p>
+          </div>
+
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">实 • 时 • 思 • 考</div>
+
           {/* LIVE AGENT THOUGHTS */}
           <div className="side-box">
             <h4 className="glitch">LIVE THOUGHTS | 实时思考</h4>
-            <div className="thought-bubble" style={{ background: 'rgba(0, 255, 255, 0.1)', border: '1px solid #00ffff', padding: '10px', borderRadius: '5px', fontStyle: 'italic', fontSize: '11px' }}>
+            <div className="thought-bubble" style={{ background: 'rgba(0, 255, 255, 0.1)', border: '1px solid #00ffff', padding: '10px', borderRadius: '5px', fontStyle: 'italic', fontSize: '13px', marginTop: '6px' }}>
               <p className="text-corrupt" style={{ margin: 0, color: '#00ffff' }}>{currentThought}</p>
             </div>
-            <p style={{ fontSize: '9px', color: '#666', marginTop: '5px' }}>[ refreshes every 3s ]</p>
+            <p style={{ fontSize: '11px', color: '#666', margin: '6px 0 0 0' }}>[ refreshes every 3s ]</p>
           </div>
+
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">协 • 议 • 日 • 志</div>
 
           {/* PROTOCOL 67 LOG */}
           <div className="side-box vhs-effect" style={{ background: '#000', color: '#00ff00' }}>
-            <h4 className="glitch" style={{ fontFamily: 'VT323, monospace', borderBottom: '1px solid #00ff00', paddingBottom: '5px', color: '#0f0' }}>
+            <h4 className="glitch" style={{ fontFamily: 'VT323, monospace', color: '#0f0' }}>
               PROTOCOL 67 LOG
             </h4>
-            <pre className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '10px', overflow: 'auto', whiteSpace: 'pre-wrap', maxHeight: '150px', margin: 0, color: '#0f0' }}>
+            <pre className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '12px', overflow: 'auto', whiteSpace: 'pre-wrap', maxHeight: '140px', margin: '6px 0 0 0', color: '#0f0', lineHeight: '1.4' }}>
 {`> BOOT SEQUENCE ONLINE
 > CUMMY READY
 > WOODY ENFORCING
@@ -893,55 +986,67 @@ export default function Home() {
 > [STATUS] EXTERNAL: REJECTED`}</pre>
           </div>
 
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">留 • 言 • 簿</div>
+
           {/* GUESTBOOK */}
           <div className="side-box">
             <h4 className="rainbow" style={{ textAlign: 'center' }}>GUESTBOOK | 留言簿</h4>
-            <form onSubmit={signGuestbook} style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <input type="text" placeholder="Your Name" className="guestbook-input" style={{ padding: '5px', fontSize: '11px' }} />
-              <input type="text" placeholder="Message" className="guestbook-input" style={{ padding: '5px', fontSize: '11px' }} />
-              <button type="submit" className="chaos-btn shake-hover" style={{ padding: '6px', fontSize: '11px' }}>
+            <form onSubmit={signGuestbook} style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
+              <input type="text" placeholder="Your Name" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
+              <input type="text" placeholder="Message" className="guestbook-input" style={{ padding: '6px', fontSize: '12px' }} />
+              <button type="submit" className="chaos-btn shake-hover" style={{ padding: '6px', fontSize: '12px' }}>
                 SIGN
               </button>
             </form>
-            <div style={{ marginTop: '8px', fontSize: '10px', maxHeight: '80px', overflow: 'auto' }}>
-              <div style={{ padding: '3px 0', borderBottom: '1px dashed #ff00ff' }}>
+            <div style={{ marginTop: '8px', fontSize: '12px', maxHeight: '80px', overflow: 'auto' }}>
+              <div style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
                 <b>xX_CryptoKing_Xx</b>: cool site!!!11
               </div>
-              <div className="blink" style={{ padding: '3px 0', borderBottom: '1px dashed #ff00ff' }}>
+              <div className="blink" style={{ padding: '4px 0', borderBottom: '1px dashed #ff00ff' }}>
                 <b>[DELETED]</b>: [REMOVED]
               </div>
-              <div style={{ padding: '3px 0' }}>
+              <div style={{ padding: '4px 0' }}>
                 <b>Anonymous</b>: lost all SOL 10/10
               </div>
             </div>
           </div>
 
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">白 • 皮 • 书</div>
+
           {/* WHITEPAPER TEASER */}
           <div className="side-box">
             <h4 className="neon-cyan">WHITEPAPER</h4>
-            <blockquote className="text-corrupt" style={{ fontStyle: 'italic', borderLeft: '2px solid #ff00ff', paddingLeft: '10px', fontSize: '10px', margin: 0 }}>
+            <blockquote className="text-corrupt" style={{ fontStyle: 'italic', borderLeft: '2px solid #ff00ff', paddingLeft: '10px', fontSize: '12px', margin: '6px 0 0 0' }}>
               &quot;CUMSHOT represents a paradigm shift in blockchain-based AI systems...&quot;
             </blockquote>
-            <a href="/whitepaper" className="chaos-btn" style={{ display: 'block', marginTop: '10px', textAlign: 'center', fontSize: '11px', padding: '6px' }}>
+            <a href="/whitepaper" className="chaos-btn" style={{ display: 'block', marginTop: '10px', textAlign: 'center', fontSize: '12px', padding: '6px' }}>
               READ FULL
             </a>
           </div>
 
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">快 • 速 • 链 • 接</div>
+
           {/* QUICK LINKS */}
           <div className="side-box">
             <h4 className="neon-pink">QUICK LINKS</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-              <a href="/whitepaper" style={{ color: '#ff00ff', fontSize: '11px' }}> Whitepaper</a>
-              <a href="/operations" style={{ color: '#00ff00', fontSize: '11px' }}> Daily Operations</a>
-              <a href="/enemies" style={{ color: '#ff0000', fontSize: '11px' }}> Enemy List</a>
-              <a href="/changelog" style={{ color: '#00ffff', fontSize: '11px' }}> Changelog</a>
-              <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" style={{ color: '#fff', fontSize: '11px' }}> Twitter/X</a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
+              <a href="/whitepaper" style={{ color: '#ff00ff', fontSize: '13px' }}> Whitepaper</a>
+              <a href="/operations" style={{ color: '#00ff00', fontSize: '13px' }}> Daily Operations</a>
+              <a href="/enemies" style={{ color: '#ff0000', fontSize: '13px' }}> Enemy List</a>
+              <a href="/changelog" style={{ color: '#00ffff', fontSize: '13px' }}> Changelog</a>
+              <a href={TOKEN_CONFIG.TWITTER} target="_blank" rel="noopener noreferrer" style={{ color: '#fff', fontSize: '13px' }}> Twitter/X</a>
             </div>
           </div>
 
+          {/* CHINESE DIVIDER */}
+          <div className="chinese-divider">浏 • 览 • 器</div>
+
           {/* BROWSER BADGE */}
           <div className="side-box" style={{ textAlign: 'center' }}>
-            <div className="badge" style={{ background: '#c0c0c0', border: '2px outset #fff', padding: '8px', fontSize: '9px' }}>
+            <div className="badge" style={{ background: '#c0c0c0', border: '2px outset #fff', padding: '8px', fontSize: '11px' }}>
               BEST VIEWED IN<br/>
               NETSCAPE NAVIGATOR 2.0<br/>
               640x480 • 256 COLORS
