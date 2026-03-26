@@ -743,16 +743,55 @@ export default function Home() {
             <p className="comic-sans" style={{ fontSize: '10px' }}>(definitely not fake)</p>
           </div>
 
-          {/* WEBRING */}
-          <div className="webring" style={{ marginBottom: '6px' }}>
-            <h3 className="comic-sans"> COOL SITES WEBRING | 酷站网环 </h3>
-            <div className="webring-nav">
-              <a href="#" className="webring-btn">&lt;&lt; PREV</a>
-              <span className="comic-sans"> CUMSHOT RING </span>
-              <a href="#" className="webring-btn">NEXT &gt;&gt;</a>
+          {/* COMMUNITY BANNER */}
+          <a href="/community" style={{ display: 'block', marginBottom: '6px', textDecoration: 'none' }}>
+            <div className="chaos-box shake-hover" style={{ 
+              background: 'linear-gradient(135deg, #ff00ff 0%, #00ffff 50%, #ff00ff 100%)', 
+              padding: '20px', 
+              textAlign: 'center',
+              position: 'relative',
+              overflow: 'hidden',
+              border: '3px solid #fff'
+            }}>
+              {/* Floating team avatars */}
+              <div style={{ position: 'absolute', top: '10px', left: '10px', display: 'flex', gap: '-10px' }}>
+                <img src="/cumshot.png" alt="" style={{ width: '30px', height: '30px', borderRadius: '50%', border: '2px solid #fff' }} />
+                <img src="/cummy.png" alt="" style={{ width: '30px', height: '30px', borderRadius: '50%', border: '2px solid #fff', marginLeft: '-10px' }} />
+                <img src="/woody.png" alt="" style={{ width: '30px', height: '30px', borderRadius: '50%', border: '2px solid #fff', marginLeft: '-10px' }} />
+              </div>
+              <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', gap: '-10px' }}>
+                <img src="/johnny.png" alt="" style={{ width: '30px', height: '30px', borderRadius: '50%', border: '2px solid #fff' }} />
+                <img src="/frederick.png" alt="" style={{ width: '30px', height: '30px', borderRadius: '50%', border: '2px solid #fff', marginLeft: '-10px' }} />
+                <img src="/noose.png" alt="" style={{ width: '30px', height: '30px', borderRadius: '50%', border: '2px solid #fff', marginLeft: '-10px' }} />
+              </div>
+              <h3 className="glitch" style={{ 
+                color: '#000', 
+                fontSize: '1.8rem', 
+                margin: '10px 0 5px 0',
+                textShadow: '2px 2px 0 #fff'
+              }}>
+                CUMSHOT &amp; FRIENDS
+              </h3>
+              <p style={{ color: '#000', fontSize: '14px', margin: '0 0 5px 0', fontWeight: 'bold' }}>
+                COMMUNITY HUB | 社区中心
+              </p>
+              <p style={{ color: 'rgba(0,0,0,0.7)', fontSize: '12px', margin: 0 }}>
+                💬 Chat with the CUMTEK team &amp; degens
+              </p>
+              <div className="emergency-blink" style={{ 
+                position: 'absolute', 
+                bottom: '5px', 
+                right: '10px', 
+                background: '#000', 
+                color: '#0f0', 
+                padding: '2px 8px', 
+                fontSize: '10px',
+                fontFamily: 'VT323, monospace'
+              }}>
+                LIVE
+              </div>
             </div>
-            <a href="#" className="webring-btn" style={{ marginTop: '10px' }}>RANDOM</a>
-          </div>
+          </a>
 
         </div>
 
