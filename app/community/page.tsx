@@ -185,8 +185,39 @@ export default function CommunityPage() {
     return date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
   }
 
+  // Hide global nav and footer on community page
+  useEffect(() => {
+    const nav = document.querySelector('.chaos-nav') as HTMLElement
+    const footer = document.querySelector('.chaos-footer') as HTMLElement
+    const staticOverlay = document.querySelector('.static-overlay') as HTMLElement
+    const scanlines = document.querySelector('body > .scanlines') as HTMLElement
+    
+    if (nav) nav.style.display = 'none'
+    if (footer) footer.style.display = 'none'
+    if (staticOverlay) staticOverlay.style.display = 'none'
+    if (scanlines) scanlines.style.display = 'none'
+    
+    return () => {
+      if (nav) nav.style.display = ''
+      if (footer) footer.style.display = ''
+      if (staticOverlay) staticOverlay.style.display = ''
+      if (scanlines) scanlines.style.display = ''
+    }
+  }, [])
+
   return (
-    <main style={{ minHeight: '100vh', background: '#0a0a0a', padding: '0' }}>
+    <main style={{ 
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      overflow: 'hidden', 
+      background: '#0a0a0a', 
+      padding: '0',
+      display: 'flex',
+      flexDirection: 'column'
+    }}>
       {/* SCANLINES */}
       <div className="scanlines" />
 
@@ -222,7 +253,7 @@ export default function CommunityPage() {
       </div>
 
       {/* MAIN LAYOUT */}
-      <div style={{ display: 'flex', height: 'calc(100vh - 60px)' }}>
+      <div style={{ display: 'flex', flex: 1, minHeight: 0, overflow: 'hidden' }}>
         
         {/* LEFT SIDEBAR - TEAM */}
         <div style={{ 
