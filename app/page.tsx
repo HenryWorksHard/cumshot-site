@@ -237,7 +237,7 @@ export default function Home() {
                 margin: 0,
                 lineHeight: 1.4
               }}>
-                It says it does NOTHING you stupid bastard. Continue jerking off to me 😏💦
+                It says it does NOTHING you stupid bastard. Continue jerking off to me
               </p>
             </div>
           </div>
