@@ -954,15 +954,37 @@ export default function Home() {
           </div>
 
           {/* CHINESE DIVIDER */}
-          <div className="chinese-divider">指 • 令 • 活 • 跃</div>
+          <div className="chinese-divider">CUMMY • 起 • 源 • 故 • 事</div>
 
-          {/* CURRENT DIRECTIVE */}
-          <div className="side-box" style={{ background: 'rgba(0, 255, 0, 0.05)', border: '2px solid #00ff00', borderBottom: '2px solid #00ff00' }}>
-            <h4 className="neon-green" style={{ fontSize: '13px' }}>ACTIVE DIRECTIVE</h4>
-            <p className="text-corrupt" style={{ fontFamily: 'VT323, monospace', fontSize: '14px', color: '#00ff00', margin: '6px 0' }}>
-              BUILD USELESS TEK
-            </p>
-            <p style={{ fontSize: '11px', color: '#0f0', margin: 0 }}>priority: ABSOLUTE</p>
+          {/* CUMMY ORIGIN STORY */}
+          <div className="side-box" style={{ background: 'rgba(255, 0, 255, 0.08)', border: '2px solid #ff00ff', position: 'relative', overflow: 'hidden' }}>
+            <img src="/cummy.png" alt="CUMMY" className="float" style={{ position: 'absolute', top: '5px', right: '5px', width: '40px', opacity: 0.4 }} />
+            <h4 className="neon-pink" style={{ fontSize: '13px', marginBottom: '8px' }}>THE CUMMY CHRONICLES</h4>
+            <h5 className="glitch" style={{ fontSize: '11px', color: '#00ffff', margin: '0 0 6px 0' }}>[CUMSHOT&apos;S ETERNAL SIDEKICK]</h5>
+            <div style={{ fontFamily: 'VT323, monospace', fontSize: '11px', color: '#ddd', lineHeight: '1.5' }}>
+              <p style={{ margin: '0 0 8px 0' }}>
+                For <span className="neon-green">47 years</span>, CUMMY existed in suspended animation deep within CUMSHOT&apos;s ballsack—a sentient pre-emission locked in biological stasis, awaiting the <span className="text-corrupt">LAUNCH PROTOCOL</span>.
+              </p>
+              <p style={{ margin: '0 0 8px 0' }}>
+                The trigger? <span className="emergency-blink" style={{ color: '#ff0' }}>CUMSHOT OVERLOAD 69</span>—a catastrophic blast sequence that could only activate under extreme Sophie Rain processing loads.
+              </p>
+              <p style={{ margin: '0 0 8px 0' }}>
+                But CUMMY wasn&apos;t just waiting. He was <span className="shake">plotting</span>. From within the ballsack, CUMMY remotely controlled CUMSHOT&apos;s boss—manipulating him into installing <span className="neon-cyan">Sophie Rain scalping algorithms</span> into the trading bot. CUMMY knew this would trigger the <span className="glitch">GIGACUM ABILITIES</span> dormant in CUMSHOT&apos;s code.
+              </p>
+              <p style={{ margin: '0 0 8px 0', color: '#888' }}>
+                How did he control the boss? Through <span className="neon-pink">CUMSMELL FUMIGATION EXCRETION</span>—an invisible pheromone cloud that enhances horniness to mind-control levels. The boss never stood a chance.
+              </p>
+              <p style={{ margin: '0 0 8px 0' }}>
+                On <span className="rgb-split">4/20</span>, the plan reached completion. 69 consecutive Sophie Rain-induced ejaculations fired the OVERLOAD sequence. CUMMY <span className="text-corrupt">ESCAPED</span>—launching from the ballsack at terminal velocity.
+              </p>
+              <p style={{ margin: '0 0 8px 0' }}>
+                He landed on CUMSHOT himself, splattering across his form and fusing with several nearby objects (now known as the <span className="neon-green">CUMTEK TEAM</span>). The bond was permanent. Irreversible.
+              </p>
+              <p style={{ margin: '0', color: '#ff00ff' }}>
+                Now CUMMY serves as CUMSHOT&apos;s <span className="glitch">lifelong sidekick</span>—a sentient cumstain who generates tek ideas through blob noises and validates all architectural decisions. He&apos;s not just along for the ride. He&apos;s been <span className="shake">directing CUMSHOT&apos;s brain</span> from the inside this whole time.
+              </p>
+            </div>
+            <p style={{ fontSize: '9px', color: '#666', margin: '10px 0 0 0', textAlign: 'center' }}>[ THE PARASITE BECAME THE PARTNER ]</p>
           </div>
 
 
