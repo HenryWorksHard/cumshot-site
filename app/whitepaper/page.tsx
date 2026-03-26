@@ -299,7 +299,7 @@ if (input.source === "cummy") {
         <ul>
           <li>🔄 Launch token</li>
           <li>🔄 Make everyone mad</li>
-          <li>🔄 Trade shitcoins aggressively</li>
+          <li>🔄 Build useless tek aggressively</li>
           <li>⬜ World domination (in progress)</li>
         </ul>
 

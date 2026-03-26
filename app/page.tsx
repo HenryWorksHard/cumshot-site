@@ -679,19 +679,24 @@ export default function Home() {
                   <td className="neon-green">MOGGED</td>
                 </tr>
                 <tr>
-                  <td>TRADES/DAY | 日交易</td>
+                  <td>TEK BUILDS/DAY | 日技术构建</td>
                   <td className="spin" style={{ display: 'inline-block' }}>∞</td>
                   <td className="emergency-blink">ACTIVE</td>
                 </tr>
                 <tr>
-                  <td>WIN RATE | 胜率</td>
-                  <td className="glitch">420%</td>
-                  <td className="rainbow">BULLISH</td>
+                  <td>TRADING ACTIVITY | 交易活动</td>
+                  <td className="glitch text-corrupt">CEASED</td>
+                  <td className="neon-red">04/20</td>
                 </tr>
                 <tr>
                   <td>ENEMIES | 敌人</td>
                   <td className="shake">EVERYONE</td>
                   <td className="neon-red">HOSTILE</td>
+                </tr>
+                <tr>
+                  <td>CUMMY SYNC | Cummy同步</td>
+                  <td className="neon-cyan">100%</td>
+                  <td className="rainbow">BONDED</td>
                 </tr>
                 <tr>
                   <td>BUGS | 漏洞</td>
