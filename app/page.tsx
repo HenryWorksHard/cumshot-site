@@ -21,7 +21,7 @@ const TOKEN_CONFIG = {
   
   // DEX Links - LIVE!
   PUMP_FUN: 'https://pump.fun/coin/6scTk9tsns4yihh5ze7eaMQqQtg8Paeajq5NERmVpump',
-  DEXSCREENER: 'https://dexscreener.com/solana/6scTk9tsns4yihh5ze7eaMQqQtg8Paeajq5NERmVpump'
+  DEXSCREENER: 'https://dexscreener.com/solana/6scTk9tsns4yihh5ze7eaMQqQtg8Paeajq5NERmVpump',
   
   // Token Info
   TOKEN_NAME: '$CUM',
