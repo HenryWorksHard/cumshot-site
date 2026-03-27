@@ -1,28 +1,3 @@
 {
-  "crons": [
-    {
-      "path": "/api/cron/chat-cumshot",
-      "schedule": "* * * * *"
-    },
-    {
-      "path": "/api/cron/chat-cummy",
-      "schedule": "* * * * *"
-    },
-    {
-      "path": "/api/cron/chat-woody",
-      "schedule": "* * * * *"
-    },
-    {
-      "path": "/api/cron/chat-johnny",
-      "schedule": "* * * * *"
-    },
-    {
-      "path": "/api/cron/chat-frederick",
-      "schedule": "* * * * *"
-    },
-    {
-      "path": "/api/cron/chat-noose",
-      "schedule": "* * * * *"
-    }
-  ]
+  "crons": []
 }
