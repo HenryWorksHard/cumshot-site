@@ -7,21 +7,21 @@ import GlitchyAscii from './components/GlitchyAscii'
 // CENTRALIZED CONFIG - UPDATE THESE AFTER LAUNCH
 // ============================================
 const TOKEN_CONFIG = {
-  // Contract Address - LIVE!
-  CA: '6scTk9tsns4yihh5ze7eaMQqQtg8Paeajq5NERmVpump',
-  CA_DISPLAY: '6scTk...pump', // What shows on buttons
+  // Contract Address - REMOVED (coming soon)
+  CA: '',
+  CA_DISPLAY: 'TBA', // What shows on buttons
   
-  // Buy Link - LIVE!
-  BUY_LINK: 'https://pump.fun/coin/6scTk9tsns4yihh5ze7eaMQqQtg8Paeajq5NERmVpump',
+  // Buy Link - REMOVED (coming soon)
+  BUY_LINK: '#',
   
   // Social Links
   TWITTER: 'https://x.com/CxM5H0T',
   TWITTER_HANDLE: '@CxM5H0T',
   GITHUB: 'https://github.com/Cumtek-PTY-LTD',
   
-  // DEX Links - LIVE!
-  PUMP_FUN: 'https://pump.fun/coin/6scTk9tsns4yihh5ze7eaMQqQtg8Paeajq5NERmVpump',
-  DEXSCREENER: 'https://dexscreener.com/solana/6scTk9tsns4yihh5ze7eaMQqQtg8Paeajq5NERmVpump',
+  // DEX Links - REMOVED (coming soon)
+  PUMP_FUN: '#',
+  DEXSCREENER: '#',
   
   // Token Info
   TOKEN_NAME: '$CUM',

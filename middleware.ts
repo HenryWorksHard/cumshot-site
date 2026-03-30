@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 // COMING SOON MODE - Set to false to disable
-const COMING_SOON_MODE = false
+const COMING_SOON_MODE = true
 
 // Paths that should bypass coming soon (API routes, assets, etc)
 const BYPASS_PATHS = [
